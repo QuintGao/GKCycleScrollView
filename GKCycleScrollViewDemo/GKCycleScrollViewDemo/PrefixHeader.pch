@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  GKCycleScrollViewDemo
+//
+//  Created by gaokun on 2019/9/18.
+//  Copyright © 2019 QuintGao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Masonry/Masonry.h>
+
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+
+#define kAdapter(w) kScreenW / 750.0f * w
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */; };
+		60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */; };
+		60E78FAD2331C5C600C324CF /* GKDemo001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */; };
+		60E78FB02331C5CE00C324CF /* GKDemo002ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FAF2331C5CE00C324CF /* GKDemo002ViewController.m */; };
+		60E78FB32331C5D600C324CF /* GKDemo003ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FB22331C5D600C324CF /* GKDemo003ViewController.m */; };
+		792D10C42337794B006C997D /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792D10BD2337794B006C997D /* TADotView.m */; };
+		792D10C52337794B006C997D /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 792D10BE2337794B006C997D /* TAPageControl.m */; };
+		792D10C62337794B006C997D /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792D10BF2337794B006C997D /* TAAnimatedDotView.m */; };
+		792D10C72337794B006C997D /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792D10C02337794B006C997D /* TAAbstractDotView.m */; };
+		792D10CA2337A904006C997D /* GKDemoTitleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792D10C92337A904006C997D /* GKDemoTitleImageCell.m */; };
+		792D10CD2337A927006C997D /* GKDemoTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792D10CC2337A927006C997D /* GKDemoTitleCell.m */; };
+		795C703D23366A8E004364E5 /* GKPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 795C703C23366A8E004364E5 /* GKPageControl.m */; };
+		79A5E5AF232E39A7009F01D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5AE232E39A7009F01D3 /* AppDelegate.m */; };
+		79A5E5B2232E39A7009F01D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5B1232E39A7009F01D3 /* ViewController.m */; };
+		79A5E5B7232E39A8009F01D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E5B6232E39A8009F01D3 /* Assets.xcassets */; };
+		79A5E5BD232E39A8009F01D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5BC232E39A8009F01D3 /* main.m */; };
+		79A5E5C7232E39A8009F01D3 /* GKCycleScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5C6232E39A8009F01D3 /* GKCycleScrollViewDemoTests.m */; };
+		79A5E5D2232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5D1232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.m */; };
+		79A5E5E2232E39EA009F01D3 /* GKCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5E1232E39EA009F01D3 /* GKCycleScrollView.m */; };
+		79A5E5E5232E3ABC009F01D3 /* GKCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E5E4232E3ABC009F01D3 /* GKCycleScrollViewCell.m */; };
+		EFA3BB4BBDF19ACCFA6E9DF1 /* Pods_GKCycleScrollViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9844048E4E8CCA55575B1AC1 /* Pods_GKCycleScrollViewDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79A5E5C3232E39A8009F01D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79A5E5A2232E39A7009F01D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79A5E5A9232E39A7009F01D3;
+			remoteInfo = GKCycleScrollViewDemo;
+		};
+		79A5E5CE232E39A8009F01D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79A5E5A2232E39A7009F01D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79A5E5A9232E39A7009F01D3;
+			remoteInfo = GKCycleScrollViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47C8BBB9BA303DC1F33BA573 /* Pods-GKCycleScrollViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKCycleScrollViewDemo.release.xcconfig"; path = "Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		60E78FA82331C5BC00C324CF /* GKDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoBaseViewController.h; sourceTree = "<group>"; };
+		60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoBaseViewController.m; sourceTree = "<group>"; };
+		60E78FAB2331C5C600C324CF /* GKDemo001ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo001ViewController.h; sourceTree = "<group>"; };
+		60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo001ViewController.m; sourceTree = "<group>"; };
+		60E78FAE2331C5CE00C324CF /* GKDemo002ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo002ViewController.h; sourceTree = "<group>"; };
+		60E78FAF2331C5CE00C324CF /* GKDemo002ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo002ViewController.m; sourceTree = "<group>"; };
+		60E78FB12331C5D500C324CF /* GKDemo003ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo003ViewController.h; sourceTree = "<group>"; };
+		60E78FB22331C5D600C324CF /* GKDemo003ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo003ViewController.m; sourceTree = "<group>"; };
+		60E78FB42332283E00C324CF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		792D10BC2337794B006C997D /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		792D10BD2337794B006C997D /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		792D10BE2337794B006C997D /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		792D10BF2337794B006C997D /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		792D10C02337794B006C997D /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		792D10C12337794B006C997D /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		792D10C22337794B006C997D /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		792D10C32337794B006C997D /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		792D10C82337A904006C997D /* GKDemoTitleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoTitleImageCell.h; sourceTree = "<group>"; };
+		792D10C92337A904006C997D /* GKDemoTitleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoTitleImageCell.m; sourceTree = "<group>"; };
+		792D10CB2337A927006C997D /* GKDemoTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoTitleCell.h; sourceTree = "<group>"; };
+		792D10CC2337A927006C997D /* GKDemoTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoTitleCell.m; sourceTree = "<group>"; };
+		795C703B23366A8E004364E5 /* GKPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKPageControl.h; sourceTree = "<group>"; };
+		795C703C23366A8E004364E5 /* GKPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKPageControl.m; sourceTree = "<group>"; };
+		79A5E5AA232E39A7009F01D3 /* GKCycleScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKCycleScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A5E5AD232E39A7009F01D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		79A5E5AE232E39A7009F01D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		79A5E5B0232E39A7009F01D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		79A5E5B1232E39A7009F01D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		79A5E5B6232E39A8009F01D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79A5E5BB232E39A8009F01D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A5E5BC232E39A8009F01D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79A5E5C2232E39A8009F01D3 /* GKCycleScrollViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKCycleScrollViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A5E5C6232E39A8009F01D3 /* GKCycleScrollViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollViewDemoTests.m; sourceTree = "<group>"; };
+		79A5E5C8232E39A8009F01D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A5E5CD232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKCycleScrollViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A5E5D1232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollViewDemoUITests.m; sourceTree = "<group>"; };
+		79A5E5D3232E39A8009F01D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A5E5E0232E39EA009F01D3 /* GKCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollView.h; sourceTree = "<group>"; };
+		79A5E5E1232E39EA009F01D3 /* GKCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollView.m; sourceTree = "<group>"; };
+		79A5E5E3232E3ABC009F01D3 /* GKCycleScrollViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollViewCell.h; sourceTree = "<group>"; };
+		79A5E5E4232E3ABC009F01D3 /* GKCycleScrollViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollViewCell.m; sourceTree = "<group>"; };
+		9844048E4E8CCA55575B1AC1 /* Pods_GKCycleScrollViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKCycleScrollViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4ACD9A70D3EAD513B8D314 /* Pods-GKCycleScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKCycleScrollViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79A5E5A7232E39A7009F01D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA3BB4BBDF19ACCFA6E9DF1 /* Pods_GKCycleScrollViewDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A5E5BF232E39A8009F01D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A5E5CA232E39A8009F01D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60E78FA72331C59900C324CF /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				60E78FA82331C5BC00C324CF /* GKDemoBaseViewController.h */,
+				60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */,
+				60E78FAB2331C5C600C324CF /* GKDemo001ViewController.h */,
+				60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */,
+				60E78FAE2331C5CE00C324CF /* GKDemo002ViewController.h */,
+				60E78FAF2331C5CE00C324CF /* GKDemo002ViewController.m */,
+				60E78FB12331C5D500C324CF /* GKDemo003ViewController.h */,
+				60E78FB22331C5D600C324CF /* GKDemo003ViewController.m */,
+				792D10C82337A904006C997D /* GKDemoTitleImageCell.h */,
+				792D10C92337A904006C997D /* GKDemoTitleImageCell.m */,
+				792D10CB2337A927006C997D /* GKDemoTitleCell.h */,
+				792D10CC2337A927006C997D /* GKDemoTitleCell.m */,
+				795C703B23366A8E004364E5 /* GKPageControl.h */,
+				795C703C23366A8E004364E5 /* GKPageControl.m */,
+				792D10BB2337794B006C997D /* PageControl */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		792D10BB2337794B006C997D /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				792D10BC2337794B006C997D /* TAAbstractDotView.h */,
+				792D10BD2337794B006C997D /* TADotView.m */,
+				792D10BE2337794B006C997D /* TAPageControl.m */,
+				792D10BF2337794B006C997D /* TAAnimatedDotView.m */,
+				792D10C02337794B006C997D /* TAAbstractDotView.m */,
+				792D10C12337794B006C997D /* TADotView.h */,
+				792D10C22337794B006C997D /* TAAnimatedDotView.h */,
+				792D10C32337794B006C997D /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		79A5E5A1232E39A7009F01D3 = {
+			isa = PBXGroup;
+			children = (
+				79A5E5AC232E39A7009F01D3 /* GKCycleScrollViewDemo */,
+				79A5E5C5232E39A8009F01D3 /* GKCycleScrollViewDemoTests */,
+				79A5E5D0232E39A8009F01D3 /* GKCycleScrollViewDemoUITests */,
+				79A5E5AB232E39A7009F01D3 /* Products */,
+				E02CE734ED83A4CF1CB8A7E9 /* Pods */,
+				E2ABEAFCBB84EFBE72DFD9F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		79A5E5AB232E39A7009F01D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E5AA232E39A7009F01D3 /* GKCycleScrollViewDemo.app */,
+				79A5E5C2232E39A8009F01D3 /* GKCycleScrollViewDemoTests.xctest */,
+				79A5E5CD232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79A5E5AC232E39A7009F01D3 /* GKCycleScrollViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E5DF232E39D2009F01D3 /* GKCycleScrollView */,
+				60E78FA72331C59900C324CF /* Demo */,
+				79A5E5AD232E39A7009F01D3 /* AppDelegate.h */,
+				79A5E5AE232E39A7009F01D3 /* AppDelegate.m */,
+				79A5E5B0232E39A7009F01D3 /* ViewController.h */,
+				79A5E5B1232E39A7009F01D3 /* ViewController.m */,
+				79A5E5B6232E39A8009F01D3 /* Assets.xcassets */,
+				79A5E5BB232E39A8009F01D3 /* Info.plist */,
+				79A5E5BC232E39A8009F01D3 /* main.m */,
+				60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */,
+				60E78FB42332283E00C324CF /* PrefixHeader.pch */,
+			);
+			path = GKCycleScrollViewDemo;
+			sourceTree = "<group>";
+		};
+		79A5E5C5232E39A8009F01D3 /* GKCycleScrollViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E5C6232E39A8009F01D3 /* GKCycleScrollViewDemoTests.m */,
+				79A5E5C8232E39A8009F01D3 /* Info.plist */,
+			);
+			path = GKCycleScrollViewDemoTests;
+			sourceTree = "<group>";
+		};
+		79A5E5D0232E39A8009F01D3 /* GKCycleScrollViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E5D1232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.m */,
+				79A5E5D3232E39A8009F01D3 /* Info.plist */,
+			);
+			path = GKCycleScrollViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		79A5E5DF232E39D2009F01D3 /* GKCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E5E0232E39EA009F01D3 /* GKCycleScrollView.h */,
+				79A5E5E1232E39EA009F01D3 /* GKCycleScrollView.m */,
+				79A5E5E3232E3ABC009F01D3 /* GKCycleScrollViewCell.h */,
+				79A5E5E4232E3ABC009F01D3 /* GKCycleScrollViewCell.m */,
+			);
+			path = GKCycleScrollView;
+			sourceTree = "<group>";
+		};
+		E02CE734ED83A4CF1CB8A7E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF4ACD9A70D3EAD513B8D314 /* Pods-GKCycleScrollViewDemo.debug.xcconfig */,
+				47C8BBB9BA303DC1F33BA573 /* Pods-GKCycleScrollViewDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2ABEAFCBB84EFBE72DFD9F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9844048E4E8CCA55575B1AC1 /* Pods_GKCycleScrollViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79A5E5A9232E39A7009F01D3 /* GKCycleScrollViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79A5E5D6232E39A8009F01D3 /* Build configuration list for PBXNativeTarget "GKCycleScrollViewDemo" */;
+			buildPhases = (
+				7E3EC0200C488EE8E1417E09 /* [CP] Check Pods Manifest.lock */,
+				79A5E5A6232E39A7009F01D3 /* Sources */,
+				79A5E5A7232E39A7009F01D3 /* Frameworks */,
+				79A5E5A8232E39A7009F01D3 /* Resources */,
+				5490A872B89880B8D6A3FF61 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GKCycleScrollViewDemo;
+			productName = GKCycleScrollViewDemo;
+			productReference = 79A5E5AA232E39A7009F01D3 /* GKCycleScrollViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79A5E5C1232E39A8009F01D3 /* GKCycleScrollViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79A5E5D9232E39A8009F01D3 /* Build configuration list for PBXNativeTarget "GKCycleScrollViewDemoTests" */;
+			buildPhases = (
+				79A5E5BE232E39A8009F01D3 /* Sources */,
+				79A5E5BF232E39A8009F01D3 /* Frameworks */,
+				79A5E5C0232E39A8009F01D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79A5E5C4232E39A8009F01D3 /* PBXTargetDependency */,
+			);
+			name = GKCycleScrollViewDemoTests;
+			productName = GKCycleScrollViewDemoTests;
+			productReference = 79A5E5C2232E39A8009F01D3 /* GKCycleScrollViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79A5E5CC232E39A8009F01D3 /* GKCycleScrollViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79A5E5DC232E39A8009F01D3 /* Build configuration list for PBXNativeTarget "GKCycleScrollViewDemoUITests" */;
+			buildPhases = (
+				79A5E5C9232E39A8009F01D3 /* Sources */,
+				79A5E5CA232E39A8009F01D3 /* Frameworks */,
+				79A5E5CB232E39A8009F01D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79A5E5CF232E39A8009F01D3 /* PBXTargetDependency */,
+			);
+			name = GKCycleScrollViewDemoUITests;
+			productName = GKCycleScrollViewDemoUITests;
+			productReference = 79A5E5CD232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79A5E5A2232E39A7009F01D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = QuintGao;
+				TargetAttributes = {
+					79A5E5A9232E39A7009F01D3 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					79A5E5C1232E39A8009F01D3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 79A5E5A9232E39A7009F01D3;
+					};
+					79A5E5CC232E39A8009F01D3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 79A5E5A9232E39A7009F01D3;
+					};
+				};
+			};
+			buildConfigurationList = 79A5E5A5232E39A7009F01D3 /* Build configuration list for PBXProject "GKCycleScrollViewDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79A5E5A1232E39A7009F01D3;
+			productRefGroup = 79A5E5AB232E39A7009F01D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79A5E5A9232E39A7009F01D3 /* GKCycleScrollViewDemo */,
+				79A5E5C1232E39A8009F01D3 /* GKCycleScrollViewDemoTests */,
+				79A5E5CC232E39A8009F01D3 /* GKCycleScrollViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79A5E5A8232E39A7009F01D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A5E5B7232E39A8009F01D3 /* Assets.xcassets in Resources */,
+				60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A5E5C0232E39A8009F01D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A5E5CB232E39A8009F01D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5490A872B89880B8D6A3FF61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3EC0200C488EE8E1417E09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GKCycleScrollViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79A5E5A6232E39A7009F01D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795C703D23366A8E004364E5 /* GKPageControl.m in Sources */,
+				60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */,
+				60E78FAD2331C5C600C324CF /* GKDemo001ViewController.m in Sources */,
+				792D10C72337794B006C997D /* TAAbstractDotView.m in Sources */,
+				79A5E5E5232E3ABC009F01D3 /* GKCycleScrollViewCell.m in Sources */,
+				792D10CD2337A927006C997D /* GKDemoTitleCell.m in Sources */,
+				60E78FB32331C5D600C324CF /* GKDemo003ViewController.m in Sources */,
+				792D10C52337794B006C997D /* TAPageControl.m in Sources */,
+				79A5E5B2232E39A7009F01D3 /* ViewController.m in Sources */,
+				792D10CA2337A904006C997D /* GKDemoTitleImageCell.m in Sources */,
+				60E78FB02331C5CE00C324CF /* GKDemo002ViewController.m in Sources */,
+				79A5E5BD232E39A8009F01D3 /* main.m in Sources */,
+				792D10C62337794B006C997D /* TAAnimatedDotView.m in Sources */,
+				792D10C42337794B006C997D /* TADotView.m in Sources */,
+				79A5E5E2232E39EA009F01D3 /* GKCycleScrollView.m in Sources */,
+				79A5E5AF232E39A7009F01D3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A5E5BE232E39A8009F01D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A5E5C7232E39A8009F01D3 /* GKCycleScrollViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A5E5C9232E39A8009F01D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A5E5D2232E39A8009F01D3 /* GKCycleScrollViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79A5E5C4232E39A8009F01D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79A5E5A9232E39A7009F01D3 /* GKCycleScrollViewDemo */;
+			targetProxy = 79A5E5C3232E39A8009F01D3 /* PBXContainerItemProxy */;
+		};
+		79A5E5CF232E39A8009F01D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79A5E5A9232E39A7009F01D3 /* GKCycleScrollViewDemo */;
+			targetProxy = 79A5E5CE232E39A8009F01D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		79A5E5D4232E39A8009F01D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		79A5E5D5232E39A8009F01D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79A5E5D7232E39A8009F01D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4ACD9A70D3EAD513B8D314 /* Pods-GKCycleScrollViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X52753HQNM;
+				GCC_PREFIX_HEADER = GKCycleScrollViewDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = GKCycleScrollViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GKCycleScrollViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = aystfm_dev_test;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79A5E5D8232E39A8009F01D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47C8BBB9BA303DC1F33BA573 /* Pods-GKCycleScrollViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X52753HQNM;
+				GCC_PREFIX_HEADER = GKCycleScrollViewDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = GKCycleScrollViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GKCycleScrollViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = aystfm_dev_test;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79A5E5DA232E39A8009F01D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GKCycleScrollViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyinsitanfm.GKCycleScrollViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKCycleScrollViewDemo.app/GKCycleScrollViewDemo";
+			};
+			name = Debug;
+		};
+		79A5E5DB232E39A8009F01D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GKCycleScrollViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyinsitanfm.GKCycleScrollViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKCycleScrollViewDemo.app/GKCycleScrollViewDemo";
+			};
+			name = Release;
+		};
+		79A5E5DD232E39A8009F01D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GKCycleScrollViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyinsitanfm.GKCycleScrollViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GKCycleScrollViewDemo;
+			};
+			name = Debug;
+		};
+		79A5E5DE232E39A8009F01D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GKCycleScrollViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyinsitanfm.GKCycleScrollViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GKCycleScrollViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79A5E5A5232E39A7009F01D3 /* Build configuration list for PBXProject "GKCycleScrollViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A5E5D4232E39A8009F01D3 /* Debug */,
+				79A5E5D5232E39A8009F01D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79A5E5D6232E39A8009F01D3 /* Build configuration list for PBXNativeTarget "GKCycleScrollViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A5E5D7232E39A8009F01D3 /* Debug */,
+				79A5E5D8232E39A8009F01D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79A5E5D9232E39A8009F01D3 /* Build configuration list for PBXNativeTarget "GKCycleScrollViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A5E5DA232E39A8009F01D3 /* Debug */,
+				79A5E5DB232E39A8009F01D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79A5E5DC232E39A8009F01D3 /* Build configuration list for PBXNativeTarget "GKCycleScrollViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A5E5DD232E39A8009F01D3 /* Debug */,
+				79A5E5DE232E39A8009F01D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79A5E5A2232E39A7009F01D3 /* Project object */;
+}
