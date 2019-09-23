@@ -396,11 +396,18 @@
                     
                     leftRightInset = ceilf(adjustLeftRightMargin * delta / self.cellSize.width);
                     topBottomInset = ceilf(adjustTopBottomMargin * delta / self.cellSize.width);
+                    
+                    NSInteger index = i % self.realCount;
+                    if (index == self.currentSelectIndex) {
+                        [self.scrollView bringSubviewToFront:cell];
+                    }
                 } else {
                     alpha = self.minimumCellAlpha;
                     
                     leftRightInset = self.leftRightMargin;
                     topBottomInset = self.topBottomMargin;
+                    
+                    [self.scrollView sendSubviewToBack:cell];
                 }
                 
                 if (self.leftRightMargin == 0 && self.topBottomMargin == 0) {
@@ -503,6 +510,8 @@
         
         if (!cell.superview) {
             [self.scrollView addSubview:cell];
+//            [self.scrollView sendSubviewToBack:cell];
+            
         }
     }
 }

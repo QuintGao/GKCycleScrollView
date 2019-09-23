@@ -39,11 +39,6 @@
                      @{@"title": @"支持设置左右间距，上下间距（缩放）", @"img_url": @"http://img0.imgtn.bdimg.com/it/u=240303812,1014789226&fm=26&gp=0.jpg"},
                      @{@"title": @"支持自动轮播，无限轮播", @"img_url": @"http://img1.imgtn.bdimg.com/it/u=2078392142,3408530103&fm=15&gp=0.jpg"},
                      @{@"title": @"支持cell之间透明度渐变", @"img_url": @"http://img2.imgtn.bdimg.com/it/u=1442201060,4140956584&fm=26&gp=0.jpg"}];
-//    self.dataArr = @[@"http://img5.imgtn.bdimg.com/it/u=2018579695,196237912&fm=26&gp=0.jpg",
-//                     @"http://img3.imgtn.bdimg.com/it/u=1809899943,4092597772&fm=15&gp=0.jpg",
-//                     @"http://img0.imgtn.bdimg.com/it/u=240303812,1014789226&fm=26&gp=0.jpg",
-//                     @"http://img1.imgtn.bdimg.com/it/u=2078392142,3408530103&fm=15&gp=0.jpg",
-//                     @"http://img2.imgtn.bdimg.com/it/u=1442201060,4140956584&fm=26&gp=0.jpg"];
     
     // ---------------------------轮播图demo1--------------------------
     // 默认样式：无缩放，自动轮播，无限轮播

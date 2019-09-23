@@ -84,6 +84,7 @@
         cell = [GKCycleScrollViewCell new];
         cell.layer.cornerRadius = kAdapter(10.0f);
         cell.layer.masksToBounds = YES;
+        cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     NSDictionary *dict = self.dataArr[index];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:dict[@"img_url"]]];

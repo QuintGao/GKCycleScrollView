@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6004DBE02338D11100248558 /* GKDemo004ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6004DBDF2338D11100248558 /* GKDemo004ViewController.m */; };
 		60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */; };
 		60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */; };
 		60E78FAD2331C5C600C324CF /* GKDemo001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */; };
@@ -49,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		47C8BBB9BA303DC1F33BA573 /* Pods-GKCycleScrollViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKCycleScrollViewDemo.release.xcconfig"; path = "Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6004DBDE2338D11100248558 /* GKDemo004ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo004ViewController.h; sourceTree = "<group>"; };
+		6004DBDF2338D11100248558 /* GKDemo004ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo004ViewController.m; sourceTree = "<group>"; };
 		60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60E78FA82331C5BC00C324CF /* GKDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoBaseViewController.h; sourceTree = "<group>"; };
 		60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoBaseViewController.m; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				60E78FAF2331C5CE00C324CF /* GKDemo002ViewController.m */,
 				60E78FB12331C5D500C324CF /* GKDemo003ViewController.h */,
 				60E78FB22331C5D600C324CF /* GKDemo003ViewController.m */,
+				6004DBDE2338D11100248558 /* GKDemo004ViewController.h */,
+				6004DBDF2338D11100248558 /* GKDemo004ViewController.m */,
 				792D10C82337A904006C997D /* GKDemoTitleImageCell.h */,
 				792D10C92337A904006C997D /* GKDemoTitleImageCell.m */,
 				792D10CB2337A927006C997D /* GKDemoTitleCell.h */,
@@ -424,6 +429,7 @@
 				79A5E5E5232E3ABC009F01D3 /* GKCycleScrollViewCell.m in Sources */,
 				792D10CD2337A927006C997D /* GKDemoTitleCell.m in Sources */,
 				60E78FB32331C5D600C324CF /* GKDemo003ViewController.m in Sources */,
+				6004DBE02338D11100248558 /* GKDemo004ViewController.m in Sources */,
 				792D10C52337794B006C997D /* TAPageControl.m in Sources */,
 				79A5E5B2232E39A7009F01D3 /* ViewController.m in Sources */,
 				792D10CA2337A904006C997D /* GKDemoTitleImageCell.m in Sources */,
