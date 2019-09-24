@@ -84,23 +84,60 @@
 }
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
-    if (cycleScrollView == self.cycleScrollView) {
-        if (self.isSelectIcon) return;
-        [self.iconScrollView scrollToCellAtIndex:index animated:YES];
-    }else if (cycleScrollView == self.iconScrollView) {
-        [self.cycleScrollView scrollToCellAtIndex:index animated:YES];
-    }
+//    if (self.isSelectIcon) return;
+//    if (cycleScrollView == self.cycleScrollView) {
+//        [self.iconScrollView scrollToCellAtIndex:index animated:YES];
+//    }else if (cycleScrollView == self.iconScrollView) {
+//        [self.cycleScrollView scrollToCellAtIndex:index animated:YES];
+//    }
 }
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didSelectCellAtIndex:(NSInteger)index {
     if (cycleScrollView == self.iconScrollView) {
         self.isSelectIcon = YES;
+        [self.iconScrollView scrollToCellAtIndex:index animated:YES];
         [self.cycleScrollView scrollToCellAtIndex:index animated:YES];
     }
 }
 
-- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndScrollingAnimation:(UIScrollView *)scrollView {
-    self.isSelectIcon = NO;
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView willBeginDragging:(UIScrollView *)scrollView {
+    if (cycleScrollView == self.cycleScrollView) {
+        self.isScrollCard = YES;
+    }else if (cycleScrollView == self.iconScrollView) {
+        self.isScrollIcon = YES;
+    }
+}
+
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScroll:(UIScrollView *)scrollView {
+    if (cycleScrollView == self.cycleScrollView) {
+        if (self.isScrollIcon) return;
+        CGFloat ratio = scrollView.contentOffset.x / scrollView.contentSize.width;
+        CGPoint offset = CGPointMake(self.iconScrollView.scrollView.contentSize.width * ratio, 0);
+        [self.iconScrollView.scrollView setContentOffset:offset animated:NO];
+    }else if (cycleScrollView == self.iconScrollView) {
+        if (self.isScrollCard) return;
+        CGFloat ratio = scrollView.contentOffset.x / scrollView.contentSize.width;
+        CGPoint offset = CGPointMake(self.cycleScrollView.scrollView.contentSize.width * ratio, 0);
+        [self.cycleScrollView.scrollView setContentOffset:offset animated:NO];
+    }
+}
+
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        if (cycleScrollView == self.cycleScrollView) {
+            self.isScrollCard = NO;
+        }else if (cycleScrollView == self.iconScrollView) {
+            self.isScrollIcon = NO;
+        }
+    }
+}
+
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndDecelerating:(UIScrollView *)scrollView {
+    if (cycleScrollView == self.cycleScrollView) {
+        self.isScrollCard = NO;
+    }else if (cycleScrollView == self.iconScrollView) {
+        self.isScrollIcon = NO;
+    }
 }
 
 #pragma mark - 懒加载

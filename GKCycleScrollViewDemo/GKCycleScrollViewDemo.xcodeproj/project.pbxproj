@@ -74,6 +74,7 @@
 		792D10C92337A904006C997D /* GKDemoTitleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoTitleImageCell.m; sourceTree = "<group>"; };
 		792D10CB2337A927006C997D /* GKDemoTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoTitleCell.h; sourceTree = "<group>"; };
 		792D10CC2337A927006C997D /* GKDemoTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoTitleCell.m; sourceTree = "<group>"; };
+		792D10CE233A70D3006C997D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		795C703B23366A8E004364E5 /* GKPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKPageControl.h; sourceTree = "<group>"; };
 		795C703C23366A8E004364E5 /* GKPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKPageControl.m; sourceTree = "<group>"; };
 		79A5E5AA232E39A7009F01D3 /* GKCycleScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKCycleScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +200,7 @@
 				79A5E5BC232E39A8009F01D3 /* main.m */,
 				60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */,
 				60E78FB42332283E00C324CF /* PrefixHeader.pch */,
+				792D10CE233A70D3006C997D /* README.md */,
 			);
 			path = GKCycleScrollViewDemo;
 			sourceTree = "<group>";

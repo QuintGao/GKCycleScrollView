@@ -654,11 +654,15 @@
     if (index >= 0 && self.currentSelectIndex != index) {
         [self handleCellScrollWithIndex:index];
     }
+    
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didScroll:)]) {
+        [self.delegate cycleScrollView:self didScroll:scrollView];
+    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self stopTimer];
-    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:willBeginDragging:)]) {
         [self.delegate cycleScrollView:self willBeginDragging:scrollView];
     }
 }
