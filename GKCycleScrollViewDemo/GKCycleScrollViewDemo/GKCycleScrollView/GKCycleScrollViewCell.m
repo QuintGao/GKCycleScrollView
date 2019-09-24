@@ -46,6 +46,7 @@
     if (!_coverView) {
         _coverView = [UIView new];
         _coverView.backgroundColor = [UIColor blackColor];
+        _coverView.userInteractionEnabled = NO;
     }
     return _coverView;
 }

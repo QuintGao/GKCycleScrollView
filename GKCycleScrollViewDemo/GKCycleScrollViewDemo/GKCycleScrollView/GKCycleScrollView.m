@@ -60,15 +60,38 @@
     self.scrollView.delegate = nil;
 }
 
+// 重新此方法是为了解决当cell超出UIScrollView时不能点击的问题
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     if ([self pointInside:point withEvent:event]) {
+        // 判断点击的点是否在cell上
+        for (UIView *cell in self.scrollView.subviews) {
+            // 将cell的frame转换到当前视图上
+            CGRect convertFrame = CGRectZero;
+            convertFrame.size = cell.frame.size;
+            
+            if (self.direction == GKCycleScrollViewScrollDirectionHorizontal) {
+                convertFrame.origin.x = cell.frame.origin.x + self.scrollView.frame.origin.x - self.scrollView.contentOffset.x;
+                convertFrame.origin.y = 0;
+            }else {
+                convertFrame.origin.x = 0;
+                convertFrame.origin.y = cell.frame.origin.y + self.scrollView.frame.origin.y - self.scrollView.contentOffset.y;
+            }
+
+            // 判断点击的点是否在cell上
+            if (CGRectContainsPoint(convertFrame, point)) {
+                return cell;
+            }
+        }
+        // 判断点击的点是否在UIScrollView上
         CGPoint newPoint = CGPointZero;
         newPoint.x = point.x - self.scrollView.frame.origin.x + self.scrollView.contentOffset.x;
         newPoint.y = point.y - self.scrollView.frame.origin.y + self.scrollView.contentOffset.y;
         if ([self.scrollView pointInside:newPoint withEvent:event]) {
             return [self.scrollView hitTest:newPoint withEvent:event];
         }
-        return self.scrollView;
+        
+        // 系统处理
+        return [super hitTest:point withEvent:event];
     }
     return nil;
 }
@@ -510,8 +533,6 @@
         
         if (!cell.superview) {
             [self.scrollView addSubview:cell];
-//            [self.scrollView sendSubviewToBack:cell];
-            
         }
     }
 }
@@ -637,10 +658,27 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self stopTimer];
+    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+        [self.delegate cycleScrollView:self willBeginDragging:scrollView];
+    }
 }
 
+// 结束拖拽时调用，decelerate是否有减速
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        [self startTimer];
+    }
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didEndDragging:willDecelerate:)]) {
+        [self.delegate cycleScrollView:self didEndDragging:scrollView willDecelerate:decelerate];
+    }
+}
+
+// 结束减速是调用
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self startTimer];
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didEndDecelerating:)]) {
+        [self.delegate cycleScrollView:self didEndDecelerating:scrollView];
+    }
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
@@ -677,6 +715,12 @@
             default:
                 break;
         }
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didEndScrollingAnimation:)]) {
+        [self.delegate cycleScrollView:self didEndScrollingAnimation:scrollView];
     }
 }
 

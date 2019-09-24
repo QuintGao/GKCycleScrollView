@@ -28,13 +28,21 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 @protocol GKCycleScrollViewDelegate <NSObject>
 
 @optional
+// 返回自定义cell尺寸
 - (CGSize)sizeForCellInCycleScrollView:(GKCycleScrollView *)cycleScrollView;
 
+// cell滑动时调用
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index;
 
+// cell点击时调用
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didSelectCellAtIndex:(NSInteger)index;
 
+#pragma mark - UIScrollViewDelegate 相关
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView willBeginDragging:(UIScrollView *)scrollView;
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScroll:(UIScrollView *)scrollView;
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndDecelerating:(UIScrollView *)scrollView;
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndScrollingAnimation:(UIScrollView *)scrollView;
 
 @end
 

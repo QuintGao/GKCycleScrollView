@@ -8,7 +8,6 @@
 
 #import "GKDemo004ViewController.h"
 #import "GKCycleScrollView.h"
-#import <JXCategoryView/JXCategoryView.h>
 
 @interface GKDemo004ViewController ()<GKCycleScrollViewDataSource, GKCycleScrollViewDelegate>
 
@@ -16,8 +15,11 @@
 
 @property (nonatomic, strong) GKCycleScrollView *cycleScrollView;
 
-@property (nonatomic, strong) JXCategoryImageView *categoryView;
 @property (nonatomic, strong) GKCycleScrollView *iconScrollView;
+
+@property (nonatomic, assign) BOOL  isSelectIcon;
+@property (nonatomic, assign) BOOL  isScrollCard;
+@property (nonatomic, assign) BOOL  isScrollIcon;
 
 @end
 
@@ -28,7 +30,7 @@
     
     [self.view addSubview:self.effectView];
     [self.view addSubview:self.cycleScrollView];
-    [self.view addSubview:self.categoryView];
+    [self.view addSubview:self.iconScrollView];
     
     [self.effectView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -39,21 +41,14 @@
         make.centerY.equalTo(self.view);
         make.height.mas_equalTo(kAdapter(990.0f));
     }];
-    
-    [self.cycleScrollView reloadData];
-    
-//    [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.right.equalTo(self.view);
-//        make.top.equalTo(self.cycleScrollView.mas_bottom).offset(kAdapter(30.0f));
-//        make.height.mas_equalTo(kAdapter(84.0f));
-//    }];
-    [self.view addSubview:self.iconScrollView];
+
     [self.iconScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.top.equalTo(self.cycleScrollView.mas_bottom).offset(kAdapter(30.0f));
         make.height.mas_equalTo(kAdapter(84.0f));
     }];
     
+    [self.cycleScrollView reloadData];
     [self.iconScrollView reloadData];
 }
 
@@ -90,6 +85,7 @@
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
     if (cycleScrollView == self.cycleScrollView) {
+        if (self.isSelectIcon) return;
         [self.iconScrollView scrollToCellAtIndex:index animated:YES];
     }else if (cycleScrollView == self.iconScrollView) {
         [self.cycleScrollView scrollToCellAtIndex:index animated:YES];
@@ -98,8 +94,13 @@
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didSelectCellAtIndex:(NSInteger)index {
     if (cycleScrollView == self.iconScrollView) {
+        self.isSelectIcon = YES;
         [self.cycleScrollView scrollToCellAtIndex:index animated:YES];
     }
+}
+
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didEndScrollingAnimation:(UIScrollView *)scrollView {
+    self.isSelectIcon = NO;
 }
 
 #pragma mark - 懒加载
@@ -124,25 +125,6 @@
         _cycleScrollView.topBottomMargin = kAdapter(30.0f);
     }
     return _cycleScrollView;
-}
-
-- (JXCategoryImageView *)categoryView {
-    if (!_categoryView) {
-        _categoryView = [[JXCategoryImageView alloc] init];
-        
-        NSMutableArray *imgNames = [NSMutableArray new];
-        for (NSInteger i = 0; i < 7; i++) {
-            [imgNames addObject:[NSString stringWithFormat:@"icon00%zd", i + 1]];
-        }
-        _categoryView.imageNames = imgNames;
-        _categoryView.selectedImageNames = imgNames;
-        _categoryView.imageZoomEnabled = YES;
-        _categoryView.imageSize = CGSizeMake(kAdapter(68.0f), kAdapter(68.0f));
-        _categoryView.imageCornerRadius = kAdapter(34.0f);
-        _categoryView.contentEdgeInsetLeft = kAdapter(100.0f);
-        _categoryView.contentEdgeInsetRight = kAdapter(540.0f);
-    }
-    return _categoryView;
 }
 
 - (GKCycleScrollView *)iconScrollView {

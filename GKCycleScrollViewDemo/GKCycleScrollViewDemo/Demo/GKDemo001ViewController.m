@@ -74,7 +74,7 @@
     GKCycleScrollView *cycleScrollView3 = [[GKCycleScrollView alloc] init];
     cycleScrollView3.dataSource = self;
     cycleScrollView3.delegate = self;
-    cycleScrollView3.minimumCellAlpha = 0.5;
+    cycleScrollView3.minimumCellAlpha = 0.0;
     cycleScrollView3.leftRightMargin = 20.0f;
     cycleScrollView3.topBottomMargin = 20.0f;
 //    cycleScrollView3.isAutoScroll = NO;
@@ -186,7 +186,7 @@
 #pragma mark - GKCycleScrollViewDelegate
 - (CGSize)sizeForCellInCycleScrollView:(GKCycleScrollView *)cycleScrollView {
     if (cycleScrollView == self.cycleScrollView5) return CGSizeMake(kScreenW, 40);
-    return CGSizeMake(kScreenW - 80, 160);
+    return CGSizeMake(kScreenW - 100, 160);
 }
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
