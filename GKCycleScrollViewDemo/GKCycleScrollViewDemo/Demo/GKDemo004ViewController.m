@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) GKCycleScrollView *iconScrollView;
 
+@property (nonatomic, strong) UIImageView       *arrowImgView;
+
 @property (nonatomic, assign) BOOL  isSelectIcon;
 @property (nonatomic, assign) BOOL  isScrollCard;
 @property (nonatomic, assign) BOOL  isScrollIcon;
@@ -30,6 +32,7 @@
     
     [self.view addSubview:self.effectView];
     [self.view addSubview:self.cycleScrollView];
+    [self.view addSubview:self.arrowImgView];
     [self.view addSubview:self.iconScrollView];
     
     [self.effectView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -41,10 +44,15 @@
         make.centerY.equalTo(self.view);
         make.height.mas_equalTo(kAdapter(990.0f));
     }];
+    
+    [self.arrowImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.cycleScrollView.mas_bottom);
+    }];
 
     [self.iconScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.equalTo(self.cycleScrollView.mas_bottom).offset(kAdapter(30.0f));
+        make.top.equalTo(self.arrowImgView.mas_bottom).offset(kAdapter(30.0f));
         make.height.mas_equalTo(kAdapter(84.0f));
     }];
     
@@ -111,11 +119,13 @@
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScroll:(UIScrollView *)scrollView {
     if (cycleScrollView == self.cycleScrollView) {
         if (self.isScrollIcon) return;
+        if (!self.isScrollCard) return;
         CGFloat ratio = scrollView.contentOffset.x / scrollView.contentSize.width;
         CGPoint offset = CGPointMake(self.iconScrollView.scrollView.contentSize.width * ratio, 0);
         [self.iconScrollView.scrollView setContentOffset:offset animated:NO];
     }else if (cycleScrollView == self.iconScrollView) {
         if (self.isScrollCard) return;
+        if (!self.isScrollIcon) return;
         CGFloat ratio = scrollView.contentOffset.x / scrollView.contentSize.width;
         CGPoint offset = CGPointMake(self.cycleScrollView.scrollView.contentSize.width * ratio, 0);
         [self.cycleScrollView.scrollView setContentOffset:offset animated:NO];
@@ -176,6 +186,14 @@
         _iconScrollView.topBottomMargin = kAdapter(10.0f);
     }
     return _iconScrollView;
+}
+
+- (UIImageView *)arrowImgView {
+    if (!_arrowImgView) {
+        _arrowImgView = [UIImageView new];
+        _arrowImgView.image = [UIImage imageNamed:@"bottom_arrow"];
+    }
+    return _arrowImgView;
 }
 
 @end

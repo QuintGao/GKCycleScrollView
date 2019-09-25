@@ -42,7 +42,7 @@
     
     // ---------------------------轮播图demo1--------------------------
     // 默认样式：无缩放，自动轮播，无限轮播
-    GKCycleScrollView *cycleScrollView1 = [[GKCycleScrollView alloc] initWithFrame:CGRectMake(0, GK_NAVBAR_HEIGHT + 60, kScreenW, 160)];
+    GKCycleScrollView *cycleScrollView1 = [[GKCycleScrollView alloc] initWithFrame:CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, kScreenW, 130)];
     cycleScrollView1.direction = GKCycleScrollViewScrollDirectionVertical;
     cycleScrollView1.dataSource = self;
     [self.view addSubview:cycleScrollView1];
@@ -56,7 +56,7 @@
     
     // ---------------------------轮播图demo2--------------------------
     // 左右间距：无缩放，自动轮播，不无限轮播
-    GKCycleScrollView *cycleScrollView2 = [[GKCycleScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView1.frame) + 20, kScreenW, 160)];
+    GKCycleScrollView *cycleScrollView2 = [[GKCycleScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView1.frame) + 20, kScreenW, 130)];
     cycleScrollView2.direction = GKCycleScrollViewScrollDirectionVertical;
     cycleScrollView2.dataSource = self;
     cycleScrollView2.minimumCellAlpha = 0.5;
@@ -93,7 +93,7 @@
     [cycleScrollView3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.top.equalTo(cycleScrollView2.mas_bottom).offset(20.0f);
-        make.height.mas_equalTo(160.0f);
+        make.height.mas_equalTo(130.0f);
     }];
     
     [pageControl3 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -127,9 +127,9 @@
     .leftEqualToView(self.view)
     .rightEqualToView(self.view)
     .topSpaceToView(cycleScrollView3, 20.0f)
-    .heightIs(160.0f);
+    .heightIs(130.0f);
     
-    pageControl4.frame = CGRectMake(0, 160-15, kScreenW, 15);
+    pageControl4.frame = CGRectMake(0, 130-15, kScreenW, 15);
     [pageControl4 sizeToFit];
     
     // ---------------------------轮播图demo5--------------------------
@@ -191,7 +191,7 @@
 #pragma mark - GKCycleScrollViewDelegate
 - (CGSize)sizeForCellInCycleScrollView:(GKCycleScrollView *)cycleScrollView {
     if (cycleScrollView == self.cycleScrollView5) return CGSizeMake(kScreenW, 40);
-    return CGSizeMake(kScreenW - 80, 160);
+    return CGSizeMake(kScreenW - 100, 130);
 }
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
