@@ -10,6 +10,7 @@
 		6004DBE02338D11100248558 /* GKDemo004ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6004DBDF2338D11100248558 /* GKDemo004ViewController.m */; };
 		6004DBE9233B359100248558 /* GKCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6004DBE5233B359100248558 /* GKCycleScrollView.m */; };
 		6004DBEA233B359100248558 /* GKCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6004DBE8233B359100248558 /* GKCycleScrollViewCell.m */; };
+		6004DC5B23405E2100248558 /* GKCycleScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */; };
 		60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */; };
 		60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */; };
 		60E78FAD2331C5C600C324CF /* GKDemo001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */; };
@@ -57,6 +58,7 @@
 		6004DBE6233B359100248558 /* GKCycleScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollViewCell.h; sourceTree = "<group>"; };
 		6004DBE7233B359100248558 /* GKCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollView.h; sourceTree = "<group>"; };
 		6004DBE8233B359100248558 /* GKCycleScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollViewCell.m; sourceTree = "<group>"; };
+		6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GKCycleScrollView.podspec; path = ../../GKCycleScrollView.podspec; sourceTree = "<group>"; };
 		60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60E78FA82331C5BC00C324CF /* GKDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoBaseViewController.h; sourceTree = "<group>"; };
 		60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoBaseViewController.m; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */,
 				60E78FB42332283E00C324CF /* PrefixHeader.pch */,
 				792D10CF233A7682006C997D /* README.md */,
+				6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */,
 			);
 			path = GKCycleScrollViewDemo;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792D10D0233A7682006C997D /* README.md in Resources */,
+				6004DC5B23405E2100248558 /* GKCycleScrollView.podspec in Resources */,
 				79A5E5B7232E39A8009F01D3 /* Assets.xcassets in Resources */,
 				60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */,
 			);
