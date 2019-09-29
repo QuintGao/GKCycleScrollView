@@ -1,11 +1,11 @@
 PODS:
   - GKNavigationBarViewController (2.3.4)
-  - JXCategoryView (1.4.1)
+  - JXCategoryView (1.5.1)
   - Masonry (1.1.0)
   - SDAutoLayout (2.2.1)
-  - SDWebImage (5.1.1):
-    - SDWebImage/Core (= 5.1.1)
-  - SDWebImage/Core (5.1.1)
+  - SDWebImage (5.2.0):
+    - SDWebImage/Core (= 5.2.0)
+  - SDWebImage/Core (5.2.0)
 
 DEPENDENCIES:
   - GKNavigationBarViewController
@@ -15,7 +15,7 @@ DEPENDENCIES:
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - GKNavigationBarViewController
     - JXCategoryView
     - Masonry
@@ -24,11 +24,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   GKNavigationBarViewController: 92f856c67ec7f21a3d9466ddb1521315a0e13856
-  JXCategoryView: cf1042804616d5986c9fa939754625361f0c72a5
+  JXCategoryView: ebfc9b0b6e43ece9d823510c708a54ab854c6b3a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
-  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  SDWebImage: 609192dcf3898c910a2848032372ead951e66364
 
 PODFILE CHECKSUM: 71c5f187a60a1fe9f2b323085698c6e580f0fa3b
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.1

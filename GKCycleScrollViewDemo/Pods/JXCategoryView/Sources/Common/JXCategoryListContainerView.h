@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "JXCategoryViewDefines.h"
+#import "JXCategoryBaseView.h"
 @class JXCategoryListContainerView;
+
+/**
+ 列表容器视图的类型
+
+ - ScrollView: UIScrollView。优势：没有其他副作用。劣势：视图内存占用相对大一点。
+ - CollectionView: 使用UICollectionView。优势：因为列表被添加到cell上，视图的内存占用更少，适合内存要求特别高的场景。劣势：因为cell重用机制的问题，导致列表下拉刷新视图，会因为被removeFromSuperview而被隐藏。需要参考`LoadDataListCollectionListViewController`类做特殊处理。
+ */
+typedef NS_ENUM(NSUInteger, JXCategoryListContainerType) {
+    JXCategoryListContainerType_ScrollView,
+    JXCategoryListContainerType_CollectionView,
+};
 
 @protocol JXCategoryListContentViewDelegate <NSObject>
 
@@ -67,13 +79,13 @@
 
 @optional
 /**
- 返回自定义UIScrollView实例
+ 返回自定义UIScrollView或UICollectionView的Class
  某些特殊情况需要自己处理UIScrollView内部逻辑。比如项目用了FDFullscreenPopGesture，需要处理手势相关代理。
 
  @param listContainerView JXCategoryListContainerView
  @return 自定义UIScrollView实例
  */
-- (UIScrollView *)scrollViewInlistContainerView:(JXCategoryListContainerView *)listContainerView;
+- (Class)scrollViewClassInlistContainerView:(JXCategoryListContainerView *)listContainerView;
 
 /**
  控制能否初始化对应index的列表。有些业务需求，需要在某些情况才允许初始化某些列表，通过通过该代理实现控制。
@@ -83,30 +95,21 @@
 @end
 
 
-@interface JXCategoryListContainerView : UIView
+@interface JXCategoryListContainerView : UIView <JXCategoryViewListContainer>
 
+@property (nonatomic, assign, readonly) JXCategoryListContainerType containerType;
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 @property (nonatomic, strong, readonly) NSDictionary <NSNumber *, id<JXCategoryListContentViewDelegate>> *validListDict;   //已经加载过的列表字典。key是index，value是对应的列表
-@property (nonatomic, assign) CGFloat didAppearPercent JXCategoryViewDeprecated("请使用initListPercent属性，未来将会删除");
+
 /**
  滚动切换的时候，滚动距离超过一页的多少百分比，就触发列表的初始化。默认0.01（即列表显示了一点就触发加载）。范围0~1，开区间不包括0和1
  */
 @property (nonatomic, assign) CGFloat initListPercent;
-/**
- 需要和self.categoryView.defaultSelectedIndex保持一致
- */
-@property (nonatomic, assign) NSInteger defaultSelectedIndex;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
-- (instancetype)initWithDelegate:(id<JXCategoryListContainerViewDelegate>)delegate NS_DESIGNATED_INITIALIZER;
-
-- (void)reloadData;
-//必须调用，请按照demo示例那样调用
-- (void)scrollingFromLeftIndex:(NSInteger)leftIndex toRightIndex:(NSInteger)rightIndex ratio:(CGFloat)ratio selectedIndex:(NSInteger)selectedIndex;
-//必须调用，请按照demo示例那样调用（注意是是点击选中的回调，不是其他回调）
-- (void)didClickSelectedItemAtIndex:(NSInteger)index;
+- (instancetype)initWithType:(JXCategoryListContainerType)type delegate:(id<JXCategoryListContainerViewDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 @end
 

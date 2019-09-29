@@ -107,7 +107,7 @@
     cycleScrollView4.delegate = self;
     cycleScrollView4.isChangeAlpha = NO;
 //    cycleScrollView4.isAutoScroll = NO;
-    cycleScrollView4.isInfiniteLoop = NO;
+//    cycleScrollView4.isInfiniteLoop = NO;
     cycleScrollView4.leftRightMargin = 20.0f;
     cycleScrollView4.topBottomMargin = 20.0f;
     [self.view addSubview:cycleScrollView4];
@@ -192,6 +192,9 @@
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
     if (cycleScrollView == self.cycleScrollView4) {
         self.pageControl4.currentPage = index;
+        
+        GKDemoTitleImageCell *cell = (GKDemoTitleImageCell *)cycleScrollView.currentCell;
+        NSLog(@"%@", cell.titleLabel.text);
     }
 }
 

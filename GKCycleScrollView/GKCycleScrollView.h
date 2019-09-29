@@ -62,6 +62,9 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 // 外部传入，自行处理
 @property (nonatomic, weak) UIPageControl *pageControl;
 
+// 当前展示的cell
+@property (nonatomic, strong, readonly) GKCycleScrollViewCell *currentCell;
+
 // 当前显示的页码
 @property (nonatomic, assign, readonly) NSInteger   currentSelectIndex;
 

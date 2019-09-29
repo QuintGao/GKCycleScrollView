@@ -146,21 +146,15 @@ static NSUInteger SDDeviceFreeMemory() {
     self.animatedImage = nil;
     self.totalFrameCount = 0;
     self.totalLoopCount = 0;
-    self.currentFrame = nil;
-    self.currentFrameIndex = 0;
-    self.currentLoopCount = 0;
-    self.currentTime = 0;
-    self.bufferMiss = NO;
+    // reset current state
+    [self resetCurrentFrameIndex];
     self.shouldAnimate = NO;
     self.isProgressive = NO;
     self.maxBufferCount = 0;
     self.animatedImageScale = 1;
     [_fetchQueue cancelAllOperations];
-    _fetchQueue = nil;
-    SD_LOCK(self.lock);
-    [_frameBuffer removeAllObjects];
-    _frameBuffer = nil;
-    SD_UNLOCK(self.lock);
+    // clear buffer cache
+    [self clearFrameBuffer];
 }
 
 - (void)resetProgressiveImage
@@ -174,6 +168,22 @@ static NSUInteger SDDeviceFreeMemory() {
     self.maxBufferCount = 0;
     self.animatedImageScale = 1;
     // preserve buffer cache
+}
+
+- (void)resetCurrentFrameIndex
+{
+    self.currentFrame = nil;
+    self.currentFrameIndex = 0;
+    self.currentLoopCount = 0;
+    self.currentTime = 0;
+    self.bufferMiss = NO;
+}
+
+- (void)clearFrameBuffer
+{
+    SD_LOCK(self.lock);
+    [_frameBuffer removeAllObjects];
+    SD_UNLOCK(self.lock);
 }
 
 #pragma mark - Accessors
@@ -200,7 +210,7 @@ static NSUInteger SDDeviceFreeMemory() {
     
     // We need call super method to keep function. This will impliedly call `setNeedsDisplay`. But we have no way to avoid this when using animated image. So we call `setNeedsDisplay` again at the end.
     super.image = image;
-    if ([image conformsToProtocol:@protocol(SDAnimatedImage)]) {
+    if ([image.class conformsToProtocol:@protocol(SDAnimatedImage)]) {
         NSUInteger animatedImageFrameCount = ((UIImage<SDAnimatedImage> *)image).animatedImageFrameCount;
         // Check the frame count
         if (animatedImageFrameCount <= 1) {
@@ -460,6 +470,12 @@ static NSUInteger SDDeviceFreeMemory() {
 #else
         _displayLink.paused = YES;
 #endif
+        if (self.resetFrameIndexWhenStopped) {
+            [self resetCurrentFrameIndex];
+        }
+        if (self.clearBufferWhenStopped) {
+            [self clearFrameBuffer];
+        }
     } else {
 #if SD_UIKIT
         [super stopAnimating];
@@ -530,9 +546,11 @@ static NSUInteger SDDeviceFreeMemory() {
         // Early return
         return;
     }
-    if ([image conformsToProtocol:@protocol(SDAnimatedImage)] && image.sd_isIncremental) {
+    // We must use `image.class conformsToProtocol:` instead of `image conformsToProtocol:` here
+    // Because UIKit on macOS, using internal hard-coded override method, which returns NO
+    if ([image.class conformsToProtocol:@protocol(SDAnimatedImage)] && image.sd_isIncremental) {
         UIImage *previousImage = self.image;
-        if ([previousImage conformsToProtocol:@protocol(SDAnimatedImage)] && previousImage.sd_isIncremental) {
+        if ([previousImage.class conformsToProtocol:@protocol(SDAnimatedImage)] && previousImage.sd_isIncremental) {
             NSData *previousData = [((UIImage<SDAnimatedImage> *)previousImage) animatedImageData];
             NSData *currentData = [((UIImage<SDAnimatedImage> *)image) animatedImageData];
             // Check whether to use progressive rendering or not

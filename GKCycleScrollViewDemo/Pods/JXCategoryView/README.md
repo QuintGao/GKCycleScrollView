@@ -11,6 +11,7 @@ A powerful and easy to use category view (segmentedcontrol, segmentview, pagingv
 - 使用协议封装指示器逻辑，可以为所欲为的自定义指示器效果；
 - 提供更加全面丰富、高度自定义的效果；
 - 使用子类化管理cell样式，逻辑更清晰，扩展更简单；
+- 高度封装列表容器，使用便捷，完美支持列表的生命周期调用；
 
 ## Swift版本
 
@@ -166,28 +167,21 @@ self.categoryView.indicators = @[lineView];
 - (void)categoryView:(JXCategoryBaseView *)categoryView scrollingFromLeftIndex:(NSInteger)leftIndex toRightIndex:(NSInteger)rightIndex ratio:(CGFloat)ratio;
 ```
 
-### `contentScrollView`列表容器使用示例
-
-#### 直接使用UIScrollView自定义
-
-因为代码比较分散，而且代码量也比较多，所有不推荐使用该方法。要正确使用需要注意的地方比较多，尤其对于刚接触iOS的同学来说不太友好。
-
-不直接贴代码了，具体点击[LoadDataListCustomViewController](https://github.com/pujiaxin33/JXCategoryView/blob/master/JXCategoryView/Example/LoadData/LoadDataListCustomViewController.m)查看源代码了解。
-
-作为替代，官方使用&强烈推荐使用下面这种方式👇👇👇。
+### 列表容器使用示例
 
 #### `JXCategoryListContainerView`封装类使用示例
 
 `JXCategoryListContainerView`是对列表视图高度封装的类，具有以下优点：
 - 相对于直接使用`UIScrollView`自定义，封装度高、代码集中、使用简单；
 - 列表懒加载：当显示某个列表的时候，才进行列表初始化。而不是一次性加载全部列表，性能更优；
+- 支持列表的willAppear、didAppear、willDisappear、didDisappear生命周期方法调用；
 
-1.初始化`JXCategoryListContainerView`
+1.初始化`JXCategoryListContainerView`并关联到`categoryView`
 ```Objective-C
-self.listContainerView = [[JXCategoryListContainerView alloc] initWithDelegate:self];
+self.listContainerView = [[JXCategoryListContainerView alloc] initWithType:JXCategoryListContainerType_ScrollView delegate:self];
 [self.view addSubview:self.listContainerView];
-//关联cotentScrollView，关联之后才可以互相联动！！！
-self.categoryView.contentScrollView = self.listContainerView.scrollView;
+//关联到categoryView
+self.categoryView.listContainer = self.listContainerView;
 ```
 
 2.实现`JXCategoryListContainerViewDelegate`代理方法
@@ -196,13 +190,13 @@ self.categoryView.contentScrollView = self.listContainerView.scrollView;
 - (NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView {
     return self.titles.count;
 }
-//返回遵从`JXCategoryListContentViewDelegate`协议的实例
+//根据下标index返回对应遵从`JXCategoryListContentViewDelegate`协议的列表实例
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     return [[ListViewController alloc] init];
 }
 ```
 
-3.列表实现`JXCategoryListContainerViewDelegate`代理方法
+3.列表实现`JXCategoryListContentViewDelegate`代理方法
 
 不管列表是UIView还是UIViewController都可以，提高使用灵活性，更便于现有的业务接入。
 ```Objective-C
@@ -214,32 +208,15 @@ self.categoryView.contentScrollView = self.listContainerView.scrollView;
 }
 ```
 
-4.将关键事件告知`JXCategoryListContainerView`
-
-在下面两个`JXCategoryViewDelegate`代理方法里面调用对应的代码，一定不要忘记这一条❗️❗️❗️
-```Objective-C
-//传递点击选中事件给listContainerView，必须调用！！！是点击选中回调方法，而不是滚动选中和通用选中方法，请注意辨别❗️❗️❗️
-- (void)categoryView:(JXCategoryBaseView *)categoryView didClickSelectedItemAtIndex:(NSInteger)index {
-    [self.listContainerView didClickSelectedItemAtIndex:index];
-}
-
-//传递scrolling事件给listContainerView，必须调用！！！
-- (void)categoryView:(JXCategoryBaseView *)categoryView scrollingFromLeftIndex:(NSInteger)leftIndex toRightIndex:(NSInteger)rightIndex ratio:(CGFloat)ratio {
-    [self.listContainerView scrollingFromLeftIndex:leftIndex toRightIndex:rightIndex ratio:ratio selectedIndex:categoryView.selectedIndex];
-}
-```
 
 具体点击[LoadDataListContainerViewController](https://github.com/pujiaxin33/JXCategoryView/blob/master/JXCategoryView/Example/LoadData/LoadDataListContainerViewController.m)查看源代码了解
 
-#### `JXCategoryListCollectionContainerView`封装类使用示例
+#### 直接使用UIScrollView自定义
 
-- 有了`JXCategoryListContainerView`为什么还要`JXCategoryListCollectionContainerView`类呢？
-    - 因为`JXCategoryListContainerView`内部使用的是`UIScrollView`，当所有列表都加载出来后，所有的列表都被addSubview到`UIScrollView`上面了。所以，在视图内存这一块会比较大，对于一些列表复杂且数量多的应用，内存表现不太好。
+因为代码量较多且分散，所有不推荐使用该方法。要正确使用需要注意的地方比较多，尤其对于刚接触iOS的同学来说不太友好。
 
-- `JXCategoryListCollectionContainerView`的优势
-    - 只有当前显示的列表才会被addSubview，视图内存表现更好；
+不直接贴代码了，具体点击[LoadDataListCustomViewController](https://github.com/pujiaxin33/JXCategoryView/blob/master/JXCategoryView/Example/LoadData/LoadDataListCustomViewController.m)查看源代码了解。
 
-具体使用示例，点击参看[JXCategoryListCollectionContainerView使用示例](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/JXCategoryListCollectionContainerView%E4%BD%BF%E7%94%A8.md)
 
 ## 常见问题和答案
 
@@ -250,19 +227,20 @@ self.categoryView.contentScrollView = self.listContainerView.scrollView;
 - [个人主页效果更丰富的示例:JXPagingView](https://github.com/pujiaxin33/JXPagingView)
 - [侧滑手势处理](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BE%A7%E6%BB%91%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86.md)
 - [列表的生命周期方法处理](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E5%88%97%E8%A1%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95%E5%A4%84%E7%90%86.md)
+- [`JXCategoryListContainerType`的`scrollView`和`collectionView`对比](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#jxcategorylistcontainertype%E7%9A%84scrollview%E5%92%8Ccollectionview%E5%AF%B9%E6%AF%94)
 - [cell左滑删除](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#cell%E5%B7%A6%E6%BB%91%E5%88%A0%E9%99%A4)
 - [`FDFullscreenPopGesture`等全屏手势处理](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E5%85%A8%E5%B1%8F%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86.md)
 - [JXCategoryView数据源刷新](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#jxcategoryview%E6%95%B0%E6%8D%AE%E6%BA%90%E5%88%B7%E6%96%B0)
-- [defaultSelectedIndex使用](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#defaultselectedindex%E4%BD%BF%E7%94%A8)
-- [contentScrollView关联说明](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#contentscrollview%E5%85%B3%E8%81%94%E8%AF%B4%E6%98%8E)
+- [`reloadDataWithoutListContainer`方法使用说明](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#reloaddatawithoutlistcontainer%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
+- [listContainer或contentScrollView关联说明](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#listcontainer%E6%88%96contentscrollview%E5%85%B3%E8%81%94%E8%AF%B4%E6%98%8E)
 - [点击切换列表的动画控制](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E7%82%B9%E5%87%BB%E5%88%87%E6%8D%A2%E5%88%97%E8%A1%A8%E7%9A%84%E5%8A%A8%E7%94%BB%E6%8E%A7%E5%88%B6)
 - [列表cell点击跳转示例](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E5%88%97%E8%A1%A8cell%E7%82%B9%E5%87%BB%E8%B7%B3%E8%BD%AC%E7%A4%BA%E4%BE%8B)
 - [列表调用`presentViewController`方法](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E5%88%97%E8%A1%A8%E8%B0%83%E7%94%A8presentviewcontroller%E6%96%B9%E6%B3%95)
 - [代码选中指定index](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E4%BB%A3%E7%A0%81%E9%80%89%E4%B8%AD%E6%8C%87%E5%AE%9Aindex)
 - [JXCategoryView.collectionView高度取整说明](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#jxcategoryviewcollectionview%E9%AB%98%E5%BA%A6%E5%8F%96%E6%95%B4%E8%AF%B4%E6%98%8E)
 - [对父VC的automaticallyAdjustsScrollViewInsets属性设置为NO](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E5%AF%B9%E7%88%B6vc%E7%9A%84automaticallyadjustsscrollviewinsets%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%E4%B8%BAno)
+- [`JXCategoryListContainerView`内部使用`UIViewController`当做列表容器使用说明](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#jxcategorylistcontainerview%E5%86%85%E9%83%A8%E4%BD%BF%E7%94%A8uiviewcontroller%E5%BD%93%E5%81%9A%E5%88%97%E8%A1%A8%E5%AE%B9%E5%99%A8%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 - [使用多行文本](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E4%BD%BF%E7%94%A8%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC)
-- [iPhoneX刘海屏手机列表底部安全距离显示建议](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#iphonex%E5%88%98%E6%B5%B7%E5%B1%8F%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E5%BA%95%E9%83%A8%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB%E6%98%BE%E7%A4%BA%E5%BB%BA%E8%AE%AE)
 - [列表容器禁止左右滑动](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E5%88%97%E8%A1%A8%E5%AE%B9%E5%99%A8%E7%A6%81%E6%AD%A2%E5%B7%A6%E5%8F%B3%E6%BB%91%E5%8A%A8)
 - [单个cell刷新 ](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E5%8D%95%E4%B8%AAcell%E5%88%B7%E6%96%B0)
 - [点击item时指示器和列表滚动时效果一致](https://github.com/pujiaxin33/JXCategoryView/blob/master/Document/%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md#%E7%82%B9%E5%87%BBitem%E6%97%B6%E6%8C%87%E7%A4%BA%E5%99%A8%E5%92%8C%E5%88%97%E8%A1%A8%E6%BB%9A%E5%8A%A8%E6%97%B6%E6%95%88%E6%9E%9C%E4%B8%80%E8%87%B4)
@@ -297,6 +275,7 @@ self.categoryView.contentScrollView = self.listContainerView.scrollView;
 - 2019.6.21 发布1.3.13版本，更新内容：将`JXCategoryListCollectionContainerView.dataSource`移动到m实现文件，添加`- (instancetype)initWithDataSource:(id<JXCategoryListCollectionContainerViewDataSource>)dataSource`初始化方法。
 - 2019.7.20 发布1.3.16版本，删除代理方法`- (void)categoryView:(JXCategoryBaseView *)categoryView didClickedItemContentScrollViewTransitionToIndex:(NSInteger)index;`，请使用`contentScrollViewClickTransitionAnimationEnabled`属性。`JXCategoryTitleVerticalZoomView`进行了重构，内容左边距只需要使用`contentEdgeLeft`属性即可。
 - 2019.9.11 发布1.4.0版本，删除一波被标记为弃用的属性和方法；完善列表的生命周期方法的调用；`JXCategoryListCollectionContainerView`类新增和必须要调用`- (void)scrollingFromLeftIndex:(NSInteger)leftIndex toRightIndex:(NSInteger)rightIndex ratio:(CGFloat)ratio selectedIndex:(NSInteger)selectedIndex`和`- (void)didClickSelectedItemAtIndex:(NSInteger)index`两个方法。
+- 2019.9.19 发布1.5.0版本，重构列表容器，具体修改请参考[1.5.0版本迁移指南](https://github.com/pujiaxin33/JXCategoryView/blob/master/Migration/1.5.0%E7%89%88%E6%9C%AC%E8%BF%81%E7%A7%BB%E6%8C%87%E5%8D%97.md)
 
 ## 补充
 

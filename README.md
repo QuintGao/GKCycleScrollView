@@ -1,3 +1,12 @@
+## GKCycleScrollView
+
+[![Build Status](http://img.shields.io/travis/QuintGao/GKCycleScrollView/master.svg?style=flat)](https://travis-ci.org/QuintGao/GKCycleScrollView)
+[![Pod Version](http://img.shields.io/cocoapods/v/GKCycleScrollView.svg?style=flat)](https://cocoapods.org/pods/GKCycleScrollView)
+[![Pod Platform](http://img.shields.io/cocoapods/p/GKCycleScrollView.svg?style=flat)](https://cocoadocs.org/docsets/GKCycleScrollView/)
+[![Pod License](http://img.shields.io/cocoapods/l/GKCycleScrollView.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![languages](https://img.shields.io/badge/language-objective--c-blue.svg)](#) 
+[![support](https://img.shields.io/badge/support-ios%208%2B-orange.svg)](#) 
+
 iOS轻量级图片、文字轮播器，支持自定义
 ===========
 GKCycleScrollView是一款基于UIScrollView封装的轮播器，参考了[NewPagedFlowView](https://github.com/PageGuo/NewPagedFlowView)的实现方法，功能更加强大，使用更加便捷
@@ -50,4 +59,5 @@ cycleScrollView1.dataSource = self;
 | **卡片效果** | ![card](https://github.com/QuintGao/GKCycleScrollView/blob/master/imgs/demo_card.gif) |
 | **仿QQ聊天** | ![qqchat](https://github.com/QuintGao/GKCycleScrollView/blob/master/imgs/demo_qqchat.gif)|
 
-
+## 说明
+[GKCycleScrollView - 一个轻量级的自定义轮播图组件](https://www.jianshu.com/p/950ca713e6a9)

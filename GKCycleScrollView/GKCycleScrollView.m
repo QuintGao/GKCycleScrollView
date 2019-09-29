@@ -10,6 +10,8 @@
 
 @interface GKCycleScrollView ()<UIScrollViewDelegate>
 
+@property (nonatomic, strong, readwrite) GKCycleScrollViewCell *currentCell;
+
 @property (nonatomic, assign, readwrite) NSInteger currentSelectIndex;
 
 // 实际的个数
@@ -256,17 +258,12 @@
                     self.timerIndex = 0;
                 }
                 
-                [self.scrollView setContentOffset:offset animated:NO];
+                self.scrollView.contentOffset = offset;
                 
                 // 自动轮播
                 if (self.isAutoScroll) {
                     [self startTimer];
                 }
-            }
-            
-            // 默认选中
-            if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
-                [self handleCellScrollWithIndex:self.defaultSelectIndex];
             }
         }
             break;
@@ -292,10 +289,6 @@
                 if (self.isAutoScroll) {
                     [self startTimer];
                 }
-                
-                if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
-                    [self handleCellScrollWithIndex:self.defaultSelectIndex];
-                }
             }
         }
             break;
@@ -308,6 +301,11 @@
     
     // 更新可见cell的显示
     [self updateVisibleCellAppearance];
+    
+    // 默认选中
+    if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
+        [self handleCellScrollWithIndex:self.defaultSelectIndex];
+    }
 }
 
 - (void)setupCellsWithContentOffset:(CGPoint)offset {
@@ -444,6 +442,11 @@
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, insets);
                 }
                 
+                // 获取当前cell
+                if (cell.tag == self.currentSelectIndex) {
+                    self.currentCell = cell;
+                }
+                
                 // 透明度渐变
                 if (self.isChangeAlpha) {
                     cell.coverView.alpha = alpha;
@@ -472,11 +475,18 @@
                     
                     leftRightInset = ceilf(adjustLeftRightMargin * delta / self.cellSize.height);
                     topBottomInset = ceilf(adjustTopBottomMargin * delta / self.cellSize.height);
+                    
+                    NSInteger index = i % self.realCount;
+                    if (index == self.currentSelectIndex) {
+                        [self.scrollView bringSubviewToFront:cell];
+                    }
                 } else {
                     alpha = self.minimumCellAlpha;
                     
                     leftRightInset = self.leftRightMargin;
                     topBottomInset = self.topBottomMargin;
+                    
+                    [self.scrollView sendSubviewToBack:cell];
                 }
                 
                 if (self.leftRightMargin == 0 && self.topBottomMargin == 0) {
@@ -561,6 +571,14 @@
     
     if (self.pageControl && [self.pageControl respondsToSelector:@selector(setCurrentPage:)]) {
         self.pageControl.currentPage = index;
+    }
+    
+    // 获取当前cell
+    for (NSInteger i = self.visibleRange.location; i < NSMaxRange(self.visibleRange); i++) {
+        GKCycleScrollViewCell *cell = self.visibleCells[i];
+        if (cell.tag == index) {
+            self.currentCell = cell;
+        }
     }
     
     if ([self.delegate respondsToSelector:@selector(cycleScrollView:didScrollCellToIndex:)]) {
