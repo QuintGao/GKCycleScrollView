@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.platform            = :ios, "8.0"
 
-  s.source              = { :git => "https://github.com/QuintGao/GKPageScrollView.git", :tag => s.version }
+  s.source              = { :git => "https://github.com/QuintGao/GKCycleScrollView.git", :tag => s.version }
 
   s.source_files        = 'GKCycleScrollView/*.{h,m}'
 
