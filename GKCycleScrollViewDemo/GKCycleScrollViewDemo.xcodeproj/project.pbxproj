@@ -137,6 +137,8 @@
 				6004DBE5233B359100248558 /* GKCycleScrollView.m */,
 				6004DBE6233B359100248558 /* GKCycleScrollViewCell.h */,
 				6004DBE8233B359100248558 /* GKCycleScrollViewCell.m */,
+				795C703B23366A8E004364E5 /* GKPageControl.h */,
+				795C703C23366A8E004364E5 /* GKPageControl.m */,
 			);
 			name = GKCycleScrollView;
 			path = ../../GKCycleScrollView;
@@ -159,8 +161,6 @@
 				792D10C92337A904006C997D /* GKDemoTitleImageCell.m */,
 				792D10CB2337A927006C997D /* GKDemoTitleCell.h */,
 				792D10CC2337A927006C997D /* GKDemoTitleCell.m */,
-				795C703B23366A8E004364E5 /* GKPageControl.h */,
-				795C703C23366A8E004364E5 /* GKPageControl.m */,
 				792D10BB2337794B006C997D /* PageControl */,
 			);
 			path = Demo;

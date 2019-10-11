@@ -61,3 +61,6 @@ cycleScrollView1.dataSource = self;
 
 ## 说明
 [GKCycleScrollView - 一个轻量级的自定义轮播图组件](https://www.jianshu.com/p/950ca713e6a9)
+
+## 版本更新
+2019-10-11  添加自定义pageControl
