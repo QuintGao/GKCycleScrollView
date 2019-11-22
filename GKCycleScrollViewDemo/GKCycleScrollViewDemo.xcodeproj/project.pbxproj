@@ -12,6 +12,7 @@
 		6004DBEA233B359100248558 /* GKCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6004DBE8233B359100248558 /* GKCycleScrollViewCell.m */; };
 		6004DC5B23405E2100248558 /* GKCycleScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */; };
 		6004DC5D234080C700248558 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5C234080C700248558 /* .travis.yml */; };
+		60073BC72387DC7D00B8692A /* GKDemo005ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */; };
 		60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */; };
 		60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */; };
 		60E78FAD2331C5C600C324CF /* GKDemo001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */; };
@@ -61,6 +62,8 @@
 		6004DBE8233B359100248558 /* GKCycleScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollViewCell.m; sourceTree = "<group>"; };
 		6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GKCycleScrollView.podspec; path = ../../GKCycleScrollView.podspec; sourceTree = "<group>"; };
 		6004DC5C234080C700248558 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../../.travis.yml; sourceTree = "<group>"; };
+		60073BC52387DC7D00B8692A /* GKDemo005ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo005ViewController.h; sourceTree = "<group>"; };
+		60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo005ViewController.m; sourceTree = "<group>"; };
 		60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60E78FA82331C5BC00C324CF /* GKDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoBaseViewController.h; sourceTree = "<group>"; };
 		60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoBaseViewController.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				60E78FB22331C5D600C324CF /* GKDemo003ViewController.m */,
 				6004DBDE2338D11100248558 /* GKDemo004ViewController.h */,
 				6004DBDF2338D11100248558 /* GKDemo004ViewController.m */,
+				60073BC52387DC7D00B8692A /* GKDemo005ViewController.h */,
+				60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */,
 				792D10C82337A904006C997D /* GKDemoTitleImageCell.h */,
 				792D10C92337A904006C997D /* GKDemoTitleImageCell.m */,
 				792D10CB2337A927006C997D /* GKDemoTitleCell.h */,
@@ -452,6 +457,7 @@
 				792D10C62337794B006C997D /* TAAnimatedDotView.m in Sources */,
 				792D10C42337794B006C997D /* TADotView.m in Sources */,
 				79A5E5AF232E39A7009F01D3 /* AppDelegate.m in Sources */,
+				60073BC72387DC7D00B8692A /* GKDemo005ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +610,7 @@
 			baseConfigurationReference = EF4ACD9A70D3EAD513B8D314 /* Pods-GKCycleScrollViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xinjun zhang (DNJGV7XB9Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X52753HQNM;
 				GCC_PREFIX_HEADER = GKCycleScrollViewDemo/PrefixHeader.pch;
@@ -625,6 +632,7 @@
 			baseConfigurationReference = 47C8BBB9BA303DC1F33BA573 /* Pods-GKCycleScrollViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xinjun zhang (DNJGV7XB9Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X52753HQNM;
 				GCC_PREFIX_HEADER = GKCycleScrollViewDemo/PrefixHeader.pch;

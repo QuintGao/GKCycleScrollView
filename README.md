@@ -63,4 +63,5 @@ cycleScrollView1.dataSource = self;
 [GKCycleScrollView - 一个轻量级的自定义轮播图组件](https://www.jianshu.com/p/950ca713e6a9)
 
 ## 版本更新
+2019-11-22  0.0.4 修复自动轮播跳动问题及设置defaultSelectIndex后滚动错误问题
 2019-10-11  添加自定义pageControl

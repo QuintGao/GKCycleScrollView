@@ -249,13 +249,13 @@
             if (self.realCount > 1) {
                 CGPoint offset = CGPointZero;
                 
-                if (self.isInfiniteLoop) { // 开启自动轮播
+                if (self.isInfiniteLoop) { // 开启无限轮播
                     // 滚动到第二组
                     offset = CGPointMake(self.cellSize.width * (self.realCount + self.defaultSelectIndex), 0);
-                    self.timerIndex = self.realCount;
+                    self.timerIndex = self.realCount + self.defaultSelectIndex;
                 }else {
                     offset = CGPointMake(self.cellSize.width * self.defaultSelectIndex, 0);
-                    self.timerIndex = 0;
+                    self.timerIndex = self.defaultSelectIndex;
                 }
                 
                 self.scrollView.contentOffset = offset;
@@ -274,13 +274,13 @@
             
             if (self.realCount > 1) {
                 CGPoint offset = CGPointZero;
-                if (self.isInfiniteLoop) { // 开启自动轮播
+                if (self.isInfiniteLoop) { // 开启无限轮播
                     // 滚动到第二组
                     offset = CGPointMake(0, self.cellSize.height * (self.realCount + self.defaultSelectIndex));
-                    self.timerIndex = self.realCount;
+                    self.timerIndex = self.realCount + self.defaultSelectIndex;
                 }else {
                     offset = CGPointMake(0, self.cellSize.height * self.defaultSelectIndex);
-                    self.timerIndex = 0;
+                    self.timerIndex = self.defaultSelectIndex;
                 }
                 
                 [self.scrollView setContentOffset:offset animated:NO];
@@ -708,30 +708,12 @@
         switch (self.direction) {
             case GKCycleScrollViewScrollDirectionHorizontal: {
                 NSInteger horIndex = floor(scrollView.contentOffset.x / self.cellSize.width);
-                
-                if (self.isInfiniteLoop) {
-                    if (self.timerIndex == horIndex) {
-                        self.timerIndex = horIndex + 1;
-                    }else {
-                        self.timerIndex = horIndex;
-                    }
-                }else {
-                    self.timerIndex = horIndex;
-                }
+                self.timerIndex = horIndex;
             }
                 break;
             case GKCycleScrollViewScrollDirectionVertical: {
                 NSInteger verIndex = floor(scrollView.contentOffset.y / self.cellSize.height);
-                
-                if (self.isInfiniteLoop) {
-                    if (self.timerIndex == verIndex) {
-                        self.timerIndex = verIndex + 1;
-                    }else {
-                        self.timerIndex = verIndex;
-                    }
-                }else {
-                    self.timerIndex = verIndex;
-                }
+                self.timerIndex = verIndex;
             }
                 break;
             default:

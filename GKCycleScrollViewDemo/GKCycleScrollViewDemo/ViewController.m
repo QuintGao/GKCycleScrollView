@@ -34,7 +34,8 @@
     self.dataSource = @[@{@"title": @"横向轮播", @"class": @"GKDemo001ViewController"},
                         @{@"title": @"纵向轮播", @"class": @"GKDemo002ViewController"},
                         @{@"title": @"卡片效果", @"class": @"GKDemo003ViewController"},
-                        @{@"title": @"仿QQ聊天", @"class": @"GKDemo004ViewController"}];
+                        @{@"title": @"仿QQ聊天", @"class": @"GKDemo004ViewController"},
+                        @{@"title": @"测试", @"class": @"GKDemo005ViewController"}];
 }
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>
