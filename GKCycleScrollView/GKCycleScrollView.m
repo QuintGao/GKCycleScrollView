@@ -412,11 +412,11 @@
                 if (delta < self.cellSize.width) {
                     alpha = (delta / self.cellSize.width) * self.minimumCellAlpha;
                     
-                    CGFloat adjustLeftRightMargin = self.leftRightMargin == 0 ? 0 : self.leftRightMargin + 2;
-                    CGFloat adjustTopBottomMargin = self.topBottomMargin == 0 ? 0 : self.topBottomMargin + 2;
+                    CGFloat adjustLeftRightMargin = self.leftRightMargin == 0 ? 0 : self.leftRightMargin + 1;
+                    CGFloat adjustTopBottomMargin = self.topBottomMargin == 0 ? 0 : self.topBottomMargin;
                     
-                    leftRightInset = ceilf(adjustLeftRightMargin * delta / self.cellSize.width);
-                    topBottomInset = ceilf(adjustTopBottomMargin * delta / self.cellSize.width);
+                    leftRightInset = adjustLeftRightMargin * delta / self.cellSize.width;
+                    topBottomInset = adjustTopBottomMargin * delta / self.cellSize.width;
                     
                     NSInteger index = i % self.realCount;
                     if (index == self.currentSelectIndex) {
@@ -470,11 +470,11 @@
                 if (delta < self.cellSize.height) {
                     alpha = (delta / self.cellSize.height) * self.minimumCellAlpha;
                     
-                    CGFloat adjustLeftRightMargin = self.leftRightMargin == 0 ? 0 : self.leftRightMargin + 2;
-                    CGFloat adjustTopBottomMargin = self.topBottomMargin == 0 ? 0 : self.topBottomMargin + 2;
+                    CGFloat adjustLeftRightMargin = self.leftRightMargin == 0 ? 0 : self.leftRightMargin;
+                    CGFloat adjustTopBottomMargin = self.topBottomMargin == 0 ? 0 : self.topBottomMargin + 1;
                     
-                    leftRightInset = ceilf(adjustLeftRightMargin * delta / self.cellSize.height);
-                    topBottomInset = ceilf(adjustTopBottomMargin * delta / self.cellSize.height);
+                    leftRightInset = adjustLeftRightMargin * delta / self.cellSize.height;
+                    topBottomInset = adjustTopBottomMargin * delta / self.cellSize.height;
                     
                     NSInteger index = i % self.realCount;
                     if (index == self.currentSelectIndex) {
@@ -588,6 +588,11 @@
 
 - (void)timerUpdate {
     self.timerIndex++;
+    
+    // bug fixed：解决反向滑动停止后，可能出现的自动滚动错乱问题
+    if (self.timerIndex > self.realCount * 2) {
+        self.timerIndex = self.realCount * 2;
+    }
     
     if (!self.isInfiniteLoop) {
         if (self.timerIndex >= self.realCount) {
@@ -707,13 +712,22 @@
     if (self.realCount > 1 && self.isAutoScroll) {
         switch (self.direction) {
             case GKCycleScrollViewScrollDirectionHorizontal: {
-                NSInteger horIndex = floor(scrollView.contentOffset.x / self.cellSize.width);
-                self.timerIndex = horIndex;
+                NSInteger index = floor(scrollView.contentOffset.x / self.cellSize.width);
+                
+                if (self.timerIndex == index) {
+                    self.timerIndex = index + 1;
+                }else {
+                    self.timerIndex = index;
+                }
             }
                 break;
             case GKCycleScrollViewScrollDirectionVertical: {
-                NSInteger verIndex = floor(scrollView.contentOffset.y / self.cellSize.height);
-                self.timerIndex = verIndex;
+                NSInteger index = floor(scrollView.contentOffset.y / self.cellSize.height);
+                if (self.timerIndex == index) {
+                    self.timerIndex = index + 1;
+                }else {
+                    self.timerIndex = index;
+                }
             }
                 break;
             default:
@@ -723,6 +737,8 @@
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    [self updateVisibleCellAppearance];
+    
     if ([self.delegate respondsToSelector:@selector(cycleScrollView:didEndScrollingAnimation:)]) {
         [self.delegate cycleScrollView:self didEndScrollingAnimation:scrollView];
     }

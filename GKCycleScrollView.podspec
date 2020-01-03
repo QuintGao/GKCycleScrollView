@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name                = 'GKCycleScrollView'
 
-  s.version             = '0.0.4'
+  s.version             = '0.0.5'
 
   s.summary             = '一个轻量级的自定义轮播图组件'
 
