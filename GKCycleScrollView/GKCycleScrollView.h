@@ -17,10 +17,16 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 
 @class GKCycleScrollView;
 
+/// 数据源代理
 @protocol GKCycleScrollViewDataSource <NSObject>
 
+/// 返回cell个数
+/// @param cycleScrollView cycleScrollView description
 - (NSInteger)numberOfCellsInCycleScrollView:(GKCycleScrollView *)cycleScrollView;
 
+/// 返回继承自GKCycleScrollViewCell的类
+/// @param cycleScrollView cycleScrollView description
+/// @param index 索引
 - (GKCycleScrollViewCell *)cycleScrollView:(GKCycleScrollView *)cycleScrollView cellForViewAtIndex:(NSInteger)index;
 
 @end
