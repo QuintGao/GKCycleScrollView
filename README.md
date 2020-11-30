@@ -55,10 +55,10 @@ cycleScrollView.dataSource = self;
 
 | 说明 | 效果图 |
 |-------|-------|
-| **横向轮播** | ![horizontal](https://github.com/QuintGao/GKCycleScrollView/blob/master/imgs/demo_horizontal.gif) |
-| **纵向轮播** | ![vertical](https://github.com/QuintGao/GKCycleScrollView/blob/master/imgs/demo_vertical.gif) |
-| **卡片效果** | ![card](https://github.com/QuintGao/GKCycleScrollView/blob/master/imgs/demo_card.gif) |
-| **仿QQ聊天** | ![qqchat](https://github.com/QuintGao/GKCycleScrollView/blob/master/imgs/demo_qqchat.gif)|
+| **横向轮播** | ![horizontal](https://github.com/QuintGao/GKExampleImages/blob/master/GKCycleScrollView/demo_horizontal.gif) |
+| **纵向轮播** | ![vertical](https://github.com/QuintGao/GKExampleImages/blob/master/GKCycleScrollView/demo_vertical.gif) |
+| **卡片效果** | ![card](https://github.com/QuintGao/GKExampleImages/blob/master/GKCycleScrollView/demo_card.gif) |
+| **仿QQ聊天** | ![qqchat](https://github.com/QuintGao/GKExampleImages/blob/master/GKCycleScrollView/demo_qqchat.gif)|
 
 ## 说明
 [GKCycleScrollView - 一个轻量级的自定义轮播图组件](https://www.jianshu.com/p/950ca713e6a9)
