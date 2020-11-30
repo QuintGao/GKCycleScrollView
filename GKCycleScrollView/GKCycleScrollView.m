@@ -81,7 +81,10 @@
 
             // 判断点击的点是否在cell上
             if (CGRectContainsPoint(convertFrame, point)) {
-                return cell;
+                // 修复cell上添加其他点击事件无效的bug
+                UIView *view = [super hitTest:point withEvent:event];
+                if (view == cell) return cell;
+                return view;
             }
         }
         // 判断点击的点是否在UIScrollView上
@@ -518,31 +521,32 @@
     GKCycleScrollViewCell *cell = self.visibleCells[index];
     if ((NSObject *)cell == [NSNull null]) {
         cell = [self.dataSource cycleScrollView:self cellForViewAtIndex:index % self.realCount];
-        NSAssert(cell!=nil, @"datasource must not return nil");
-        [self.visibleCells replaceObjectAtIndex:index withObject:cell];
-        
-        cell.tag = index % self.realCount;
-        [cell setupCellFrame:CGRectMake(0, 0, self.cellSize.width, self.cellSize.height)];
-        if (!self.isChangeAlpha) cell.coverView.hidden = YES;
-        
-        __weak __typeof(self) weakSelf = self;
-        cell.didCellClick = ^(NSInteger index) {
-            [weakSelf handleCellSelectWithIndex:index];
-        };
-        
-        switch (self.direction) {
-            case GKCycleScrollViewScrollDirectionHorizontal:
-                cell.frame = CGRectMake(self.cellSize.width * index, 0, self.cellSize.width, self.cellSize.height);
-                break;
-            case GKCycleScrollViewScrollDirectionVertical:
-                cell.frame = CGRectMake(0, self.cellSize.height * index, self.cellSize.width, self.cellSize.height);
-                break;
-            default:
-                break;
-        }
-        
-        if (!cell.superview) {
-            [self.scrollView addSubview:cell];
+        if (cell) {
+            [self.visibleCells replaceObjectAtIndex:index withObject:cell];
+            
+            cell.tag = index % self.realCount;
+            [cell setupCellFrame:CGRectMake(0, 0, self.cellSize.width, self.cellSize.height)];
+            if (!self.isChangeAlpha) cell.coverView.hidden = YES;
+            
+            __weak __typeof(self) weakSelf = self;
+            cell.didCellClick = ^(NSInteger index) {
+                [weakSelf handleCellSelectWithIndex:index];
+            };
+            
+            switch (self.direction) {
+                case GKCycleScrollViewScrollDirectionHorizontal:
+                    cell.frame = CGRectMake(self.cellSize.width * index, 0, self.cellSize.width, self.cellSize.height);
+                    break;
+                case GKCycleScrollViewScrollDirectionVertical:
+                    cell.frame = CGRectMake(0, self.cellSize.height * index, self.cellSize.width, self.cellSize.height);
+                    break;
+                default:
+                    break;
+            }
+            
+            if (!cell.superview) {
+                [self.scrollView addSubview:cell];
+            }
         }
     }
 }

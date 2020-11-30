@@ -1,11 +1,11 @@
 PODS:
-  - GKNavigationBarViewController (2.6.3)
+  - GKNavigationBarViewController (2.6.4)
   - JXCategoryView (1.5.8)
   - Masonry (1.1.0)
   - SDAutoLayout (2.2.1)
-  - SDWebImage (5.9.4):
-    - SDWebImage/Core (= 5.9.4)
-  - SDWebImage/Core (5.9.4)
+  - SDWebImage (5.10.0):
+    - SDWebImage/Core (= 5.10.0)
+  - SDWebImage/Core (5.10.0)
 
 DEPENDENCIES:
   - GKNavigationBarViewController
@@ -23,11 +23,11 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  GKNavigationBarViewController: d682ec891050fccfd3e6695ee0f3ee2f75970535
+  GKNavigationBarViewController: 5f74830dde9ec4eabf4f7b6665989533b2b39631
   JXCategoryView: 778a620f76070d6598fd8d7239991b8da8326170
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
-  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
+  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
 
 PODFILE CHECKSUM: 71c5f187a60a1fe9f2b323085698c6e580f0fa3b
 

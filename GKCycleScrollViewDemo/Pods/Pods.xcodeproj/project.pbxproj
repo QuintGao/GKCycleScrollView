@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		0104E109B65ABC58EC20443AAF413D8D /* JXCategoryIndicatorRainbowLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4857446BDF6F310313930076F3328931 /* JXCategoryIndicatorRainbowLineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01686953CD3D80119BE2E79E920E21C0 /* SDAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5F7D2DCEE390D045904AF320BF26FA /* SDAutoLayout-dummy.m */; };
+		017B580CCBF27750A4100819B5EABEF7 /* GKPopTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 796CBEF771C5DC16A93BD985A531AAD9 /* GKPopTransitionAnimation.m */; };
 		02292FC1E8CF700F59D154DF2C841F75 /* SDAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4643EBF7753B9C9A495C47C2EC8D61AD /* SDAssociatedObject.m */; };
 		02630CF9E3967768C1A8EB31DBE9BB72 /* SDImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDF7ACC144BCD8187677DD0C2E630F /* SDImageCoder.m */; };
 		029A8DD944B7C619520AA93542CF7653 /* JXCategoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 448EB7B5F36AC6EA592F6F2D98E87160 /* JXCategoryFactory.m */; };
 		033D834C818DD0CC0880FD7F71025C16 /* JXCategoryImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F86094BFF13DE098DEEED1838A7204 /* JXCategoryImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04762E2F6696F6B57AC647288F800D2D /* SDWebImageCacheKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 728581B3881F6238E0BBC4A5C58D7B99 /* SDWebImageCacheKeyFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0513A8CBE5F5FB4AAA7D548E4F419A5C /* GKPushTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F01064253641F2922B47BF632CBDD /* GKPushTransitionAnimation.m */; };
 		0514929969C05FC0579DDBB29767426F /* JXCategoryTitleCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC4164EC1B8F31547C5A7F7CE1010A4 /* JXCategoryTitleCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A040F35BF1C88F869404E1A940B493 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BA79B056009DD6955E7972A4EC55B6A7 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05EA1447EEA0EB669F8DEE73964A7C60 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A96D204E15340C4F6E636793F6AAF2 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,27 +24,28 @@
 		06A8C56B968192778FC568ADEC53D9D6 /* JXCategoryIndicatorCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A57AAF000F1EEF6F6296C00C9B7F16F7 /* JXCategoryIndicatorCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E6EA5D5054822A93A14BEFBA02174D /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F795F404DB532A74DCBC529A4B7E1F5 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08414C28164CC487E519E30C48342B08 /* SDWebImageCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9172A3A542AD086854EA9D6B63E968C0 /* SDWebImageCacheSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08D334DDE531ABE96BEABA22832340D7 /* UIBarButtonItem+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4D9CDFA7826FA8C5EDDBF791A1392 /* UIBarButtonItem+GKCategory.m */; };
 		092E352F77C5306E82961E8844CCB231 /* SDImageIOAnimatedCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B6D1D6FAB05433ACCEB80960B65CB9C /* SDImageIOAnimatedCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0967598607D521318F69D7D39D517B20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 467E0543F47A69DF897B7AAC899C512B /* ViewController+MASAdditions.m */; };
 		097BFF20A75A7F5E1217DD159D0A208A /* JXCategoryImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0626B70D41B428D9CF33DBA87DA9C7D8 /* JXCategoryImageView.m */; };
 		098630ECDB64ED7B89F5F687C82B4AC3 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A64D127B98E7E6DF1431C0A62090FC /* NSArray+MASAdditions.m */; };
-		0A88B742C2173F44EBD7E29C64109D40 /* UIBarButtonItem+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E25A401029F3E1D400217D7DDFABEFF /* UIBarButtonItem+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AF1AD35706D90B1A91F291B899EF8C0 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B76F98B5786D044F4721E8E1093339BE /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BC52097426786A1611A11744FF823B4 /* SDWebImageCacheSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6E1B04702E054A499DADA2361FC4D6 /* SDWebImageCacheSerializer.m */; };
 		0C6FCC9C7174D6305AA2153904F77111 /* JXCategoryIndicatorTriangleView.h in Headers */ = {isa = PBXBuildFile; fileRef = C68ABE0DE7F4B64D064A664AE17FD636 /* JXCategoryIndicatorTriangleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CA1749E31CB35A6A5DD4E01E2982F23 /* JXCategoryFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ABA2C039A6E0B825FB4FA65858BA6FB /* JXCategoryFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DB3997F1BCFA41FAE5BA88B339B4079 /* UIScrollView+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E4F088A54BDA75C450F86DF6C16BC79 /* UIScrollView+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DE72963700100361EA2789EA929EFFD /* SDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DAE52C5A8CEDC3F3156CFA8F31339E /* SDDiskCache.m */; };
 		0FE4EBA08A8135658EE3FEE7198FF686 /* SDWebImageDownloaderConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = AFF6CCFB363C63A756086AA68B7DEF67 /* SDWebImageDownloaderConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1049E7F4C39052F48D4678FA7079B58C /* GKNavigationBarConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = BD37CDE24676B82B402F3D6312F0473F /* GKNavigationBarConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10B5A5FF74C577DB66C759DE898D39D2 /* SDImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 136112534ECFB45156C5BD81C60417E0 /* SDImageCodersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		114C2D0BB7EDBEAAA2433CCC8DE5526C /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E150BEC8C68A64B3A15F029D654830D /* UIButton+WebCache.m */; };
 		11A5AD2289F6B9DEA02FD65DFDF7046A /* JXCategoryIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A61CE071405C462128E8C7A63A167 /* JXCategoryIndicatorCell.m */; };
 		1285C9C09B8AEC7859A8E7ED04547998 /* JXCategoryView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C551AECE1FD4978488CC6F724E20E45 /* JXCategoryView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B001685EE3DC4E8570993BF813C8BC /* GKBaseTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D15AB30ED9E095CAF818816D0C6D /* GKBaseTransitionAnimation.m */; };
 		158ED66F79A1A1B16072418E8B66E628 /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E01D23917EE852D910510D765538EDDB /* SDWebImageIndicator.m */; };
 		15CA190FA16D0A98FBDFE0B7D9F11C1E /* JXCategoryTitleImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D6892CA217A0F850EEB1F25804B45135 /* JXCategoryTitleImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15F0D404DF94F1546A17142E40A8F3B1 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 107911C2B050A2A16711C6085E1F918C /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		166D4FCCDE8B33BB1BC417E738CBB43B /* GKPopTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4633C1F6D3EC44DA206058608E0F52 /* GKPopTransitionAnimation.m */; };
 		17B34E5BDBB7F979DA5B06ECE951A36A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF62529CFAA2D00B529B64442FD0CB98 /* UIKit.framework */; };
-		180471F2A3E7DD4A880D02FF4A5626E6 /* GKBaseTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D84AC08776C7618416A49ED01F1D36 /* GKBaseTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		181E4E963DE7DD336BB8F49B815BC810 /* JXCategoryViewAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1446B5864071B64C64F894F632E04483 /* JXCategoryViewAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		184327EC05D576EF84737355C6A447EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7438B12CD0AFAD6A32490366C702D /* Foundation.framework */; };
 		18D1D252617EE8076F60E5F13462A79F /* SDAnimatedImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B216EED8D6EBFA1CAC099E09EE8C3F9 /* SDAnimatedImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,15 +58,14 @@
 		1CBEEC98DEB7338620F68B0E705D132D /* NSImage+Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3CC04EBDCE83891030D91DB571AE1 /* NSImage+Compatibility.m */; };
 		1D3D7A0DE732DFAB6296369D7BBAE45C /* JXCategoryIndicatorTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABB8635A7BD1AD1951E6B21C35F2E3 /* JXCategoryIndicatorTriangleView.m */; };
 		1DA6DE69B7F59943AF3B60BA9ACFDEFA /* UIImage+MemoryCacheCost.m in Sources */ = {isa = PBXBuildFile; fileRef = 40613900AD00F1441463E41F81D96BEE /* UIImage+MemoryCacheCost.m */; };
-		1DE5C0F1ECAA84C45BC4FC93B34726D5 /* UIScrollView+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C38A364B1F1966EE88CD92DA5C67096 /* UIScrollView+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E7089E96EB375AFDBF0BAC0A2DDDDD6 /* GKNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF30618B4E0525AB2270F01E069FA5 /* GKNavigationBar.m */; };
 		1E72332B507926908C1BF282D9065FDB /* JXCategoryTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B02726679F3CCEEBC22BB13C535C44 /* JXCategoryTitleView.m */; };
-		1EA025B7142F138AF69BB12DB54B215A /* UINavigationController+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8EECEC9FB8B413208B1BB6F22148E0 /* UINavigationController+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F55097C4490DCFB8BA4B3D8D284ED33 /* SDAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2A224D33942FCDAC05961A968D42BE /* SDAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F5A96B3EF393FE66CAA63900C7B0D56 /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CF6F2A99A06D18EEF160258725A8D23 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F653593F9E282D6DB5C5D6787F5D2B9 /* UIViewController+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F0DFAC18F6B7F974CFBF41B9E000486 /* UIViewController+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7AFE861609115DF7D756769A553F87 /* SDAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A87D09BB57CCC581DF2E10990C33F4B0 /* SDAnimatedImageView+WebCache.m */; };
 		23FC6BE13A678F2CA41B636620AF73EF /* JXCategoryTitleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2A696006033EFC95E8070C765ADDAD /* JXCategoryTitleImageCell.m */; };
 		254FA808D61EA56F7F23667E2D54EFAF /* JXCategoryNumberView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D283CE04CD1F08FC9645C663E5279E /* JXCategoryNumberView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		256BE0BB3AA58CF60482C6EE88249B21 /* GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 15958605468AD86564BF23DF3D638EDC /* GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2696F977A70850BB01888207C94020E4 /* JXCategoryIndicatorLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFD1B34F7DAC1C6A59B83505E4E6603 /* JXCategoryIndicatorLineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26AFA2DD186558E28CCAC2EF248B4E56 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 45FDFD956AAA12BBCCCBB60B25E47B2D /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26D9C9FFCDC18618DC92736439FAD58A /* SDImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = BADFFEB42F4CAD4F77799FAD5AB28CA5 /* SDImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,7 +82,6 @@
 		2EEEB63BD28078518C3D5C6C1BA1D23D /* JXCategoryTitleVerticalZoomCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BC687EB45B844BC9DD2EEB426D718167 /* JXCategoryTitleVerticalZoomCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FCD2E2216FEAA27697A43417F59C0A7 /* JXCategoryListContainerRTLCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E988C13B01762564FA601271BF6662 /* JXCategoryListContainerRTLCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3108C6C33EF01CE7D997F389B9732257 /* JXCategoryIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A8FEA4A2676AFABEFD8326B7B73BC3 /* JXCategoryIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32652FBB8ECFE35A208FDAE93FD5DA10 /* GKDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDB266B64C97BB0B343C1E35E0E2A6 /* GKDelegateHandler.m */; };
 		346080C0D1CA23399ADD739D722D7CEF /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA5F1DABC5F0A755FFE3D223E12F7A4 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3539E3E01A8DE6636BE39797BBBD13E4 /* SDImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AEED67A66C7A008D6355D5AD6C2934 /* SDImageIOCoder.m */; };
 		354ED7FE2CF541313426DDB96EC41B5D /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC137E98B2FCC6550EBDF8C11EA1ACB2 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,16 +96,14 @@
 		3D375A85D8162BC44D045F53781D006A /* SDWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E4549FAFAA1D396EF663CC035DAB229 /* SDWeakProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3DA5F1D8E51CDD102A871C2F37770C7B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = D9EE7A1C2B30F93B719EB80167F22CE7 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E344FED4F81EEA697CB210FEAC27659 /* SDImageAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63EB7879B435E73ED22840D106938B /* SDImageAssetManager.m */; };
-		401A58D61D48E5D9E3CF8B3F86156C33 /* GKCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A461DB2E7331A0DC668C62CCB1E39855 /* GKCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40A5F8B62507885E01DB3FE0EDE93706 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 45B95319A34AA5E5697B2CE5250F19BD /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40C1238DC5744C26FB96C3391431639A /* SDImageHEICCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BA57835EAA0999F3852B086813262B /* SDImageHEICCoder.m */; };
-		42F6EFFD2911731D4491DB16FA91EC2A /* UIImage+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F54822391569547DC537D4790E4FB0C /* UIImage+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		437B5D266F3575FCD83513D39658FFBF /* UIImage+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA29499EE60D040245D33FEF9251364 /* UIImage+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44B4F51B018F0039263D2DD796E2F467 /* SDWebImageOptionsProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2093326EF0B2F51864AEDD6ECB47947F /* SDWebImageOptionsProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44ECEC8F3B80FA3B6AD8E8C9E0B0F7F2 /* JXCategoryBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 583A6C4E71E33DDFB71C8DC47522FD83 /* JXCategoryBaseCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4554DF8D87AC28E81C2A3A6F5FF4ACF2 /* JXCategoryNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B44665B6D8C0DBCDC4603F0975EC644 /* JXCategoryNumberCell.m */; };
 		482390939D521EDC7E4197436C13C005 /* SDMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D62F50DBDF216EC982899E0DED70FF /* SDMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		494F5E5284E2F6D0FA92F07ADF5FB6AC /* SDFileAttributeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D85D85D5422BA50158353283B3DA176 /* SDFileAttributeHelper.m */; };
-		498A39F20113A0D686E3B2E36B6477A2 /* GKPopTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5E00F1FA948C4FA990D52219D290DC /* GKPopTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B0981F9AC628CF5100C50FF4A163A4A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C91E9C13A788E2498CB8194168FEFF /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D3D9AA5E2ABCB9F87CD0A59AE536CC6 /* SDImageIOAnimatedCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EB73F0EC2A61E98A85559B737A851E /* SDImageIOAnimatedCoderInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4F7A7E7060578A2E22141D37FCD0E99C /* UIView+SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 379441E8C5842D47B6AC4B1A07C824E5 /* UIView+SDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +120,7 @@
 		5702F1FA4E13C2F79EC5B9D520795BD7 /* JXCategoryTitleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C11D55C74D21539E40A619B9259C166E /* JXCategoryTitleCellModel.m */; };
 		58AF805046CFD9986EFEAACCBA61F9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7438B12CD0AFAD6A32490366C702D /* Foundation.framework */; };
 		5918453F627DBCD9AA4B274FC1D3E449 /* JXCategoryDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CAF01889D6A202FFD641A978842576 /* JXCategoryDotView.m */; };
+		5C722BBD201981BE0A13CC330760D563 /* GKNavigationInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDAE9FB6133058A819D57369474872 /* GKNavigationInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CA2AC72A71CEF79A07FAAA283BE8A52 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F869DC7FEA1F565B6984ABA3E42EE21 /* ImageIO.framework */; };
 		5D5AB502D85BF8E27246A5964F6B3E9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF62529CFAA2D00B529B64442FD0CB98 /* UIKit.framework */; };
 		5E0D570A78EF2D89B442D62B266B275E /* SDImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB529799184E3B72F95E8DB4BFCE606 /* SDImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -130,57 +130,53 @@
 		6344E7016428C35B6CFDCA22CD9CEEB9 /* JXCategoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = D2776177E38C9469A137A7773230BD4B /* JXCategoryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6426334186986F3FB6225876EB8A90DA /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F444540251D34ADFD864FCDD2CD23 /* SDImageGraphics.m */; };
 		64DAB91A8FA2EA338E04690A514F7AE0 /* SDImageAWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD73963DBADD795E6F8A03646731452 /* SDImageAWebPCoder.m */; };
-		64ECF4EBB7D7EE3617EEA15FA24C6E78 /* GKNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C60ABBBF3DA76EAD8BE74375AF68B15 /* GKNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		660751AEAE8DBBF4FBEC77223AC2C69C /* SDWebImageDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E2BA4FB000B99034951ED512BFCB7AA /* SDWebImageDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6670CE21A07A8FE1D74FAD1F5103A93B /* SDImageCachesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 67ACBD49A906FBFE20378402965729B2 /* SDImageCachesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66C437D847C1FDF28D11861BA3C32F9B /* JXCategoryDotCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 732D7E5649EAF61EF02753D882596322 /* JXCategoryDotCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67DAE7DCC0AF3B5FBEBBD81C23ED6DA9 /* UIScrollView+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0B5D798F3BFC77711CB2428F1F0712 /* UIScrollView+GKCategory.m */; };
+		68A52FD46AA831BDCF425C29D3D6AC3F /* UIImage+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DC2FF6EF81FB1F7DAC0CFB7E901512 /* UIImage+GKCategory.m */; };
 		694569BA69DB36D7AFF27367F5ED3A36 /* UIImage+Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BECBACB3085BCE152772F1BC096CD52 /* UIImage+Metadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A3B8160E860AC10F0E625C5103C6E50 /* JXCategoryIndicatorRainbowLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1F80FEB9AD76979A54A04453DA6AF /* JXCategoryIndicatorRainbowLineView.m */; };
 		6A6AD3A5BBDBFD0B4AF936BD518EC0B1 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DC2AE274AC058589A0B5538D4D10B5 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AC5D2781167F9081FBA570FC8B89C90 /* SDAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A72927CC8E424A678D2AF74BD5A1A /* SDAnimatedImage.m */; };
 		6D807F4E3245C11DF14F39F681BAEA23 /* SDAssociatedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 375479C58222048123F85595AC4367DC /* SDAssociatedObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6DAC084159E11BD6A8C42748096A0A9D /* GKBaseTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 800C2EAC98F83CA73ACD399B484650B3 /* GKBaseTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E8F129294E44619FA2674150EBE336A /* NSBezierPath+SDRoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A85AABC7460B6A5302FEA023D81B2A /* NSBezierPath+SDRoundedCorners.m */; };
 		6F27684AC57716BA63A3C106BF1C6A5D /* SDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5754AD9470AAFCC028E7AD28BFA99DD /* SDWeakProxy.m */; };
 		6F3B1690F53D8DD5B00A062BE5FAE923 /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F60DEF8FE317A56CD16D956054F558 /* UIImage+ForceDecode.m */; };
-		7104092069832E21F5463DB2ABB08EF5 /* GKDelegateHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CE8726E4F4F296E4FD6A10F7667B61 /* GKDelegateHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		710B099BD183D22DC6138DEF0D82F478 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = D13FA1655DBB9D74A1A5D4B412E8B82F /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		710ECB4C75675E618D1FB1C6E737A88F /* GKNavigationBarConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 7111C564BFB331F5121F6A4F0033D087 /* GKNavigationBarConfigure.m */; };
 		71654E1A198D12BAC59ECB62B382CB66 /* JXCategoryTitleImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1035F015625D00AF77765AAFC40DBE32 /* JXCategoryTitleImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71C95FB341142F6C81587F4A60DC189F /* SDAsyncBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BE36F8F73B0068D2CCCB9E4D9FEF6151 /* SDAsyncBlockOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		72A80124A9E9F0F28B5949657D31E328 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE4D8EFAC8240E487DBD4E0EBE0AEC0 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		730F02CFFBD74BD46562276A09B922B0 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E2D7EDA5E0667165FFA4628A1B9EE0 /* SDWebImageDownloader.m */; };
-		73581961FB0882010793613909387E4C /* UINavigationController+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C0106246AAEEB531EEABB717748C40 /* UINavigationController+GKCategory.m */; };
 		739D94DB13626873E4F91055ADFF76A5 /* SDFileAttributeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC751000AF51E24054EE3B3CA611138 /* SDFileAttributeHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		74A7A86C34BFF57B7EE69F0E4A48A47F /* JXCategoryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE4EA3E49433EEA2932FADB1C9CF4B /* JXCategoryBaseCell.m */; };
 		74DCBC98B76908869FD23A65B6645252 /* UITableView+SDAutoTableViewCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EC7C393499588AF4FDC39BA9A63C79 /* UITableView+SDAutoTableViewCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7523FC5C348F565FA5A2C8ADBAB3CEA0 /* SDImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AA5E013B53791649ECFE4E38FF7D1C /* SDImageLoader.m */; };
 		768C110E380567A781CAB7CCEF4AAAEE /* JXCategoryViewDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F81CF03C0FBE18945999B1C1862B0DE /* JXCategoryViewDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7771562E8212237F9D71DFA61B548766 /* SDDeviceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81BDF9CF3DED21AFB1932D1AB48AFA27 /* SDDeviceHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		779040CD72D00535816B95CB65907119 /* GKNavigationBarViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4613525D6739464283E8ED729A93E69 /* GKNavigationBarViewController-dummy.m */; };
 		785FF717DA59ADF5702380897DE15B25 /* JXCategoryTitleImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80285345AB8AEF80AD092B5A02761D0B /* JXCategoryTitleImageCellModel.m */; };
+		78A6E622D4DD5ED95CCD727F565CB5D2 /* GKNavigationBarViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC9EAB7FB0E598888FBC17CA670AC0C /* GKNavigationBarViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78B2727EE5D693F58D019DB098005101 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EDFF7046B83BA9BA87DF087DCD9D4 /* MASConstraintMaker.m */; };
 		78EAF5EB18481BBCC1FE7DB38E929746 /* NSButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1274C7855F87B549430B4AE543A76149 /* NSButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78EBAE4A4F7FDA568D8CEE83E8B03F0D /* SDWebImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A77BE99113D2DE30215D926990732D9 /* SDWebImageDownloaderConfig.m */; };
 		7958AE8C4352219F24537DC524916EF1 /* SDImageCachesManagerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4AACC1EA9DDC53D655BDC3AC5DB14B /* SDImageCachesManagerOperation.m */; };
 		7BB4039E3FEB672B97BB7EFB42EB67F7 /* JXCategoryNumberCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C68AE57A61951DD7466B97E51E7179 /* JXCategoryNumberCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BD0B33EBB3D5E85A318408BCDB06CF7 /* UIViewController+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2B295596E178215502B6CFA54C2D72 /* UIViewController+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BFE56BB8AC3DC97C988565B3AE3C571 /* SDWebImageOptionsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC267FFB4DD5B3C066DB22F48954E13 /* SDWebImageOptionsProcessor.m */; };
 		7BFF65958F014760B6AC4742824892EB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 350FA6BF099E1382FFD2479CB44AC483 /* MASCompositeConstraint.m */; };
 		7C44BA174FCC4AFDE175F49C20ED3D18 /* JXCategoryBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CEF474394053C5F0FBCD9E3F8F3D49 /* JXCategoryBaseView.m */; };
 		7D2961DDAF48D719A4A73A3B8C046A8F /* SDImageCacheDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1710DC08E003B52C0F0F36161B651A /* SDImageCacheDefine.m */; };
 		7E98F6C822C3BC874C2BBDAA21EDE6EC /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = EF919AF1D881D7B773B6462C2A7D54D5 /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81B5C37792896F4EA03BC156B21D9F5B /* GKCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1070A557A237261A45101A7A1D1FBE7A /* GKCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82472E3E3FFEC77DCE01332CCBA72A14 /* JXCategoryIndicatorBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE2D7FF367B18CB0A159B13073D183 /* JXCategoryIndicatorBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		824870F519CB0826C1156BA0B1EBD2F2 /* SDAutoLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD25FE9C7DD71596B83DABBA9E5F624 /* SDAutoLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8297E801B8772A2FA8F1205AADD3341E /* GKPushTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 198BE56B22BC4119586EE76B769F53C8 /* GKPushTransitionAnimation.m */; };
 		84B3C925CCA883C89A4FAF942D952371 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = BE75E9E7C4BE8CA2CC289FA340CDDC46 /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84DBAFCC6AC7A5C487449824D8126F55 /* UINavigationItem+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BB42AD01DA2659D90075781C8130FA55 /* UINavigationItem+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8539B851E01A58467BE49CA3FA77223C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3515735584681B095600F142878F2743 /* MASLayoutConstraint.m */; };
 		85FB50C8A79A473625B9BB664BCCEBBE /* SDDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B577015CF27DE7A8866E16531F715E /* SDDisplayLink.m */; };
 		868DA0C9AED82E8B54F29505E024222E /* UIColor+JXAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A017B9FA9636F6041A4F43B34E7A75F /* UIColor+JXAdd.m */; };
 		870F8CC125713185231805CA5F1A3005 /* SDAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F630B471CB00CCA6F94B1D81BD9A708 /* SDAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8779EB06C676C431D5774FDC04C7CF2D /* JXCategoryListContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF147656A8CC51E60CDF9DE7F6DDF67B /* JXCategoryListContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88DE9AE01F97FD29E9D8793174A5BF14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7438B12CD0AFAD6A32490366C702D /* Foundation.framework */; };
-		8B2632B2D35F1E34A5A2A4B64B17FB0D /* GKNavigationBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C7CDAC35423F6236EDFB64C3562044 /* GKNavigationBarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B5758DF4B13538BD14B5923B2FCF70A /* NSBezierPath+SDRoundedCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C45CECFAE21FD481AE6FE004ECD2137 /* NSBezierPath+SDRoundedCorners.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8B92011C9373001132C8148BFC8F50B3 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1C3191C2AEED57F08FEF9788C10009 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C5939D1675A10B7C49C4496AA65C2E7 /* JXCategoryTitleVerticalZoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5308FDC47A72A5CAFD6567647C37CD /* JXCategoryTitleVerticalZoomCell.m */; };
@@ -189,16 +185,18 @@
 		8D4D1F6E4709EBB13974E95DC1059DDC /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F15922E0A42D40B46AD6B43EFEB5942A /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D65CE579E516BDD5FB36CAA21D693F6 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BD63BB7932E20673F1C338E2207A878 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D73F702A995711B09C3AE6315D3AFFD /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30690AD3E6B3DF037F718AC05A7D4A2E /* UIImageView+HighlightedWebCache.m */; };
+		8F5453280B1DE44F8308D10B763E5EBE /* UINavigationController+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46236A032DF9140523CEB9283C80B7FC /* UINavigationController+GKCategory.m */; };
+		8F83475B227C61C5D117AA7EE7E600B5 /* GKPushTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A891D9EA7D31CE4C736DEF02D7E8AC02 /* GKPushTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90AA337FFACC7B2D19322A8242724E0B /* JXCategoryListContainerRTLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A87A97041F744ACBE3A9983439F685 /* JXCategoryListContainerRTLCell.m */; };
 		919698B67A879DF4B1D27ADEC113E4EB /* UIImage+ExtendedCacheData.h in Headers */ = {isa = PBXBuildFile; fileRef = E55E2355151A292EFB5C826AAD1E57BB /* UIImage+ExtendedCacheData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91CB272CC3D7C0D5C1442BCFBC4F5048 /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 291E0139BBBB285B70FB8CACD7052052 /* NSButton+WebCache.m */; };
 		934A350851291541BFD22A75C146A6F1 /* SDImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F116833A3F20654CED9AF73E5907513A /* SDImageGIFCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93DF6C26933C885C5D1E79FEB7AB4353 /* GKNavigationBarViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 537B61A644B83CE1BC6C43A856A6A037 /* GKNavigationBarViewController.bundle */; };
+		93DF6C26933C885C5D1E79FEB7AB4353 /* GKNavigationBarViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 46C6E067272754290C054903ECB5C81B /* GKNavigationBarViewController.bundle */; };
 		941955A19C40899D275604E6E9C21A6D /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC69B0EC53EADBD761AE7F9CD0418F /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9504088CAE8E4620226B40481A679F44 /* SDWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EDD3B0445C6D245DB9B684619E810C /* SDWebImageOperation.m */; };
+		96466AF92C6DB583225B2582B9A42C73 /* UINavigationItem+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 59197DA45A7AD760E9A9D58462F447D6 /* UINavigationItem+GKCategory.m */; };
 		96718AF6837B7AA98E25AA6FC3198455 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7438B12CD0AFAD6A32490366C702D /* Foundation.framework */; };
 		970A6BB5BF8D5909D1BF00E3FD0BDDE8 /* SDImageCacheDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCF419322D2B07260A76B5912184599 /* SDImageCacheDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		972A5201A8718D8516D98CC9D78B3A45 /* GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A3688AD7C9E31B29B3BB37480BDFE0E /* GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A7902828F49BD78A454AA95FF89DAC7 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A483E38D971D5570272AD2B585CA8C /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BF0D8BDC1F8EE94F0E256E1D15E0D64 /* JXCategoryIndicatorImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07866607A8475E072876AE420FE82654 /* JXCategoryIndicatorImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BFF63FFEA484FC67C23A671B6E5153B /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = B8283E60724603847391A01D1BBB65B7 /* UIImage+GIF.m */; };
@@ -213,7 +211,9 @@
 		A33DC9464A8B60A6B9B6C6E4E28B6E22 /* SDWebImageCacheKeyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6771F4052809FF72976A2C39C73DFDE6 /* SDWebImageCacheKeyFilter.m */; };
 		A35FBEEC7D088AEC05297E8292A32C77 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF4FFCB70E6E027BD8C65148B4165A1 /* View+MASAdditions.m */; };
 		A3957E12BFFD41402737EC9CB044D96E /* SDImageCachesManagerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 568CD6634ECB5A10A896F5472E5FDF16 /* SDImageCachesManagerOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A4BA2E8311530A56BC2AA5FE0F481417 /* GKPopTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB077C2F969B468E2CF31F01BCB35E /* GKPopTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7164BC1D4458DF39F884C4FABD3CBAB /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3131F82A13538409333220EBEA196A /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7A98C1F78E881B3AC5B86591683DE4E /* GKNavigationBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A851421CA62DE78403087497E429A84 /* GKNavigationBarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A80404D8B63B127D33C6EE5FDCF9E22A /* SDImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E6402C39C0E56727387C94E076CB89 /* SDImageGIFCoder.m */; };
 		A89A92F1A42E55D16D68F8C61956B738 /* SDImageAPNGCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ADACD4708CC00E047C947D3A613A61C /* SDImageAPNGCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8C8A2C92F70DFC3E67E1CCB0A5FBDA3 /* SDDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 193157904A83CC6F652A44E2867A8066 /* SDDeviceHelper.m */; };
@@ -237,7 +237,9 @@
 		B74F4E473F8A8EE8922DE009ADBA3AB0 /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C07812B59BF57C77D6861F90D652FBE /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7D645EC004610E8A581E532D28771EC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB9FCCE6BC02D25A97718935F5CB5EE /* MASViewConstraint.m */; };
 		B7E17DB82CEFFEE5D3EF0327A919FC57 /* SDGraphicsImageRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = CB93BB02A5B66F3B94E9944757271CC8 /* SDGraphicsImageRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B873EB5F2ED77FE2660EF7DC193CF587 /* GKNavigationBarViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD00F68D8BA0A702CE2DDDB7F6AE412 /* GKNavigationBarViewController-dummy.m */; };
 		B964F75E0BEC223C3DDD199C6342AE0F /* SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 080702E85AC65E407065772D037038FB /* SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA08527D0DDA7A61ED650C084C3E0115 /* GKNavigationBarConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BE856095995113D8D0444C1D059D4 /* GKNavigationBarConfigure.m */; };
 		BA2D51D1EFD5AF7DB1B7C347D1052951 /* JXCategoryIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 719BF289967C0E8D4D44B72DA88E4F14 /* JXCategoryIndicatorView.m */; };
 		BC5FDC97AE796DE2F7A2F5BEEFAF7259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7438B12CD0AFAD6A32490366C702D /* Foundation.framework */; };
 		BCD5541CA37B64DFDF167614CF9A6307 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C3E78AC0737B34F2E61BD5B535B31B /* UITableView+SDAutoTableViewCellHeight.m */; };
@@ -249,23 +251,20 @@
 		C0861ADB4C5FA30F4F9E051F7638A264 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 029707EA2BC3427C1417D34BF7442BA8 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		C237BF7CC4251B70879620EDB8ECB238 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 92581D492771BB8E91E4156849A05C39 /* UIImageView+WebCache.m */; };
 		C311E505311BAEA04C896AD42725298D /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D83511E8261D36DD2A36012ED3AEB640 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5E24960A9150DE8AE7714450208F76E /* GKNavigationBarViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3631743C2A5D6998E124EB9CB95D9A26 /* GKNavigationBarViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C52AC0C59393337FC9C94D91382742E7 /* UIViewController+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A950C4F4B26F5521F3A452C175AB0 /* UIViewController+GKCategory.m */; };
 		C5E75553E150D75C05DDFF6A1F937B2D /* SDImageIOAnimatedCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE363D0EC7A5BB1ACB1B9116126B07 /* SDImageIOAnimatedCoder.m */; };
 		C6FF07461DB95FD96B47723C123B36BB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A86AA54BC5BC56CB3184131576AC43 /* NSData+ImageContentType.m */; };
 		C76B0E50CBC62A5D037B6A194E087E74 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F54B5DBF4B69BB6FB9B15413E717E23 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7F50EDBB22A2456909CD13BF0986354 /* SDWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317F00CE782904907170F84F9FE477 /* SDWebImageError.m */; };
-		C9BFC6E5FB14B66611AB66952203416A /* UIScrollView+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E863A221E60151088E97BDFCB6B81 /* UIScrollView+GKCategory.m */; };
+		C88A85C54CC0727025D1DC55CCBE49CC /* GKNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F07750EC1C158F4EE0805637C4357689 /* GKNavigationBar.m */; };
+		CA4D4F273BB04C5FF117DFD81AF28833 /* GKNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A59A5E0FA350AFCA7AADF0218B27915 /* GKNavigationBarViewController.m */; };
 		CBBE677A418C7E76E72F0DF422500EEA /* JXCategoryTitleVerticalZoomCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E76E436746848B2A46AD8805D92A40 /* JXCategoryTitleVerticalZoomCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD8A37702602450DF0AD3C9ABC3A0BE9 /* UINavigationItem+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A2FB840FAF9259D2F07648D0F174B /* UINavigationItem+GKCategory.m */; };
 		CEE39451D2648F560E415CEE64855EEF /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC59EAD2E71D58B3F1272F551B8A986 /* SDWebImagePrefetcher.m */; };
-		CF50F8D7053E702EECAC34A64DABB8DF /* GKNavigationBarConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = B562F44D5A525E9922F8EBC19A02A1DC /* GKNavigationBarConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D178E7A915C804DC54F57BE6050E2CFE /* SDWebImageTransitionInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C49C7AE79409249DD7019B0029F228D /* SDWebImageTransitionInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D17931DA48FD59E30C4AB54341659A43 /* JXCategoryIndicatorDotLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC082D6F8CC7A6811FABF129634692F /* JXCategoryIndicatorDotLineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1F4DDFA05E06CFEA557D347920CC8AC /* JXCategoryTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A92EE7C57902AF849B918985A0F875 /* JXCategoryTitleCell.m */; };
 		D2B67B0AD9D2BB06A45268778DC5CC3F /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D258A068956BC08448E812234C952A9 /* UIView+SDAutoLayout.m */; };
 		D472C82A2FDEFAC4B07E77183A7A751A /* JXCategoryImageCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 772C9891A058B3C65136C49F8EA4DAC1 /* JXCategoryImageCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5203CE6CD619B8762C6B5B56D384E26 /* UIBarButtonItem+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 373CE5469BFF17AC1060E110F96E80A2 /* UIBarButtonItem+GKCategory.m */; };
-		D5E1490C2539B3019609F5CB82895A14 /* GKBaseTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D5632825C5C0B26D738315C4F3DF89 /* GKBaseTransitionAnimation.m */; };
 		D64440589D9881D4F48584D949E6E1C6 /* JXCategoryIndicatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 60DB939C3C0EFEB401316B61636D06DD /* JXCategoryIndicatorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7478C11A11E649BA5D86EF73A584095 /* JXCategoryImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5C5547AA33E6B18B7FCD914C373995 /* JXCategoryImageCellModel.m */; };
 		D8367A6FBFB795650D4B5E5A14A28BE0 /* JXCategoryBaseCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 58A77044A363854E6F2A694AFE0F9AC4 /* JXCategoryBaseCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -273,7 +272,7 @@
 		DA6895F97E7A188A1086A604D704181B /* SDWebImageIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = EC94419656075B18C92AB8173658A752 /* SDWebImageIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDABCEDA1455A7213CC6411BEE294CCB /* SDAnimatedImagePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1C849B7B8229E0B4B0703D26859EC3 /* SDAnimatedImagePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF32AA01A71E3AAAF2F476873A472838 /* SDDisplayLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EBC71833798EB27BBB4BDBB64D34E2 /* SDDisplayLink.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E0DA4BF6C11D2D193C2049F65175BE08 /* UIViewController+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D38654841C42AC41A79E0B2C333AC1C /* UIViewController+GKCategory.m */; };
+		E07AF36436F480508A405041FDF962D7 /* UINavigationItem+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DC03E53F8CAA1C14B78C9EA93FE72048 /* UINavigationItem+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2CF397EB7EA52469628299975F0CD7F /* JXCategoryTitleCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C930DD11DF2206E41379D6CBBBE69C35 /* JXCategoryTitleCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3C7DC809034DACD9D1FF1856DAD3ED2 /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DE8D43482080B8DA3A61935FE7C4E1 /* SDAnimatedImageRep.m */; };
 		E3F51CB54A45249F79A9C49F02039CC5 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3563471951BDC38E7D904C4896CE0372 /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -282,11 +281,11 @@
 		E57482DCBAB73E4AC9A8EB0816998D8F /* SDAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E05088D9FFA0F9129E29D69232E521B8 /* SDAnimatedImageView.m */; };
 		E773967AED08863651F49292199CA59B /* JXCategoryImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7EC73341A1C5C7E430802003E89F2 /* JXCategoryImageCell.m */; };
 		E7CA20228B3583F41927813EE904CAD3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF52C38A287EC5B64BC99A2C0C4D9C6 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8706C5B21867B21FCC040BE71771DC3 /* UIImage+GKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E2363380B54FD7125EC0ECAA8D56 /* UIImage+GKCategory.m */; };
 		E8DD5D1D406150E1C80AD015271B6848 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A6D53B11059F5F5D9C485E26CA25E /* MASConstraint.m */; };
 		E8E9CD7281B12D947CCB9475BCE2D452 /* JXCategoryIndicatorParamsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE37BD7C1A0059CBE7C6A1DCAB551678 /* JXCategoryIndicatorParamsModel.m */; };
-		E95F95D5A8344F7C3834AFF06530F3C4 /* GKNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D9F46EEB8BA5C13B69DF4053D52AE3 /* GKNavigationBarViewController.m */; };
 		EAE8B0895956885A752B173683A0D889 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFC4C05B2D6E1F12E7A7E464C35E727 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBD1A315A8DF5B287510AB2248B96B00 /* GKNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CBBB6FD46DA05C069E818600206386B3 /* GKNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBFB9E1C6E5D7F1719280C6CC0094AE5 /* UINavigationController+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DB618FCA03564BA0BF0BF315A8C12C62 /* UINavigationController+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE1C7E33E62C51C201C9D3C71F74FD04 /* Pods-GKCycleScrollViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59C984ECEA65668F2D4460B7C985C4 /* Pods-GKCycleScrollViewDemo-dummy.m */; };
 		EF19AA53110D1D6658ECCA3DF5A32BC0 /* JXCategoryDotCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BC5BAF9F29DF94E7820D15F1F7F56B /* JXCategoryDotCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F00615AF2747EBC80993096F43808951 /* SDImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A850C1A227C6BAD4203592C913580 /* SDImageFrame.m */; };
@@ -296,6 +295,7 @@
 		F3ABB513E6C09BBED7119919ADFD4E4E /* JXCategoryIndicatorComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37654B94A156DB73BD5ED514D381EDA9 /* JXCategoryIndicatorComponentView.m */; };
 		F3D17B67D896B68F633140BC5732B11B /* JXCategoryTitleVerticalZoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1746CEE79DF68D49E32A21C6A1117C2B /* JXCategoryTitleVerticalZoomCellModel.m */; };
 		F3F1E68D641B571814463C6224C4EBD5 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BC55A0C4C56F05F0E8F5794F1C867D /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F43D7C57CABA2A5D7E70AED299C78AF2 /* GKNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3F5AD6FBE6977D894CF249B98C9636 /* GKNavigationInteractiveTransition.m */; };
 		F440D86DE060B7562EE7AFE983D4AEBD /* JXCategoryTitleVerticalZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A81F86FBE301DEFE74CFE0370930F08 /* JXCategoryTitleVerticalZoomView.m */; };
 		F5B2194F8954EB26405AC5EE15D4B673 /* SDImageAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC505C89E0C306562177696F1F93083 /* SDImageAssetManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F6371DAB08719126C62FC9B4559427CF /* RTLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5413E56F94C577894B040019A7C13AEA /* RTLManager.m */; };
@@ -305,11 +305,11 @@
 		FAFBFA90F7BC3E7CF50F8A5CF0A8B264 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 21FD53ACA9B743AD4521DD41338099C3 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB0822F79D370CD5CF7C51979A0271BE /* SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 112899D2DA34A00ECF61FB4B449B8FF5 /* SDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB7256E8FD968F49967450645B3543CB /* JXCategoryTitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 829217FFB5EBCD5757D55E573CD5FE08 /* JXCategoryTitleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC659B57C432A0D15EE03D61D1DB16F7 /* GKPushTransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E7032DF4E5EE628CFBCC7C25945F5146 /* GKPushTransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCB195C37285D2114148870D88D2973C /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7284F1223DCA00C426B39B0B22ADB /* SDImageCacheConfig.m */; };
 		FCE4B93B3ACF7D9349F4604EB0BFA2A7 /* SDImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 61AC7472A67157B43447E42B00768279 /* SDImageIOCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE3DA5677D1F398C686BF698344DFAC2 /* UIColor+SDHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E51A791EBC1E3FEF391D622081A588F /* UIColor+SDHexString.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FE8AA0CE26836BF394C2FD1242CD4D0B /* JXCategoryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB3817E7B3C34354961F581D1BCDC77 /* JXCategoryCollectionView.m */; };
+		FF38454D9E0343D9FF5449EDB3D66851 /* UIBarButtonItem+GKCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C64EFEB48056FF593F3180DB0CEE33 /* UIBarButtonItem+GKCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF798D8A4E72564785D4FFB3D474EDA7 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F8530646B3DC6DBFBC8ED98C32A703 /* SDWebImageError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFAFA85A6E470FF29C6F4B433762E61C /* SDWebImageDownloaderDecryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 342242451F09F84297A5FFCFDB2A658E /* SDWebImageDownloaderDecryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -357,8 +357,6 @@
 		01E8ACFEDF661E63CDBF6FF0DA5AA768 /* JXCategoryView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXCategoryView.debug.xcconfig; sourceTree = "<group>"; };
 		029707EA2BC3427C1417D34BF7442BA8 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		03E9865E8AFDF8BAE2C3992F02218426 /* Pods-GKCycleScrollViewDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKCycleScrollViewDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		05C0106246AAEEB531EEABB717748C40 /* UINavigationController+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UINavigationController+GKCategory.m"; sourceTree = "<group>"; };
-		05CE8726E4F4F296E4FD6A10F7667B61 /* GKDelegateHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKDelegateHandler.h; path = GKNavigationBarViewController/GKTransition/GKDelegateHandler.h; sourceTree = "<group>"; };
 		05FE0FFC91C793AD59D9FA930BACB1D9 /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/Core/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		0626B70D41B428D9CF33DBA87DA9C7D8 /* JXCategoryImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryImageView.m; path = Sources/Image/JXCategoryImageView.m; sourceTree = "<group>"; };
 		06FE4EA3E49433EEA2932FADB1C9CF4B /* JXCategoryBaseCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryBaseCell.m; path = Sources/Base/JXCategoryBaseCell.m; sourceTree = "<group>"; };
@@ -366,7 +364,9 @@
 		07866607A8475E072876AE420FE82654 /* JXCategoryIndicatorImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorImageView.h; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorImageView.h; sourceTree = "<group>"; };
 		080702E85AC65E407065772D037038FB /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
 		08BA57835EAA0999F3852B086813262B /* SDImageHEICCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageHEICCoder.m; path = SDWebImage/Core/SDImageHEICCoder.m; sourceTree = "<group>"; };
+		09CDAE9FB6133058A819D57369474872 /* GKNavigationInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationInteractiveTransition.h; path = GKNavigationBarViewController/GKTransition/GKNavigationInteractiveTransition.h; sourceTree = "<group>"; };
 		0ABA2C039A6E0B825FB4FA65858BA6FB /* JXCategoryFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryFactory.h; path = Sources/Common/JXCategoryFactory.h; sourceTree = "<group>"; };
+		0AD00F68D8BA0A702CE2DDDB7F6AE412 /* GKNavigationBarViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GKNavigationBarViewController-dummy.m"; sourceTree = "<group>"; };
 		0AD25FE9C7DD71596B83DABBA9E5F624 /* SDAutoLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-umbrella.h"; sourceTree = "<group>"; };
 		0B025C737693AACD33DCBDAC4EF9D683 /* JXCategoryDotCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryDotCellModel.m; path = Sources/Dot/JXCategoryDotCellModel.m; sourceTree = "<group>"; };
 		0B1710DC08E003B52C0F0F36161B651A /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/Core/SDImageCacheDefine.m; sourceTree = "<group>"; };
@@ -375,8 +375,10 @@
 		0E150BEC8C68A64B3A15F029D654830D /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/Core/UIButton+WebCache.m"; sourceTree = "<group>"; };
 		0EC082D6F8CC7A6811FABF129634692F /* JXCategoryIndicatorDotLineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorDotLineView.h; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorDotLineView.h; sourceTree = "<group>"; };
 		0EC267FFB4DD5B3C066DB22F48954E13 /* SDWebImageOptionsProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageOptionsProcessor.m; path = SDWebImage/Core/SDWebImageOptionsProcessor.m; sourceTree = "<group>"; };
+		0F2A950C4F4B26F5521F3A452C175AB0 /* UIViewController+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIViewController+GKCategory.m"; sourceTree = "<group>"; };
 		0FE7284F1223DCA00C426B39B0B22ADB /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/Core/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		1035F015625D00AF77765AAFC40DBE32 /* JXCategoryTitleImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryTitleImageView.h; path = Sources/TitleImage/JXCategoryTitleImageView.h; sourceTree = "<group>"; };
+		1070A557A237261A45101A7A1D1FBE7A /* GKCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKCommon.h; path = GKNavigationBarViewController/GKConfigure/GKCommon.h; sourceTree = "<group>"; };
 		107911C2B050A2A16711C6085E1F918C /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/Core/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		1111EE6A7DB5AC7A24C46D9F39DDF23B /* SDWebImageDownloaderRequestModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderRequestModifier.m; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.m; sourceTree = "<group>"; };
 		112899D2DA34A00ECF61FB4B449B8FF5 /* SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAutoLayout.h; path = SDAutoLayoutDemo/SDAutoLayout/SDAutoLayout.h; sourceTree = "<group>"; };
@@ -385,11 +387,12 @@
 		12C3E78AC0737B34F2E61BD5B535B31B /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SDAutoTableViewCellHeight.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		136112534ECFB45156C5BD81C60417E0 /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/Core/SDImageCodersManager.h; sourceTree = "<group>"; };
 		1446B5864071B64C64F894F632E04483 /* JXCategoryViewAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryViewAnimator.h; path = Sources/Common/JXCategoryViewAnimator.h; sourceTree = "<group>"; };
+		146BE856095995113D8D0444C1D059D4 /* GKNavigationBarConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBarConfigure.m; path = GKNavigationBarViewController/GKConfigure/GKNavigationBarConfigure.m; sourceTree = "<group>"; };
 		14A483E38D971D5570272AD2B585CA8C /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/Core/UIImage+GIF.h"; sourceTree = "<group>"; };
+		15958605468AD86564BF23DF3D638EDC /* GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKCategory.h; path = GKNavigationBarViewController/GKCategory/GKCategory.h; sourceTree = "<group>"; };
 		1746CEE79DF68D49E32A21C6A1117C2B /* JXCategoryTitleVerticalZoomCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryTitleVerticalZoomCellModel.m; path = Sources/VerticalZoomTitle/JXCategoryTitleVerticalZoomCellModel.m; sourceTree = "<group>"; };
 		18F60DEF8FE317A56CD16D956054F558 /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/Core/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
 		193157904A83CC6F652A44E2867A8066 /* SDDeviceHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDeviceHelper.m; path = SDWebImage/Private/SDDeviceHelper.m; sourceTree = "<group>"; };
-		198BE56B22BC4119586EE76B769F53C8 /* GKPushTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKPushTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKPushTransitionAnimation.m; sourceTree = "<group>"; };
 		19BC55A0C4C56F05F0E8F5794F1C867D /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/Core/SDWebImageManager.h; sourceTree = "<group>"; };
 		19C91E9C13A788E2498CB8194168FEFF /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		1C690F3A2A43FC0C403157C344DEE067 /* UIImage+Transform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Transform.h"; path = "SDWebImage/Core/UIImage+Transform.h"; sourceTree = "<group>"; };
@@ -409,13 +412,11 @@
 		291E0139BBBB285B70FB8CACD7052052 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/Core/NSButton+WebCache.m"; sourceTree = "<group>"; };
 		2A14C44054FF8F24DF28E98B71FED01B /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		2A3C3D980EFC550FB2C382E561EFF055 /* SDAutoLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDAutoLayout-Info.plist"; sourceTree = "<group>"; };
-		2A56C90232E63E6F8276F652D3E8FEA8 /* GKNavigationBarViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKNavigationBarViewController-prefix.pch"; sourceTree = "<group>"; };
 		2A91E0E9F87283B15EA95B37A2E83A9F /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/Core/SDImageLoadersManager.h; sourceTree = "<group>"; };
 		2AB182C7042E2FAE2CD867CED3AA32EA /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/Core/SDWebImageCompat.m; sourceTree = "<group>"; };
-		2B8EECEC9FB8B413208B1BB6F22148E0 /* UINavigationController+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UINavigationController+GKCategory.h"; sourceTree = "<group>"; };
 		2C0EDFF7046B83BA9BA87DF087DCD9D4 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		2C5DCF60555441C724BCC047E2E1F00F /* GKNavigationBarViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKNavigationBarViewController.modulemap; sourceTree = "<group>"; };
 		2D24B4853EF5CE5AD7D4FA5E183BD6E2 /* SDAutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDAutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D32E2363380B54FD7125EC0ECAA8D56 /* UIImage+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIImage+GKCategory.m"; sourceTree = "<group>"; };
 		30690AD3E6B3DF037F718AC05A7D4A2E /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		31D8585931F6A7E7D6E4BF2F00833760 /* SDImageTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageTransformer.m; path = SDWebImage/Core/SDImageTransformer.m; sourceTree = "<group>"; };
 		31E1C2C817F4BC0E608B84C60F0CF9F5 /* Pods-GKCycleScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKCycleScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -424,10 +425,9 @@
 		350FA6BF099E1382FFD2479CB44AC483 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		3515735584681B095600F142878F2743 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		3563471951BDC38E7D904C4896CE0372 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
-		3631743C2A5D6998E124EB9CB95D9A26 /* GKNavigationBarViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKNavigationBarViewController-umbrella.h"; sourceTree = "<group>"; };
+		35DC2FF6EF81FB1F7DAC0CFB7E901512 /* UIImage+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIImage+GKCategory.m"; sourceTree = "<group>"; };
 		36BA1BA100BBC23F388CBC97F4E12E29 /* SDAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-prefix.pch"; sourceTree = "<group>"; };
 		36ED882316CD8E6AF87DDAD31D56DD35 /* SDImageTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageTransformer.h; path = SDWebImage/Core/SDImageTransformer.h; sourceTree = "<group>"; };
-		373CE5469BFF17AC1060E110F96E80A2 /* UIBarButtonItem+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIBarButtonItem+GKCategory.m"; sourceTree = "<group>"; };
 		375479C58222048123F85595AC4367DC /* SDAssociatedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAssociatedObject.h; path = SDWebImage/Private/SDAssociatedObject.h; sourceTree = "<group>"; };
 		37654B94A156DB73BD5ED514D381EDA9 /* JXCategoryIndicatorComponentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorComponentView.m; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorComponentView.m; sourceTree = "<group>"; };
 		379441E8C5842D47B6AC4B1A07C824E5 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDAutoLayout.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
@@ -437,9 +437,7 @@
 		395B8C895F1BEBE2EBDDA5EA37998F2C /* NSImage+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+Compatibility.h"; path = "SDWebImage/Core/NSImage+Compatibility.h"; sourceTree = "<group>"; };
 		39AEED67A66C7A008D6355D5AD6C2934 /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/Core/SDImageIOCoder.m; sourceTree = "<group>"; };
 		3AA5F1DABC5F0A755FFE3D223E12F7A4 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		3C38A364B1F1966EE88CD92DA5C67096 /* UIScrollView+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIScrollView+GKCategory.h"; sourceTree = "<group>"; };
-		3C60ABBBF3DA76EAD8BE74375AF68B15 /* GKNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBar.h; path = GKNavigationBarViewController/GKConfigure/GKNavigationBar.h; sourceTree = "<group>"; };
-		3C6E863A221E60151088E97BDFCB6B81 /* UIScrollView+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIScrollView+GKCategory.m"; sourceTree = "<group>"; };
+		3AC4D9CDFA7826FA8C5EDDBF791A1392 /* UIBarButtonItem+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIBarButtonItem+GKCategory.m"; sourceTree = "<group>"; };
 		3CD73963DBADD795E6F8A03646731452 /* SDImageAWebPCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAWebPCoder.m; path = SDWebImage/Core/SDImageAWebPCoder.m; sourceTree = "<group>"; };
 		3D258A068956BC08448E812234C952A9 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDAutoLayout.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		3D7F444540251D34ADFD864FCDD2CD23 /* SDImageGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGraphics.m; path = SDWebImage/Core/SDImageGraphics.m; sourceTree = "<group>"; };
@@ -451,20 +449,22 @@
 		448EB7B5F36AC6EA592F6F2D98E87160 /* JXCategoryFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryFactory.m; path = Sources/Common/JXCategoryFactory.m; sourceTree = "<group>"; };
 		45B95319A34AA5E5697B2CE5250F19BD /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/Core/UIView+WebCache.h"; sourceTree = "<group>"; };
 		45FDFD956AAA12BBCCCBB60B25E47B2D /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
+		46236A032DF9140523CEB9283C80B7FC /* UINavigationController+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UINavigationController+GKCategory.m"; sourceTree = "<group>"; };
 		4643EBF7753B9C9A495C47C2EC8D61AD /* SDAssociatedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAssociatedObject.m; path = SDWebImage/Private/SDAssociatedObject.m; sourceTree = "<group>"; };
 		467E0543F47A69DF897B7AAC899C512B /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		46C6E067272754290C054903ECB5C81B /* GKNavigationBarViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GKNavigationBarViewController.bundle; path = GKNavigationBarViewController/GKNavigationBarViewController.bundle; sourceTree = "<group>"; };
 		46DE8D43482080B8DA3A61935FE7C4E1 /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/Core/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		48381A43E430126BC2DDB60435934BBF /* JXCategoryNumberCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryNumberCellModel.h; path = Sources/Number/JXCategoryNumberCellModel.h; sourceTree = "<group>"; };
 		4857446BDF6F310313930076F3328931 /* JXCategoryIndicatorRainbowLineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorRainbowLineView.h; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorRainbowLineView.h; sourceTree = "<group>"; };
 		490E37F058C43072DA93E6E7171DACB6 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/Core/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		4A59A5E0FA350AFCA7AADF0218B27915 /* GKNavigationBarViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBarViewController.m; path = GKNavigationBarViewController/GKNavigationBarViewController.m; sourceTree = "<group>"; };
 		4B216EED8D6EBFA1CAC099E09EE8C3F9 /* SDAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDAnimatedImageView+WebCache.h"; path = "SDWebImage/Core/SDAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
+		4BA29499EE60D040245D33FEF9251364 /* UIImage+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIImage+GKCategory.h"; sourceTree = "<group>"; };
 		4BDD421E87593CE0A5CF11DFD690770D /* JXCategoryNumberView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryNumberView.m; path = Sources/Number/JXCategoryNumberView.m; sourceTree = "<group>"; };
 		4C49C7AE79409249DD7019B0029F228D /* SDWebImageTransitionInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransitionInternal.h; path = SDWebImage/Private/SDWebImageTransitionInternal.h; sourceTree = "<group>"; };
-		4F54822391569547DC537D4790E4FB0C /* UIImage+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIImage+GKCategory.h"; sourceTree = "<group>"; };
 		4F869DC7FEA1F565B6984ABA3E42EE21 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		511FC19F79A6A213E368B7C8A2434652 /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
 		530DE12DD617D16ADF9FB7B3A744F31F /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
-		537B61A644B83CE1BC6C43A856A6A037 /* GKNavigationBarViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GKNavigationBarViewController.bundle; path = GKNavigationBarViewController/GKNavigationBarViewController.bundle; sourceTree = "<group>"; };
 		5413E56F94C577894B040019A7C13AEA /* RTLManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RTLManager.m; path = Sources/RLTManager/RTLManager.m; sourceTree = "<group>"; };
 		5508A96D75785C1BA5B2D8AB946FC2C9 /* Pods_GKCycleScrollViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKCycleScrollViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568CD6634ECB5A10A896F5472E5FDF16 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 		583A6C4E71E33DDFB71C8DC47522FD83 /* JXCategoryBaseCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryBaseCell.h; path = Sources/Base/JXCategoryBaseCell.h; sourceTree = "<group>"; };
 		58A77044A363854E6F2A694AFE0F9AC4 /* JXCategoryBaseCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryBaseCellModel.h; path = Sources/Base/JXCategoryBaseCellModel.h; sourceTree = "<group>"; };
 		58DC2AE274AC058589A0B5538D4D10B5 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
-		5A2C827C675002BD5F16433CD7117423 /* GKNavigationBarViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKNavigationBarViewController.release.xcconfig; sourceTree = "<group>"; };
+		59197DA45A7AD760E9A9D58462F447D6 /* UINavigationItem+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UINavigationItem+GKCategory.m"; sourceTree = "<group>"; };
 		5A5A9569C72A7127D5B60FFE8D80D798 /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/Core/SDImageFrame.h; sourceTree = "<group>"; };
 		5AC4164EC1B8F31547C5A7F7CE1010A4 /* JXCategoryTitleCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryTitleCellModel.h; path = Sources/Title/JXCategoryTitleCellModel.h; sourceTree = "<group>"; };
 		5B3131F82A13538409333220EBEA196A /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
@@ -484,7 +484,6 @@
 		5CB9FCCE6BC02D25A97718935F5CB5EE /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		5CD6F46BD81997534FA48F03C83B7F12 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/Core/UIView+WebCache.m"; sourceTree = "<group>"; };
 		5E3538928FB7527F7A9DBF62C8E34AD0 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/Core/UIImage+Metadata.m"; sourceTree = "<group>"; };
-		5F2B295596E178215502B6CFA54C2D72 /* UIViewController+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIViewController+GKCategory.h"; sourceTree = "<group>"; };
 		5F630B471CB00CCA6F94B1D81BD9A708 /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/Core/SDAnimatedImageView.h; sourceTree = "<group>"; };
 		60BBB1C302007CDD9B88BF1E582A57E6 /* JXCategoryView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JXCategoryView-dummy.m"; sourceTree = "<group>"; };
 		60CC69B0EC53EADBD761AE7F9CD0418F /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -501,27 +500,27 @@
 		66BC5BAF9F29DF94E7820D15F1F7F56B /* JXCategoryDotCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryDotCell.h; path = Sources/Dot/JXCategoryDotCell.h; sourceTree = "<group>"; };
 		6771F4052809FF72976A2C39C73DFDE6 /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheKeyFilter.m; path = SDWebImage/Core/SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
 		67ACBD49A906FBFE20378402965729B2 /* SDImageCachesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManager.h; path = SDWebImage/Core/SDImageCachesManager.h; sourceTree = "<group>"; };
+		6A3EC1A804C6EC2239029BA404895B11 /* GKNavigationBarViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKNavigationBarViewController.release.xcconfig; sourceTree = "<group>"; };
 		6A77BE99113D2DE30215D926990732D9 /* SDWebImageDownloaderConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderConfig.m; path = SDWebImage/Core/SDWebImageDownloaderConfig.m; sourceTree = "<group>"; };
 		6AC59EAD2E71D58B3F1272F551B8A986 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/Core/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		6B0B5D798F3BFC77711CB2428F1F0712 /* UIScrollView+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIScrollView+GKCategory.m"; sourceTree = "<group>"; };
 		6B6D1D6FAB05433ACCEB80960B65CB9C /* SDImageIOAnimatedCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOAnimatedCoder.h; path = SDWebImage/Core/SDImageIOAnimatedCoder.h; sourceTree = "<group>"; };
 		6C34647ADE875B3AF556476F781549F0 /* JXCategoryBaseCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryBaseCellModel.m; path = Sources/Base/JXCategoryBaseCellModel.m; sourceTree = "<group>"; };
-		6D38654841C42AC41A79E0B2C333AC1C /* UIViewController+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UIViewController+GKCategory.m"; sourceTree = "<group>"; };
+		6DC9EAB7FB0E598888FBC17CA670AC0C /* GKNavigationBarViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKNavigationBarViewController-umbrella.h"; sourceTree = "<group>"; };
 		6F795F404DB532A74DCBC529A4B7E1F5 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/Core/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		6F81CF03C0FBE18945999B1C1862B0DE /* JXCategoryViewDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryViewDefines.h; path = Sources/Common/JXCategoryViewDefines.h; sourceTree = "<group>"; };
 		6FCF419322D2B07260A76B5912184599 /* SDImageCacheDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheDefine.h; path = SDWebImage/Core/SDImageCacheDefine.h; sourceTree = "<group>"; };
-		7111C564BFB331F5121F6A4F0033D087 /* GKNavigationBarConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBarConfigure.m; path = GKNavigationBarViewController/GKConfigure/GKNavigationBarConfigure.m; sourceTree = "<group>"; };
 		719BF289967C0E8D4D44B72DA88E4F14 /* JXCategoryIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorView.m; path = Sources/Indicator/JXCategoryIndicatorView.m; sourceTree = "<group>"; };
 		728581B3881F6238E0BBC4A5C58D7B99 /* SDWebImageCacheKeyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheKeyFilter.h; path = SDWebImage/Core/SDWebImageCacheKeyFilter.h; sourceTree = "<group>"; };
 		732D7E5649EAF61EF02753D882596322 /* JXCategoryDotCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryDotCellModel.h; path = Sources/Dot/JXCategoryDotCellModel.h; sourceTree = "<group>"; };
 		741A72927CC8E424A678D2AF74BD5A1A /* SDAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImage.m; path = SDWebImage/Core/SDAnimatedImage.m; sourceTree = "<group>"; };
-		75C7CDAC35423F6236EDFB64C3562044 /* GKNavigationBarViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBarViewController.h; path = GKNavigationBarViewController/GKNavigationBarViewController.h; sourceTree = "<group>"; };
 		75CAF01889D6A202FFD641A978842576 /* JXCategoryDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryDotView.m; path = Sources/Dot/JXCategoryDotView.m; sourceTree = "<group>"; };
-		75D84AC08776C7618416A49ED01F1D36 /* GKBaseTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKBaseTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKBaseTransitionAnimation.h; sourceTree = "<group>"; };
 		75F2807934E0EF32735B42738E6B2845 /* JXCategoryDotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryDotView.h; path = Sources/Dot/JXCategoryDotView.h; sourceTree = "<group>"; };
 		772C9891A058B3C65136C49F8EA4DAC1 /* JXCategoryImageCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryImageCellModel.h; path = Sources/Image/JXCategoryImageCellModel.h; sourceTree = "<group>"; };
 		77D8AA5CF6A6C02B0A9F145CF7CE13B0 /* JXCategoryNumberCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryNumberCellModel.m; path = Sources/Number/JXCategoryNumberCellModel.m; sourceTree = "<group>"; };
 		77EBC71833798EB27BBB4BDBB64D34E2 /* SDDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDisplayLink.h; path = SDWebImage/Private/SDDisplayLink.h; sourceTree = "<group>"; };
 		78EC7C393499588AF4FDC39BA9A63C79 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SDAutoTableViewCellHeight.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		796CBEF771C5DC16A93BD985A531AAD9 /* GKPopTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKPopTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKPopTransitionAnimation.m; sourceTree = "<group>"; };
 		7A017B9FA9636F6041A4F43B34E7A75F /* UIColor+JXAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JXAdd.m"; path = "Sources/Common/UIColor+JXAdd.m"; sourceTree = "<group>"; };
 		7A2D7192D245EFE7642AA2923B65BFC3 /* JXCategoryIndicatorCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorCellModel.m; path = Sources/Indicator/JXCategoryIndicatorCellModel.m; sourceTree = "<group>"; };
 		7A5C0852E0092E33C1AE8679778BA9D1 /* SDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImage.h; path = WebImage/SDWebImage.h; sourceTree = "<group>"; };
@@ -529,12 +528,14 @@
 		7B2A224D33942FCDAC05961A968D42BE /* SDAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImage.h; path = SDWebImage/Core/SDAnimatedImage.h; sourceTree = "<group>"; };
 		7B4AACC1EA9DDC53D655BDC3AC5DB14B /* SDImageCachesManagerOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManagerOperation.m; path = SDWebImage/Private/SDImageCachesManagerOperation.m; sourceTree = "<group>"; };
 		7DE4D6F0E99EDD1C5FB93BA077CB3C0D /* JXCategoryIndicatorBallView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorBallView.m; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorBallView.m; sourceTree = "<group>"; };
-		7E25A401029F3E1D400217D7DDFABEFF /* UIBarButtonItem+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIBarButtonItem+GKCategory.h"; sourceTree = "<group>"; };
 		7E51A791EBC1E3FEF391D622081A588F /* UIColor+SDHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SDHexString.h"; path = "SDWebImage/Private/UIColor+SDHexString.h"; sourceTree = "<group>"; };
 		7E7465CFDBBEC29EDB9964B7210238F7 /* Pods-GKCycleScrollViewDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GKCycleScrollViewDemo-frameworks.sh"; sourceTree = "<group>"; };
 		7EB1F80FEB9AD76979A54A04453DA6AF /* JXCategoryIndicatorRainbowLineView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorRainbowLineView.m; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorRainbowLineView.m; sourceTree = "<group>"; };
 		7F0BCFE3062EEA4DCDD5E7FC471C78C5 /* JXCategoryBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryBaseView.h; path = Sources/Base/JXCategoryBaseView.h; sourceTree = "<group>"; };
+		7F0DFAC18F6B7F974CFBF41B9E000486 /* UIViewController+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIViewController+GKCategory.h"; sourceTree = "<group>"; };
+		800C2EAC98F83CA73ACD399B484650B3 /* GKBaseTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKBaseTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKBaseTransitionAnimation.h; sourceTree = "<group>"; };
 		80285345AB8AEF80AD092B5A02761D0B /* JXCategoryTitleImageCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryTitleImageCellModel.m; path = Sources/TitleImage/JXCategoryTitleImageCellModel.m; sourceTree = "<group>"; };
+		810D1191D44EAE19306AE72CFB093EA8 /* GKNavigationBarViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GKNavigationBarViewController-Info.plist"; sourceTree = "<group>"; };
 		81BDF9CF3DED21AFB1932D1AB48AFA27 /* SDDeviceHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDeviceHelper.h; path = SDWebImage/Private/SDDeviceHelper.h; sourceTree = "<group>"; };
 		8286654ED0EB7D6F3355BA8F16133179 /* SDGraphicsImageRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDGraphicsImageRenderer.m; path = SDWebImage/Core/SDGraphicsImageRenderer.m; sourceTree = "<group>"; };
 		829217FFB5EBCD5757D55E573CD5FE08 /* JXCategoryTitleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryTitleView.h; path = Sources/Title/JXCategoryTitleView.h; sourceTree = "<group>"; };
@@ -546,6 +547,7 @@
 		86EB73F0EC2A61E98A85559B737A851E /* SDImageIOAnimatedCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOAnimatedCoderInternal.h; path = SDWebImage/Private/SDImageIOAnimatedCoderInternal.h; sourceTree = "<group>"; };
 		88DAE52C5A8CEDC3F3156CFA8F31339E /* SDDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDiskCache.m; path = SDWebImage/Core/SDDiskCache.m; sourceTree = "<group>"; };
 		89E2D7EDA5E0667165FFA4628A1B9EE0 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/Core/SDWebImageDownloader.m; sourceTree = "<group>"; };
+		8A851421CA62DE78403087497E429A84 /* GKNavigationBarViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBarViewController.h; path = GKNavigationBarViewController/GKNavigationBarViewController.h; sourceTree = "<group>"; };
 		8BECBACB3085BCE152772F1BC096CD52 /* UIImage+Metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Metadata.h"; path = "SDWebImage/Core/UIImage+Metadata.h"; sourceTree = "<group>"; };
 		8C07812B59BF57C77D6861F90D652FBE /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/Core/SDAnimatedImageRep.h; sourceTree = "<group>"; };
 		8C551AECE1FD4978488CC6F724E20E45 /* JXCategoryView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXCategoryView-umbrella.h"; sourceTree = "<group>"; };
@@ -555,7 +557,6 @@
 		8E2BA4FB000B99034951ED512BFCB7AA /* SDWebImageDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDefine.h; path = SDWebImage/Core/SDWebImageDefine.h; sourceTree = "<group>"; };
 		8EC5943F20C237E7C688E3FC54BB2E92 /* UIImage+ExtendedCacheData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ExtendedCacheData.m"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.m"; sourceTree = "<group>"; };
 		8F6E1B04702E054A499DADA2361FC4D6 /* SDWebImageCacheSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheSerializer.m; path = SDWebImage/Core/SDWebImageCacheSerializer.m; sourceTree = "<group>"; };
-		8F8A2FB840FAF9259D2F07648D0F174B /* UINavigationItem+GKCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+GKCategory.m"; path = "GKNavigationBarViewController/GKCategory/UINavigationItem+GKCategory.m"; sourceTree = "<group>"; };
 		9172A3A542AD086854EA9D6B63E968C0 /* SDWebImageCacheSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheSerializer.h; path = SDWebImage/Core/SDWebImageCacheSerializer.h; sourceTree = "<group>"; };
 		91DAC8AC1F3440ECC23965E4FC8A703A /* JXCategoryIndicatorDotLineView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorDotLineView.m; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorDotLineView.m; sourceTree = "<group>"; };
 		92581D492771BB8E91E4156849A05C39 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/Core/UIImageView+WebCache.m"; sourceTree = "<group>"; };
@@ -563,25 +564,20 @@
 		93AA5E013B53791649ECFE4E38FF7D1C /* SDImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoader.m; path = SDWebImage/Core/SDImageLoader.m; sourceTree = "<group>"; };
 		9894C3F667D4DAEA42A36486FCC0F404 /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
 		98A96D204E15340C4F6E636793F6AAF2 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		9A3688AD7C9E31B29B3BB37480BDFE0E /* GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKCategory.h; path = GKNavigationBarViewController/GKCategory/GKCategory.h; sourceTree = "<group>"; };
 		9A81F86FBE301DEFE74CFE0370930F08 /* JXCategoryTitleVerticalZoomView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryTitleVerticalZoomView.m; path = Sources/VerticalZoomTitle/JXCategoryTitleVerticalZoomView.m; sourceTree = "<group>"; };
 		9ADACD4708CC00E047C947D3A613A61C /* SDImageAPNGCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAPNGCoder.h; path = SDWebImage/Core/SDImageAPNGCoder.h; sourceTree = "<group>"; };
 		9AF4FFCB70E6E027BD8C65148B4165A1 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		9D4633C1F6D3EC44DA206058608E0F52 /* GKPopTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKPopTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKPopTransitionAnimation.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EBDB266B64C97BB0B343C1E35E0E2A6 /* GKDelegateHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKDelegateHandler.m; path = GKNavigationBarViewController/GKTransition/GKDelegateHandler.m; sourceTree = "<group>"; };
+		9E4F088A54BDA75C450F86DF6C16BC79 /* UIScrollView+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIScrollView+GKCategory.h"; sourceTree = "<group>"; };
 		9F31C00FE1BC24CAC9559957A350FFCD /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/Core/SDWebImageManager.m; sourceTree = "<group>"; };
 		A18BEFCA95A2A46BF683FCC776C55972 /* JXCategoryIndicatorBackgroundView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorBackgroundView.m; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorBackgroundView.m; sourceTree = "<group>"; };
 		A1A64D127B98E7E6DF1431C0A62090FC /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		A1D5632825C5C0B26D738315C4F3DF89 /* GKBaseTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKBaseTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKBaseTransitionAnimation.m; sourceTree = "<group>"; };
 		A23DF93024A443A56536683A1AF27BBC /* Pods-GKCycleScrollViewDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GKCycleScrollViewDemo-umbrella.h"; sourceTree = "<group>"; };
 		A2E5FA8BF0C059DF44E7F459393F535D /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/Core/SDImageGraphics.h; sourceTree = "<group>"; };
-		A461DB2E7331A0DC668C62CCB1E39855 /* GKCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKCommon.h; path = GKNavigationBarViewController/GKConfigure/GKCommon.h; sourceTree = "<group>"; };
 		A57AAF000F1EEF6F6296C00C9B7F16F7 /* JXCategoryIndicatorCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorCellModel.h; path = Sources/Indicator/JXCategoryIndicatorCellModel.h; sourceTree = "<group>"; };
-		A6AF30618B4E0525AB2270F01E069FA5 /* GKNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBar.m; path = GKNavigationBarViewController/GKConfigure/GKNavigationBar.m; sourceTree = "<group>"; };
 		A78CE8077A3A0C4A704F6EF5B972FF78 /* SDImageAWebPCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAWebPCoder.h; path = SDWebImage/Core/SDImageAWebPCoder.h; sourceTree = "<group>"; };
-		A7D9F46EEB8BA5C13B69DF4053D52AE3 /* GKNavigationBarViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBarViewController.m; path = GKNavigationBarViewController/GKNavigationBarViewController.m; sourceTree = "<group>"; };
 		A87D09BB57CCC581DF2E10990C33F4B0 /* SDAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SDAnimatedImageView+WebCache.m"; path = "SDWebImage/Core/SDAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
+		A891D9EA7D31CE4C736DEF02D7E8AC02 /* GKPushTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKPushTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKPushTransitionAnimation.h; sourceTree = "<group>"; };
 		AA2BE81216AF19AB16C93615405B76D5 /* SDWebImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.release.xcconfig; sourceTree = "<group>"; };
 		AAC97FB0F6EE5754F48BABD301BC671E /* Pods-GKCycleScrollViewDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GKCycleScrollViewDemo.modulemap"; sourceTree = "<group>"; };
 		AB2A696006033EFC95E8070C765ADDAD /* JXCategoryTitleImageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryTitleImageCell.m; path = Sources/TitleImage/JXCategoryTitleImageCell.m; sourceTree = "<group>"; };
@@ -592,10 +588,8 @@
 		B003E567A136D20D0077C497321DD380 /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
 		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26D76516DBE187BD95ECDFD93DC7EAB /* UIColor+SDHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+SDHexString.m"; path = "SDWebImage/Private/UIColor+SDHexString.m"; sourceTree = "<group>"; };
-		B41B84BEC95448919864B680F24249B1 /* GKNavigationBarViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GKNavigationBarViewController-Info.plist"; sourceTree = "<group>"; };
 		B4AFB7F631E8301CF16CB416DEE2A835 /* Pods-GKCycleScrollViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKCycleScrollViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B4DDF7ACC144BCD8187677DD0C2E630F /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/Core/SDImageCoder.m; sourceTree = "<group>"; };
-		B562F44D5A525E9922F8EBC19A02A1DC /* GKNavigationBarConfigure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBarConfigure.h; path = GKNavigationBarViewController/GKConfigure/GKNavigationBarConfigure.h; sourceTree = "<group>"; };
 		B5CEF474394053C5F0FBCD9E3F8F3D49 /* JXCategoryBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryBaseView.m; path = Sources/Base/JXCategoryBaseView.m; sourceTree = "<group>"; };
 		B654FAA9517D352CD7A8A5A91419BA9E /* GKNavigationBarViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GKNavigationBarViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76F98B5786D044F4721E8E1093339BE /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
@@ -604,14 +598,15 @@
 		B9D39CFF37FA4A921F55EFAC0366E6CD /* SDWebImageDownloaderRequestModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderRequestModifier.h; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.h; sourceTree = "<group>"; };
 		BA261C61064A3A9F1096EDBDB0D931EC /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		BA398D54569031561D97BC3AFAEAF1B5 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		BA3F5AD6FBE6977D894CF249B98C9636 /* GKNavigationInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationInteractiveTransition.m; path = GKNavigationBarViewController/GKTransition/GKNavigationInteractiveTransition.m; sourceTree = "<group>"; };
 		BA79B056009DD6955E7972A4EC55B6A7 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		BADFFEB42F4CAD4F77799FAD5AB28CA5 /* SDImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoder.h; path = SDWebImage/Core/SDImageCoder.h; sourceTree = "<group>"; };
-		BB42AD01DA2659D90075781C8130FA55 /* UINavigationItem+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UINavigationItem+GKCategory.h"; sourceTree = "<group>"; };
 		BC137E98B2FCC6550EBDF8C11EA1ACB2 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/Core/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		BC687EB45B844BC9DD2EEB426D718167 /* JXCategoryTitleVerticalZoomCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryTitleVerticalZoomCell.h; path = Sources/VerticalZoomTitle/JXCategoryTitleVerticalZoomCell.h; sourceTree = "<group>"; };
 		BC806C22432CFD83821FE07D87F9AE91 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/Core/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		BC8D007A92A9F21654AB6A908E19243B /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		BD2A6D53B11059F5F5D9C485E26CA25E /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		BD37CDE24676B82B402F3D6312F0473F /* GKNavigationBarConfigure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBarConfigure.h; path = GKNavigationBarViewController/GKConfigure/GKNavigationBarConfigure.h; sourceTree = "<group>"; };
 		BDC751000AF51E24054EE3B3CA611138 /* SDFileAttributeHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDFileAttributeHelper.h; path = SDWebImage/Private/SDFileAttributeHelper.h; sourceTree = "<group>"; };
 		BE36F8F73B0068D2CCCB9E4D9FEF6151 /* SDAsyncBlockOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAsyncBlockOperation.h; path = SDWebImage/Private/SDAsyncBlockOperation.h; sourceTree = "<group>"; };
 		BE75E9E7C4BE8CA2CC289FA340CDDC46 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/Core/SDWebImageCompat.h; sourceTree = "<group>"; };
@@ -628,9 +623,11 @@
 		C68ABE0DE7F4B64D064A664AE17FD636 /* JXCategoryIndicatorTriangleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorTriangleView.h; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorTriangleView.h; sourceTree = "<group>"; };
 		C7DDD0FE55BBF7F0912141E32405FF0C /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
 		C8A92EE7C57902AF849B918985A0F875 /* JXCategoryTitleCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryTitleCell.m; path = Sources/Title/JXCategoryTitleCell.m; sourceTree = "<group>"; };
+		C8C64EFEB48056FF593F3180DB0CEE33 /* UIBarButtonItem+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UIBarButtonItem+GKCategory.h"; sourceTree = "<group>"; };
 		C930DD11DF2206E41379D6CBBBE69C35 /* JXCategoryTitleCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryTitleCell.h; path = Sources/Title/JXCategoryTitleCell.h; sourceTree = "<group>"; };
 		CA4E738F369F6EBF53F01A235914D4EE /* JXCategoryListContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryListContainerView.m; path = Sources/Common/JXCategoryListContainerView.m; sourceTree = "<group>"; };
 		CB93BB02A5B66F3B94E9944757271CC8 /* SDGraphicsImageRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDGraphicsImageRenderer.h; path = SDWebImage/Core/SDGraphicsImageRenderer.h; sourceTree = "<group>"; };
+		CBBB6FD46DA05C069E818600206386B3 /* GKNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKNavigationBar.h; path = GKNavigationBarViewController/GKConfigure/GKNavigationBar.h; sourceTree = "<group>"; };
 		CD5C5547AA33E6B18B7FCD914C373995 /* JXCategoryImageCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryImageCellModel.m; path = Sources/Image/JXCategoryImageCellModel.m; sourceTree = "<group>"; };
 		CE59C984ECEA65668F2D4460B7C985C4 /* Pods-GKCycleScrollViewDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GKCycleScrollViewDemo-dummy.m"; sourceTree = "<group>"; };
 		CEC505C89E0C306562177696F1F93083 /* SDImageAssetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAssetManager.h; path = SDWebImage/Private/SDImageAssetManager.h; sourceTree = "<group>"; };
@@ -650,8 +647,11 @@
 		D8E7438B12CD0AFAD6A32490366C702D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D9EE7A1C2B30F93B719EB80167F22CE7 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		DA1C3191C2AEED57F08FEF9788C10009 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		DC465F12537A6116E2C47650EB791DA0 /* GKNavigationBarViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKNavigationBarViewController.debug.xcconfig; sourceTree = "<group>"; };
+		DA1F01064253641F2922B47BF632CBDD /* GKPushTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKPushTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKPushTransitionAnimation.m; sourceTree = "<group>"; };
+		DB618FCA03564BA0BF0BF315A8C12C62 /* UINavigationController+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UINavigationController+GKCategory.h"; sourceTree = "<group>"; };
+		DC03E53F8CAA1C14B78C9EA93FE72048 /* UINavigationItem+GKCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+GKCategory.h"; path = "GKNavigationBarViewController/GKCategory/UINavigationItem+GKCategory.h"; sourceTree = "<group>"; };
 		DCC215324A97024A6BEE5A93DE19C2DA /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		DCD929B93BD71AA1154BF7DB79C1F35C /* GKNavigationBarViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKNavigationBarViewController.debug.xcconfig; sourceTree = "<group>"; };
 		DDB7EC73341A1C5C7E430802003E89F2 /* JXCategoryImageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryImageCell.m; path = Sources/Image/JXCategoryImageCell.m; sourceTree = "<group>"; };
 		DE107631E1BF242F65C5B07471ABA8D4 /* JXCategoryViewAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryViewAnimator.m; path = Sources/Common/JXCategoryViewAnimator.m; sourceTree = "<group>"; };
 		DE1C849B7B8229E0B4B0703D26859EC3 /* SDAnimatedImagePlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImagePlayer.h; path = SDWebImage/Core/SDAnimatedImagePlayer.h; sourceTree = "<group>"; };
@@ -662,8 +662,8 @@
 		E31826A61D6473220BC23B7CE435A2B9 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		E498FD12C32582930A13DBEB32FB1E77 /* SDAnimatedImagePlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImagePlayer.m; path = SDWebImage/Core/SDAnimatedImagePlayer.m; sourceTree = "<group>"; };
 		E4D401FC40B667582A950591F33B9067 /* JXCategoryIndicatorComponentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorComponentView.h; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorComponentView.h; sourceTree = "<group>"; };
+		E50A1F1BEB2D90BD569B40EAB8762A1F /* GKNavigationBarViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKNavigationBarViewController-prefix.pch"; sourceTree = "<group>"; };
 		E55E2355151A292EFB5C826AAD1E57BB /* UIImage+ExtendedCacheData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ExtendedCacheData.h"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.h"; sourceTree = "<group>"; };
-		E7032DF4E5EE628CFBCC7C25945F5146 /* GKPushTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKPushTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKPushTransitionAnimation.h; sourceTree = "<group>"; };
 		E7F8530646B3DC6DBFBC8ED98C32A703 /* SDWebImageError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageError.h; path = SDWebImage/Core/SDWebImageError.h; sourceTree = "<group>"; };
 		E8ABB8635A7BD1AD1951E6B21C35F2E3 /* JXCategoryIndicatorTriangleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXCategoryIndicatorTriangleView.m; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorTriangleView.m; sourceTree = "<group>"; };
 		EA7B071150333C5B9E5C8B26B7EA0253 /* JXCategoryImageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryImageCell.h; path = Sources/Image/JXCategoryImageCell.h; sourceTree = "<group>"; };
@@ -671,26 +671,26 @@
 		EBFC4C05B2D6E1F12E7A7E464C35E727 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		EC94419656075B18C92AB8173658A752 /* SDWebImageIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageIndicator.h; path = SDWebImage/Core/SDWebImageIndicator.h; sourceTree = "<group>"; };
 		EDF52C38A287EC5B64BC99A2C0C4D9C6 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		EECB077C2F969B468E2CF31F01BCB35E /* GKPopTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKPopTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKPopTransitionAnimation.h; sourceTree = "<group>"; };
 		EF919AF1D881D7B773B6462C2A7D54D5 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/Core/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		EFFD1B34F7DAC1C6A59B83505E4E6603 /* JXCategoryIndicatorLineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryIndicatorLineView.h; path = Sources/Indicator/IndicatorViews/JXCategoryIndicatorLineView.h; sourceTree = "<group>"; };
 		F02CB4CD28A0B6A2C4DD20CB37DE526B /* JXCategoryTitleImageCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryTitleImageCellModel.h; path = Sources/TitleImage/JXCategoryTitleImageCellModel.h; sourceTree = "<group>"; };
+		F07750EC1C158F4EE0805637C4357689 /* GKNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKNavigationBar.m; path = GKNavigationBarViewController/GKConfigure/GKNavigationBar.m; sourceTree = "<group>"; };
 		F116833A3F20654CED9AF73E5907513A /* SDImageGIFCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGIFCoder.h; path = SDWebImage/Core/SDImageGIFCoder.h; sourceTree = "<group>"; };
 		F15922E0A42D40B46AD6B43EFEB5942A /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		F1D62F50DBDF216EC982899E0DED70FF /* SDMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDMemoryCache.h; path = SDWebImage/Core/SDMemoryCache.h; sourceTree = "<group>"; };
 		F401E3AAFDFC6CB0E209A6FE3435021D /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/Core/SDImageCache.m; sourceTree = "<group>"; };
-		F4613525D6739464283E8ED729A93E69 /* GKNavigationBarViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GKNavigationBarViewController-dummy.m"; sourceTree = "<group>"; };
 		F68BCBA21D016733DEF14E276265FD55 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
-		F722034693EBCDC3270F79DEA28A2AB7 /* GKNavigationBarViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKNavigationBarViewController.modulemap; sourceTree = "<group>"; };
 		F7C68AE57A61951DD7466B97E51E7179 /* JXCategoryNumberCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryNumberCell.h; path = Sources/Number/JXCategoryNumberCell.h; sourceTree = "<group>"; };
 		F7D2A58F0327EEF477E607455F4183AF /* UIImage+MemoryCacheCost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MemoryCacheCost.h"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.h"; sourceTree = "<group>"; };
 		F7E988C13B01762564FA601271BF6662 /* JXCategoryListContainerRTLCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryListContainerRTLCell.h; path = Sources/Common/JXCategoryListContainerRTLCell.h; sourceTree = "<group>"; };
 		F8D283CE04CD1F08FC9645C663E5279E /* JXCategoryNumberView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXCategoryNumberView.h; path = Sources/Number/JXCategoryNumberView.h; sourceTree = "<group>"; };
 		FB5DCFEE534FD9D35849140CBEA58370 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/Core/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		FB94FE7F3352F71BE88FCC7470D29BEB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		FBD3D15AB30ED9E095CAF818816D0C6D /* GKBaseTransitionAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKBaseTransitionAnimation.m; path = GKNavigationBarViewController/GKTransition/GKBaseTransitionAnimation.m; sourceTree = "<group>"; };
 		FD3F4176EFA3375BD3348279B7ACE94F /* SDAutoLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDAutoLayout.modulemap; sourceTree = "<group>"; };
 		FD509125F183ED5DD83AA1ADA61FC6EF /* SDWebImageDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDefine.m; path = SDWebImage/Core/SDWebImageDefine.m; sourceTree = "<group>"; };
 		FDE9269F63EA444AA362193D643DC10E /* SDImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCodersManager.m; path = SDWebImage/Core/SDImageCodersManager.m; sourceTree = "<group>"; };
-		FE5E00F1FA948C4FA990D52219D290DC /* GKPopTransitionAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKPopTransitionAnimation.h; path = GKNavigationBarViewController/GKTransition/GKPopTransitionAnimation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -786,12 +786,19 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		3AE91137545BDAF63906E2EEC15DD7FF /* Resources */ = {
+		56733C0D50927EF23D710803E3B14040 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				537B61A644B83CE1BC6C43A856A6A037 /* GKNavigationBarViewController.bundle */,
+				2C5DCF60555441C724BCC047E2E1F00F /* GKNavigationBarViewController.modulemap */,
+				0AD00F68D8BA0A702CE2DDDB7F6AE412 /* GKNavigationBarViewController-dummy.m */,
+				810D1191D44EAE19306AE72CFB093EA8 /* GKNavigationBarViewController-Info.plist */,
+				E50A1F1BEB2D90BD569B40EAB8762A1F /* GKNavigationBarViewController-prefix.pch */,
+				6DC9EAB7FB0E598888FBC17CA670AC0C /* GKNavigationBarViewController-umbrella.h */,
+				DCD929B93BD71AA1154BF7DB79C1F35C /* GKNavigationBarViewController.debug.xcconfig */,
+				6A3EC1A804C6EC2239029BA404895B11 /* GKNavigationBarViewController.release.xcconfig */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/GKNavigationBarViewController";
 			sourceTree = "<group>";
 		};
 		5D1314D4DE56314D15304A9107ED8CBE /* iOS */ = {
@@ -802,21 +809,6 @@
 				BF62529CFAA2D00B529B64442FD0CB98 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		65591FA31E9BB065DEFA4BE0BCE02F98 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F722034693EBCDC3270F79DEA28A2AB7 /* GKNavigationBarViewController.modulemap */,
-				F4613525D6739464283E8ED729A93E69 /* GKNavigationBarViewController-dummy.m */,
-				B41B84BEC95448919864B680F24249B1 /* GKNavigationBarViewController-Info.plist */,
-				2A56C90232E63E6F8276F652D3E8FEA8 /* GKNavigationBarViewController-prefix.pch */,
-				3631743C2A5D6998E124EB9CB95D9A26 /* GKNavigationBarViewController-umbrella.h */,
-				DC465F12537A6116E2C47650EB791DA0 /* GKNavigationBarViewController.debug.xcconfig */,
-				5A2C827C675002BD5F16433CD7117423 /* GKNavigationBarViewController.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GKNavigationBarViewController";
 			sourceTree = "<group>";
 		};
 		6ED66FC64BA91FA73572561DF420D715 /* Core */ = {
@@ -968,6 +960,43 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		78C11EBDA56AF9A6DC1894E2FDE3B0B8 /* GKNavigationBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				800C2EAC98F83CA73ACD399B484650B3 /* GKBaseTransitionAnimation.h */,
+				FBD3D15AB30ED9E095CAF818816D0C6D /* GKBaseTransitionAnimation.m */,
+				15958605468AD86564BF23DF3D638EDC /* GKCategory.h */,
+				1070A557A237261A45101A7A1D1FBE7A /* GKCommon.h */,
+				CBBB6FD46DA05C069E818600206386B3 /* GKNavigationBar.h */,
+				F07750EC1C158F4EE0805637C4357689 /* GKNavigationBar.m */,
+				BD37CDE24676B82B402F3D6312F0473F /* GKNavigationBarConfigure.h */,
+				146BE856095995113D8D0444C1D059D4 /* GKNavigationBarConfigure.m */,
+				8A851421CA62DE78403087497E429A84 /* GKNavigationBarViewController.h */,
+				4A59A5E0FA350AFCA7AADF0218B27915 /* GKNavigationBarViewController.m */,
+				09CDAE9FB6133058A819D57369474872 /* GKNavigationInteractiveTransition.h */,
+				BA3F5AD6FBE6977D894CF249B98C9636 /* GKNavigationInteractiveTransition.m */,
+				EECB077C2F969B468E2CF31F01BCB35E /* GKPopTransitionAnimation.h */,
+				796CBEF771C5DC16A93BD985A531AAD9 /* GKPopTransitionAnimation.m */,
+				A891D9EA7D31CE4C736DEF02D7E8AC02 /* GKPushTransitionAnimation.h */,
+				DA1F01064253641F2922B47BF632CBDD /* GKPushTransitionAnimation.m */,
+				C8C64EFEB48056FF593F3180DB0CEE33 /* UIBarButtonItem+GKCategory.h */,
+				3AC4D9CDFA7826FA8C5EDDBF791A1392 /* UIBarButtonItem+GKCategory.m */,
+				4BA29499EE60D040245D33FEF9251364 /* UIImage+GKCategory.h */,
+				35DC2FF6EF81FB1F7DAC0CFB7E901512 /* UIImage+GKCategory.m */,
+				DB618FCA03564BA0BF0BF315A8C12C62 /* UINavigationController+GKCategory.h */,
+				46236A032DF9140523CEB9283C80B7FC /* UINavigationController+GKCategory.m */,
+				DC03E53F8CAA1C14B78C9EA93FE72048 /* UINavigationItem+GKCategory.h */,
+				59197DA45A7AD760E9A9D58462F447D6 /* UINavigationItem+GKCategory.m */,
+				9E4F088A54BDA75C450F86DF6C16BC79 /* UIScrollView+GKCategory.h */,
+				6B0B5D798F3BFC77711CB2428F1F0712 /* UIScrollView+GKCategory.m */,
+				7F0DFAC18F6B7F974CFBF41B9E000486 /* UIViewController+GKCategory.h */,
+				0F2A950C4F4B26F5521F3A452C175AB0 /* UIViewController+GKCategory.m */,
+				969968BAB32AD5A65CF91A7A6693BF4C /* Resources */,
+				56733C0D50927EF23D710803E3B14040 /* Support Files */,
+			);
+			path = GKNavigationBarViewController;
+			sourceTree = "<group>";
+		};
 		89F3803BC3E40FCF7D5DFB8173FE2E19 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -999,6 +1028,14 @@
 				C05417161792D84B64AFC80B7345B0CB /* Support Files */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		969968BAB32AD5A65CF91A7A6693BF4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46C6E067272754290C054903ECB5C81B /* GKNavigationBarViewController.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		A49C49667695EAC279BC98156CEDC53C /* JXCategoryView */ = {
@@ -1120,43 +1157,6 @@
 			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
-		BC239BAA61DAB5D485D3FB52DE79F3ED /* GKNavigationBarViewController */ = {
-			isa = PBXGroup;
-			children = (
-				75D84AC08776C7618416A49ED01F1D36 /* GKBaseTransitionAnimation.h */,
-				A1D5632825C5C0B26D738315C4F3DF89 /* GKBaseTransitionAnimation.m */,
-				9A3688AD7C9E31B29B3BB37480BDFE0E /* GKCategory.h */,
-				A461DB2E7331A0DC668C62CCB1E39855 /* GKCommon.h */,
-				05CE8726E4F4F296E4FD6A10F7667B61 /* GKDelegateHandler.h */,
-				9EBDB266B64C97BB0B343C1E35E0E2A6 /* GKDelegateHandler.m */,
-				3C60ABBBF3DA76EAD8BE74375AF68B15 /* GKNavigationBar.h */,
-				A6AF30618B4E0525AB2270F01E069FA5 /* GKNavigationBar.m */,
-				B562F44D5A525E9922F8EBC19A02A1DC /* GKNavigationBarConfigure.h */,
-				7111C564BFB331F5121F6A4F0033D087 /* GKNavigationBarConfigure.m */,
-				75C7CDAC35423F6236EDFB64C3562044 /* GKNavigationBarViewController.h */,
-				A7D9F46EEB8BA5C13B69DF4053D52AE3 /* GKNavigationBarViewController.m */,
-				FE5E00F1FA948C4FA990D52219D290DC /* GKPopTransitionAnimation.h */,
-				9D4633C1F6D3EC44DA206058608E0F52 /* GKPopTransitionAnimation.m */,
-				E7032DF4E5EE628CFBCC7C25945F5146 /* GKPushTransitionAnimation.h */,
-				198BE56B22BC4119586EE76B769F53C8 /* GKPushTransitionAnimation.m */,
-				7E25A401029F3E1D400217D7DDFABEFF /* UIBarButtonItem+GKCategory.h */,
-				373CE5469BFF17AC1060E110F96E80A2 /* UIBarButtonItem+GKCategory.m */,
-				4F54822391569547DC537D4790E4FB0C /* UIImage+GKCategory.h */,
-				2D32E2363380B54FD7125EC0ECAA8D56 /* UIImage+GKCategory.m */,
-				2B8EECEC9FB8B413208B1BB6F22148E0 /* UINavigationController+GKCategory.h */,
-				05C0106246AAEEB531EEABB717748C40 /* UINavigationController+GKCategory.m */,
-				BB42AD01DA2659D90075781C8130FA55 /* UINavigationItem+GKCategory.h */,
-				8F8A2FB840FAF9259D2F07648D0F174B /* UINavigationItem+GKCategory.m */,
-				3C38A364B1F1966EE88CD92DA5C67096 /* UIScrollView+GKCategory.h */,
-				3C6E863A221E60151088E97BDFCB6B81 /* UIScrollView+GKCategory.m */,
-				5F2B295596E178215502B6CFA54C2D72 /* UIViewController+GKCategory.h */,
-				6D38654841C42AC41A79E0B2C333AC1C /* UIViewController+GKCategory.m */,
-				3AE91137545BDAF63906E2EEC15DD7FF /* Resources */,
-				65591FA31E9BB065DEFA4BE0BCE02F98 /* Support Files */,
-			);
-			path = GKNavigationBarViewController;
-			sourceTree = "<group>";
-		};
 		C05417161792D84B64AFC80B7345B0CB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1192,7 +1192,7 @@
 		C5D45E2D21E94B11E499FC2AD0168FA5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BC239BAA61DAB5D485D3FB52DE79F3ED /* GKNavigationBarViewController */,
+				78C11EBDA56AF9A6DC1894E2FDE3B0B8 /* GKNavigationBarViewController */,
 				A49C49667695EAC279BC98156CEDC53C /* JXCategoryView */,
 				89F3803BC3E40FCF7D5DFB8173FE2E19 /* Masonry */,
 				BBA00715CC31889DFA748C79236B48AF /* SDAutoLayout */,
@@ -1245,6 +1245,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		25E7AAE12E42EAB86CC9366A65DFC54F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DAC084159E11BD6A8C42748096A0A9D /* GKBaseTransitionAnimation.h in Headers */,
+				256BE0BB3AA58CF60482C6EE88249B21 /* GKCategory.h in Headers */,
+				81B5C37792896F4EA03BC156B21D9F5B /* GKCommon.h in Headers */,
+				EBD1A315A8DF5B287510AB2248B96B00 /* GKNavigationBar.h in Headers */,
+				1049E7F4C39052F48D4678FA7079B58C /* GKNavigationBarConfigure.h in Headers */,
+				78A6E622D4DD5ED95CCD727F565CB5D2 /* GKNavigationBarViewController-umbrella.h in Headers */,
+				A7A98C1F78E881B3AC5B86591683DE4E /* GKNavigationBarViewController.h in Headers */,
+				5C722BBD201981BE0A13CC330760D563 /* GKNavigationInteractiveTransition.h in Headers */,
+				A4BA2E8311530A56BC2AA5FE0F481417 /* GKPopTransitionAnimation.h in Headers */,
+				8F83475B227C61C5D117AA7EE7E600B5 /* GKPushTransitionAnimation.h in Headers */,
+				FF38454D9E0343D9FF5449EDB3D66851 /* UIBarButtonItem+GKCategory.h in Headers */,
+				437B5D266F3575FCD83513D39658FFBF /* UIImage+GKCategory.h in Headers */,
+				EBFB9E1C6E5D7F1719280C6CC0094AE5 /* UINavigationController+GKCategory.h in Headers */,
+				E07AF36436F480508A405041FDF962D7 /* UINavigationItem+GKCategory.h in Headers */,
+				0DB3997F1BCFA41FAE5BA88B339B4079 /* UIScrollView+GKCategory.h in Headers */,
+				1F653593F9E282D6DB5C5D6787F5D2B9 /* UIViewController+GKCategory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		314F6CA0E760A521ADDCB36F8F2BDAA3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1419,29 +1442,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F39A710727C6B0B78504C4327F26FE4C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				180471F2A3E7DD4A880D02FF4A5626E6 /* GKBaseTransitionAnimation.h in Headers */,
-				972A5201A8718D8516D98CC9D78B3A45 /* GKCategory.h in Headers */,
-				401A58D61D48E5D9E3CF8B3F86156C33 /* GKCommon.h in Headers */,
-				7104092069832E21F5463DB2ABB08EF5 /* GKDelegateHandler.h in Headers */,
-				64ECF4EBB7D7EE3617EEA15FA24C6E78 /* GKNavigationBar.h in Headers */,
-				CF50F8D7053E702EECAC34A64DABB8DF /* GKNavigationBarConfigure.h in Headers */,
-				C5E24960A9150DE8AE7714450208F76E /* GKNavigationBarViewController-umbrella.h in Headers */,
-				8B2632B2D35F1E34A5A2A4B64B17FB0D /* GKNavigationBarViewController.h in Headers */,
-				498A39F20113A0D686E3B2E36B6477A2 /* GKPopTransitionAnimation.h in Headers */,
-				FC659B57C432A0D15EE03D61D1DB16F7 /* GKPushTransitionAnimation.h in Headers */,
-				0A88B742C2173F44EBD7E29C64109D40 /* UIBarButtonItem+GKCategory.h in Headers */,
-				42F6EFFD2911731D4491DB16FA91EC2A /* UIImage+GKCategory.h in Headers */,
-				1EA025B7142F138AF69BB12DB54B215A /* UINavigationController+GKCategory.h in Headers */,
-				84DBAFCC6AC7A5C487449824D8126F55 /* UINavigationItem+GKCategory.h in Headers */,
-				1DE5C0F1ECAA84C45BC4FC93B34726D5 /* UIScrollView+GKCategory.h in Headers */,
-				7BD0B33EBB3D5E85A318408BCDB06CF7 /* UIViewController+GKCategory.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1521,8 +1521,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA109E96207B60DB4C8DE2B023348EB3 /* Build configuration list for PBXNativeTarget "GKNavigationBarViewController" */;
 			buildPhases = (
-				F39A710727C6B0B78504C4327F26FE4C /* Headers */,
-				15E75F94E61D97A215C66685A37E6894 /* Sources */,
+				25E7AAE12E42EAB86CC9366A65DFC54F /* Headers */,
+				CE0D192C3AF3709CBAB88F085A11BC79 /* Sources */,
 				DC7F21D751ACBEEF4806B8CB1DE1607E /* Frameworks */,
 				ACF0690C5A017A845081E46E7AC7C479 /* Resources */,
 			);
@@ -1565,7 +1565,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1220;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1652,27 +1652,6 @@
 				C0861ADB4C5FA30F4F9E051F7638A264 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A35FBEEC7D088AEC05297E8292A32C77 /* View+MASAdditions.m in Sources */,
 				0967598607D521318F69D7D39D517B20 /* ViewController+MASAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15E75F94E61D97A215C66685A37E6894 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5E1490C2539B3019609F5CB82895A14 /* GKBaseTransitionAnimation.m in Sources */,
-				32652FBB8ECFE35A208FDAE93FD5DA10 /* GKDelegateHandler.m in Sources */,
-				1E7089E96EB375AFDBF0BAC0A2DDDDD6 /* GKNavigationBar.m in Sources */,
-				710ECB4C75675E618D1FB1C6E737A88F /* GKNavigationBarConfigure.m in Sources */,
-				779040CD72D00535816B95CB65907119 /* GKNavigationBarViewController-dummy.m in Sources */,
-				E95F95D5A8344F7C3834AFF06530F3C4 /* GKNavigationBarViewController.m in Sources */,
-				166D4FCCDE8B33BB1BC417E738CBB43B /* GKPopTransitionAnimation.m in Sources */,
-				8297E801B8772A2FA8F1205AADD3341E /* GKPushTransitionAnimation.m in Sources */,
-				D5203CE6CD619B8762C6B5B56D384E26 /* UIBarButtonItem+GKCategory.m in Sources */,
-				E8706C5B21867B21FCC040BE71771DC3 /* UIImage+GKCategory.m in Sources */,
-				73581961FB0882010793613909387E4C /* UINavigationController+GKCategory.m in Sources */,
-				CD8A37702602450DF0AD3C9ABC3A0BE9 /* UINavigationItem+GKCategory.m in Sources */,
-				C9BFC6E5FB14B66611AB66952203416A /* UIScrollView+GKCategory.m in Sources */,
-				E0DA4BF6C11D2D193C2049F65175BE08 /* UIViewController+GKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1819,6 +1798,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE0D192C3AF3709CBAB88F085A11BC79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12B001685EE3DC4E8570993BF813C8BC /* GKBaseTransitionAnimation.m in Sources */,
+				C88A85C54CC0727025D1DC55CCBE49CC /* GKNavigationBar.m in Sources */,
+				BA08527D0DDA7A61ED650C084C3E0115 /* GKNavigationBarConfigure.m in Sources */,
+				B873EB5F2ED77FE2660EF7DC193CF587 /* GKNavigationBarViewController-dummy.m in Sources */,
+				CA4D4F273BB04C5FF117DFD81AF28833 /* GKNavigationBarViewController.m in Sources */,
+				F43D7C57CABA2A5D7E70AED299C78AF2 /* GKNavigationInteractiveTransition.m in Sources */,
+				017B580CCBF27750A4100819B5EABEF7 /* GKPopTransitionAnimation.m in Sources */,
+				0513A8CBE5F5FB4AAA7D548E4F419A5C /* GKPushTransitionAnimation.m in Sources */,
+				08D334DDE531ABE96BEABA22832340D7 /* UIBarButtonItem+GKCategory.m in Sources */,
+				68A52FD46AA831BDCF425C29D3D6AC3F /* UIImage+GKCategory.m in Sources */,
+				8F5453280B1DE44F8308D10B763E5EBE /* UINavigationController+GKCategory.m in Sources */,
+				96466AF92C6DB583225B2582B9A42C73 /* UINavigationItem+GKCategory.m in Sources */,
+				67DAE7DCC0AF3B5FBEBBD81C23ED6DA9 /* UIScrollView+GKCategory.m in Sources */,
+				C52AC0C59393337FC9C94D91382742E7 /* UIViewController+GKCategory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1855,6 +1855,39 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0F28AE9D37F250C7374D1D7E61100F1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3C99EFF6ACFC45A3CD3EDF3EC79B351 /* SDWebImage.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		0F3825EAD3A22BFB233A9C4DFA131E78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0776E40871FEFE29CDB5DD32AACCFA63 /* JXCategoryView.release.xcconfig */;
@@ -1913,39 +1946,6 @@
 				MODULEMAP_FILE = "Target Support Files/SDAutoLayout/SDAutoLayout.modulemap";
 				PRODUCT_MODULE_NAME = SDAutoLayout;
 				PRODUCT_NAME = SDAutoLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		21E975B794CAC0C7BDE2F77F532E5DEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3C99EFF6ACFC45A3CD3EDF3EC79B351 /* SDWebImage.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
-				PRODUCT_MODULE_NAME = SDWebImage;
-				PRODUCT_NAME = SDWebImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2159,7 +2159,7 @@
 			};
 			name = Debug;
 		};
-		9467F5FD6B249087335608FBC39D039F /* Release */ = {
+		8E5946E32E072A69F1964AF40712FF8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA2BE81216AF19AB16C93615405B76D5 /* SDWebImage.release.xcconfig */;
 			buildSettings = {
@@ -2174,7 +2174,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2231,7 +2231,7 @@
 		};
 		A999AEEA28E8B0EE0A40F99EE882560B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC465F12537A6116E2C47650EB791DA0 /* GKNavigationBarViewController.debug.xcconfig */;
+			baseConfigurationReference = DCD929B93BD71AA1154BF7DB79C1F35C /* GKNavigationBarViewController.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2359,7 +2359,7 @@
 		};
 		F8E47ACE12C676397E663169713B787B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A2C827C675002BD5F16433CD7117423 /* GKNavigationBarViewController.release.xcconfig */;
+			baseConfigurationReference = 6A3EC1A804C6EC2239029BA404895B11 /* GKNavigationBarViewController.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2451,8 +2451,8 @@
 		F7647E2BDF8B9DF44AD8E949386796A7 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21E975B794CAC0C7BDE2F77F532E5DEC /* Debug */,
-				9467F5FD6B249087335608FBC39D039F /* Release */,
+				0F28AE9D37F250C7374D1D7E61100F1C /* Debug */,
+				8E5946E32E072A69F1964AF40712FF8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
