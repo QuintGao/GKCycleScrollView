@@ -83,7 +83,7 @@
             if (CGRectContainsPoint(convertFrame, point)) {
                 // 修复cell上添加其他点击事件无效的bug
                 UIView *view = [super hitTest:point withEvent:event];
-                if (view == cell) return cell;
+                if (view == self || view == cell || view == self.scrollView) return cell;
                 return view;
             }
         }
