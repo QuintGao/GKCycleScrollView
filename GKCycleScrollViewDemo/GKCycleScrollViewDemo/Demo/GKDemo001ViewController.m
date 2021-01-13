@@ -83,6 +83,8 @@
     
     GKPageControl *pageControl3 = [[GKPageControl alloc] init];
     pageControl3.style = GKPageControlStyleSizeDot;
+    pageControl3.pageIndicatorTintColor = UIColor.redColor;
+    pageControl3.currentPageIndicatorTintColor = UIColor.blueColor;
     cycleScrollView3.pageControl = pageControl3;
     [cycleScrollView3 addSubview:pageControl3];
     [cycleScrollView3 reloadData];
@@ -115,6 +117,7 @@
     
     TAPageControl *pageControl4 = [[TAPageControl alloc] init];
     pageControl4.numberOfPages = self.dataArr.count;
+    pageControl4.dotColor = UIColor.redColor;
     [cycleScrollView4 addSubview:pageControl4];
     self.pageControl4 = pageControl4;
     [cycleScrollView4 reloadData];

@@ -328,7 +328,7 @@
 		79A5E5A2232E39A7009F01D3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = QuintGao;
 				TargetAttributes = {
 					79A5E5A9232E39A7009F01D3 = {

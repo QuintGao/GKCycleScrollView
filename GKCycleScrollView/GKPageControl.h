@@ -20,16 +20,18 @@ typedef NS_ENUM(NSInteger, GKPageControlStyle) {
 
 @interface GKPageControl : UIPageControl
 
-// 默认8 长方形默认16
+/// pageControl类型
+@property (nonatomic, assign) GKPageControlStyle style;
+
+/// 以下属性在style为GKPageControlStyleSizeDot时有效
+/// 默认8 长方形默认16
 @property (nonatomic, assign) CGFloat dotWidth;
 
-// 默认8 长方形默认2
+/// 默认8 长方形默认2
 @property (nonatomic, assign) CGFloat dotHeight;
 
-// 默认8
+/// 默认8
 @property (nonatomic, assign) CGFloat dotMargin;
-
-@property (nonatomic, assign) GKPageControlStyle style;
 
 @end
 

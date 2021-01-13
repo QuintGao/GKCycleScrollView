@@ -140,7 +140,6 @@
     
     if (self.bounds.size.width <= 0 || self.bounds.size.height <= 0) {
         [self.superview layoutIfNeeded];
-        
         // 此处做延时处理是为了解决使用Masonry布局时导致的view的大小不能及时更新的bug
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self updateScrollViewAndCellSize];
