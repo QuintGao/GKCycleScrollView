@@ -13,6 +13,7 @@
 		6004DC5B23405E2100248558 /* GKCycleScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */; };
 		6004DC5D234080C700248558 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5C234080C700248558 /* .travis.yml */; };
 		60073BC72387DC7D00B8692A /* GKDemo005ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */; };
+		60A8380625AFE96E00F4B1BD /* GKDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A8380525AFE96E00F4B1BD /* GKDemoTableViewCell.m */; };
 		60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */; };
 		60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */; };
 		60E78FAD2331C5C600C324CF /* GKDemo001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FAC2331C5C600C324CF /* GKDemo001ViewController.m */; };
@@ -64,6 +65,8 @@
 		6004DC5C234080C700248558 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../../.travis.yml; sourceTree = "<group>"; };
 		60073BC52387DC7D00B8692A /* GKDemo005ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo005ViewController.h; sourceTree = "<group>"; };
 		60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo005ViewController.m; sourceTree = "<group>"; };
+		60A8380425AFE96E00F4B1BD /* GKDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoTableViewCell.h; sourceTree = "<group>"; };
+		60A8380525AFE96E00F4B1BD /* GKDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoTableViewCell.m; sourceTree = "<group>"; };
 		60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60E78FA82331C5BC00C324CF /* GKDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoBaseViewController.h; sourceTree = "<group>"; };
 		60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoBaseViewController.m; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				6004DBDF2338D11100248558 /* GKDemo004ViewController.m */,
 				60073BC52387DC7D00B8692A /* GKDemo005ViewController.h */,
 				60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */,
+				60A8380425AFE96E00F4B1BD /* GKDemoTableViewCell.h */,
+				60A8380525AFE96E00F4B1BD /* GKDemoTableViewCell.m */,
 				792D10C82337A904006C997D /* GKDemoTitleImageCell.h */,
 				792D10C92337A904006C997D /* GKDemoTitleImageCell.m */,
 				792D10CB2337A927006C997D /* GKDemoTitleCell.h */,
@@ -328,7 +333,7 @@
 		79A5E5A2232E39A7009F01D3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = QuintGao;
 				TargetAttributes = {
 					79A5E5A9232E39A7009F01D3 = {
@@ -456,6 +461,7 @@
 				6004DBEA233B359100248558 /* GKCycleScrollViewCell.m in Sources */,
 				792D10C62337794B006C997D /* TAAnimatedDotView.m in Sources */,
 				792D10C42337794B006C997D /* TADotView.m in Sources */,
+				60A8380625AFE96E00F4B1BD /* GKDemoTableViewCell.m in Sources */,
 				79A5E5AF232E39A7009F01D3 /* AppDelegate.m in Sources */,
 				60073BC72387DC7D00B8692A /* GKDemo005ViewController.m in Sources */,
 			);

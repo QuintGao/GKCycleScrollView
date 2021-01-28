@@ -73,9 +73,9 @@
             
             if (self.direction == GKCycleScrollViewScrollDirectionHorizontal) {
                 convertFrame.origin.x = cell.frame.origin.x + self.scrollView.frame.origin.x - self.scrollView.contentOffset.x;
-                convertFrame.origin.y = 0;
+                convertFrame.origin.y = self.scrollView.frame.origin.y + cell.frame.origin.y;
             }else {
-                convertFrame.origin.x = 0;
+                convertFrame.origin.x = self.scrollView.frame.origin.x + cell.frame.origin.x;
                 convertFrame.origin.y = cell.frame.origin.y + self.scrollView.frame.origin.y - self.scrollView.contentOffset.y;
             }
 
@@ -94,7 +94,6 @@
         if ([self.scrollView pointInside:newPoint withEvent:event]) {
             return [self.scrollView hitTest:newPoint withEvent:event];
         }
-        
         // 系统处理
         return [super hitTest:point withEvent:event];
     }
