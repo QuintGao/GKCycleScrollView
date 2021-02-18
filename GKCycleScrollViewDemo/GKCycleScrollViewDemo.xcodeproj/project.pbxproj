@@ -13,6 +13,8 @@
 		6004DC5B23405E2100248558 /* GKCycleScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5A23405E2100248558 /* GKCycleScrollView.podspec */; };
 		6004DC5D234080C700248558 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6004DC5C234080C700248558 /* .travis.yml */; };
 		60073BC72387DC7D00B8692A /* GKDemo005ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */; };
+		60225D6A25D2640D00B77B1F /* GKDemo006ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60225D6825D2640D00B77B1F /* GKDemo006ViewController.m */; };
+		60225D6B25D2640D00B77B1F /* GKDemo006ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60225D6925D2640D00B77B1F /* GKDemo006ViewController.xib */; };
 		60A8380625AFE96E00F4B1BD /* GKDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A8380525AFE96E00F4B1BD /* GKDemoTableViewCell.m */; };
 		60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */; };
 		60E78FAA2331C5BC00C324CF /* GKDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E78FA92331C5BC00C324CF /* GKDemoBaseViewController.m */; };
@@ -65,6 +67,9 @@
 		6004DC5C234080C700248558 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../../.travis.yml; sourceTree = "<group>"; };
 		60073BC52387DC7D00B8692A /* GKDemo005ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo005ViewController.h; sourceTree = "<group>"; };
 		60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo005ViewController.m; sourceTree = "<group>"; };
+		60225D6725D2640D00B77B1F /* GKDemo006ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemo006ViewController.h; sourceTree = "<group>"; };
+		60225D6825D2640D00B77B1F /* GKDemo006ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemo006ViewController.m; sourceTree = "<group>"; };
+		60225D6925D2640D00B77B1F /* GKDemo006ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GKDemo006ViewController.xib; sourceTree = "<group>"; };
 		60A8380425AFE96E00F4B1BD /* GKDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKDemoTableViewCell.h; sourceTree = "<group>"; };
 		60A8380525AFE96E00F4B1BD /* GKDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKDemoTableViewCell.m; sourceTree = "<group>"; };
 		60E78FA52330E9B900C324CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,6 +170,9 @@
 				6004DBDF2338D11100248558 /* GKDemo004ViewController.m */,
 				60073BC52387DC7D00B8692A /* GKDemo005ViewController.h */,
 				60073BC62387DC7D00B8692A /* GKDemo005ViewController.m */,
+				60225D6725D2640D00B77B1F /* GKDemo006ViewController.h */,
+				60225D6825D2640D00B77B1F /* GKDemo006ViewController.m */,
+				60225D6925D2640D00B77B1F /* GKDemo006ViewController.xib */,
 				60A8380425AFE96E00F4B1BD /* GKDemoTableViewCell.h */,
 				60A8380525AFE96E00F4B1BD /* GKDemoTableViewCell.m */,
 				792D10C82337A904006C997D /* GKDemoTitleImageCell.h */,
@@ -376,6 +384,7 @@
 			files = (
 				6004DC5D234080C700248558 /* .travis.yml in Resources */,
 				792D10D0233A7682006C997D /* README.md in Resources */,
+				60225D6B25D2640D00B77B1F /* GKDemo006ViewController.xib in Resources */,
 				6004DC5B23405E2100248558 /* GKCycleScrollView.podspec in Resources */,
 				79A5E5B7232E39A8009F01D3 /* Assets.xcassets in Resources */,
 				60E78FA62330E9B900C324CF /* LaunchScreen.storyboard in Resources */,
@@ -453,6 +462,7 @@
 				60E78FB32331C5D600C324CF /* GKDemo003ViewController.m in Sources */,
 				6004DBE02338D11100248558 /* GKDemo004ViewController.m in Sources */,
 				792D10C52337794B006C997D /* TAPageControl.m in Sources */,
+				60225D6A25D2640D00B77B1F /* GKDemo006ViewController.m in Sources */,
 				79A5E5B2232E39A7009F01D3 /* ViewController.m in Sources */,
 				792D10CA2337A904006C997D /* GKDemoTitleImageCell.m in Sources */,
 				6004DBE9233B359100248558 /* GKCycleScrollView.m in Sources */,
@@ -618,7 +628,7 @@
 			baseConfigurationReference = EF4ACD9A70D3EAD513B8D314 /* Pods-GKCycleScrollViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xinjun zhang (DNJGV7XB9Q)";
+				CODE_SIGN_IDENTITY = "Apple Development: xinjun zhang (DNJGV7XB9Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X52753HQNM;
 				GCC_PREFIX_HEADER = GKCycleScrollViewDemo/PrefixHeader.pch;
@@ -640,7 +650,7 @@
 			baseConfigurationReference = 47C8BBB9BA303DC1F33BA573 /* Pods-GKCycleScrollViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xinjun zhang (DNJGV7XB9Q)";
+				CODE_SIGN_IDENTITY = "Apple Development: xinjun zhang (DNJGV7XB9Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X52753HQNM;
 				GCC_PREFIX_HEADER = GKCycleScrollViewDemo/PrefixHeader.pch;

@@ -35,7 +35,8 @@
                         @{@"title": @"纵向轮播", @"class": @"GKDemo002ViewController"},
                         @{@"title": @"卡片效果", @"class": @"GKDemo003ViewController"},
                         @{@"title": @"仿QQ聊天", @"class": @"GKDemo004ViewController"},
-                        @{@"title": @"测试", @"class": @"GKDemo005ViewController"}];
+                        @{@"title": @"测试", @"class": @"GKDemo005ViewController"},
+                        @{@"title": @"Xib", @"class": @"GKDemo006ViewController"}];
 }
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>

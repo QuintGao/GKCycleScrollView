@@ -31,6 +31,9 @@
 @property (nonatomic, strong) NSMutableArray *reusableCells;
 @property (nonatomic, assign) NSRange        visibleRange;
 
+// 处理xib加载时导致的尺寸不准确问题
+@property (nonatomic, assign) CGSize        originSize;
+
 @end
 
 @implementation GKCycleScrollView
@@ -48,6 +51,15 @@
         [self initialization];
     }
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    // 解决xib加载时导致的布局错误问题
+    if (!CGSizeEqualToSize(self.bounds.size, self.originSize)) {
+        [self updateScrollViewAndCellSize];
+    }
 }
 
 // 解决当父视图释放时，当前视图因为NSTimer强引用而导致的不能释放
@@ -115,7 +127,7 @@
         
         // 展示个数
         if (self.isInfiniteLoop) {
-            self.showCount = self.realCount == 1 ? 1: self.realCount * 3;
+            self.showCount = self.realCount == 1 ? 1 : self.realCount * 3;
         }else {
             self.showCount = self.realCount;
         }
@@ -142,9 +154,19 @@
         // 此处做延时处理是为了解决使用Masonry布局时导致的view的大小不能及时更新的bug
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self updateScrollViewAndCellSize];
+            
+            // 默认选中
+            if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
+                [self handleCellScrollWithIndex:self.defaultSelectIndex];
+            }
         });
     }else {
         [self updateScrollViewAndCellSize];
+        
+        // 默认选中
+        if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
+            [self handleCellScrollWithIndex:self.defaultSelectIndex];
+        }
     }
 }
 
@@ -302,11 +324,6 @@
     
     // 更新可见cell的显示
     [self updateVisibleCellAppearance];
-    
-    // 默认选中
-    if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
-        [self handleCellScrollWithIndex:self.defaultSelectIndex];
-    }
 }
 
 - (void)setupCellsWithContentOffset:(CGPoint)offset {
