@@ -56,6 +56,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    if (CGSizeEqualToSize(self.originSize, CGSizeZero)) return;
+    
     // 解决xib加载时导致的布局错误问题
     if (!CGSizeEqualToSize(self.bounds.size, self.originSize)) {
         [self updateScrollViewAndCellSize];
@@ -153,20 +155,10 @@
         [self.superview layoutIfNeeded];
         // 此处做延时处理是为了解决使用Masonry布局时导致的view的大小不能及时更新的bug
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self updateScrollViewAndCellSize];
-            
-            // 默认选中
-            if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
-                [self handleCellScrollWithIndex:self.defaultSelectIndex];
-            }
+            [self initialScrollViewAndCellSize];
         });
     }else {
-        [self updateScrollViewAndCellSize];
-        
-        // 默认选中
-        if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
-            [self handleCellScrollWithIndex:self.defaultSelectIndex];
-        }
+        [self initialScrollViewAndCellSize];
     }
 }
 
@@ -251,6 +243,16 @@
     
     // 添加scrollView
     [self addSubview:self.scrollView];
+}
+
+- (void)initialScrollViewAndCellSize {
+    self.originSize = self.bounds.size;
+    [self updateScrollViewAndCellSize];
+    
+    // 默认选中
+    if (self.defaultSelectIndex >= 0 && self.defaultSelectIndex < self.realCount) {
+        [self handleCellScrollWithIndex:self.defaultSelectIndex];
+    }
 }
 
 - (void)updateScrollViewAndCellSize {

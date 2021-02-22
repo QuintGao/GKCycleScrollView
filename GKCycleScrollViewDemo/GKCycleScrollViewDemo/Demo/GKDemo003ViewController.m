@@ -32,8 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = @[@{@"title": @"美女", @"img_url": @"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3724300455,3419815340&fm=26&gp=0.jpg"},
-                     @{@"title": @"唯美", @"img_url": @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3657258270,1485602730&fm=26&gp=0.jpg"},
+    self.dataArr = @[@{@"title": @"美女", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2Fmn01%2F022219204249%2F1Z222204249-7.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616574225&t=6823cf729e389877cbdec6b6cf6f3318"},
+                     @{@"title": @"唯美", @"img_url": @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2662286432,3722176444&fm=15&gp=0.jpg"},
                      @{@"title": @"可爱", @"img_url": @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1361252553,2794528335&fm=26&gp=0.jpg"},
                      @{@"title": @"简约", @"img_url": @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2379750824,3935342609&fm=26&gp=0.jpg"},
                      @{@"title": @"科幻", @"img_url": @"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1806438408,1904034154&fm=15&gp=0.jpg"},
@@ -100,12 +100,12 @@
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
     if (self.isClickCategory) return;
     
-    self.isSelectCategory = YES;
-    [self.categoryView selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.isSelectCategory = NO;
-    });
+//    self.isSelectCategory = YES;
+//    [self.categoryView selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll];
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.isSelectCategory = NO;
+//    });
 }
 
 #pragma mark - JXCategoryViewDelegate
