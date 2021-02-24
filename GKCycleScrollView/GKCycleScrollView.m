@@ -329,6 +329,7 @@
 }
 
 - (void)setupCellsWithContentOffset:(CGPoint)offset {
+    if (self.showCount == 0) return;
     if (self.cellSize.width <= 0 || self.cellSize.height <= 0) return;
     //计算_visibleRange
     CGPoint startPoint = CGPointMake(offset.x - self.scrollView.frame.origin.x, offset.y - self.scrollView.frame.origin.y);
@@ -413,6 +414,7 @@
 }
 
 - (void)updateVisibleCellAppearance {
+    if (self.showCount == 0) return;
     if (self.cellSize.width <= 0 || self.cellSize.height <= 0) return;
     
     switch (self.direction) {
@@ -438,7 +440,7 @@
                     leftRightInset = adjustLeftRightMargin * delta / self.cellSize.width;
                     topBottomInset = adjustTopBottomMargin * delta / self.cellSize.width;
                     
-                    NSInteger index = i % self.realCount;
+                    NSInteger index = self.realCount == 0 ? 0 : i % self.realCount;
                     if (index == self.currentSelectIndex) {
                         [self.scrollView bringSubviewToFront:cell];
                     }
@@ -496,7 +498,7 @@
                     leftRightInset = adjustLeftRightMargin * delta / self.cellSize.height;
                     topBottomInset = adjustTopBottomMargin * delta / self.cellSize.height;
                     
-                    NSInteger index = i % self.realCount;
+                    NSInteger index = self.realCount == 0 ? 0 : i % self.realCount;
                     if (index == self.currentSelectIndex) {
                         [self.scrollView bringSubviewToFront:cell];
                     }
@@ -699,9 +701,7 @@
         [self handleCellScrollWithIndex:index];
     }
     
-    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didScroll:)]) {
-        [self.delegate cycleScrollView:self didScroll:scrollView];
-    }
+    [self handleScrollViewDidScroll:scrollView];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -762,6 +762,58 @@
     
     if ([self.delegate respondsToSelector:@selector(cycleScrollView:didEndScrollingAnimation:)]) {
         [self.delegate cycleScrollView:self didEndScrollingAnimation:scrollView];
+    }
+}
+
+- (void)handleScrollViewDidScroll:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didScroll:)]) {
+        [self.delegate cycleScrollView:self didScroll:scrollView];
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:scrollingFromIndex:toIndex:ratio:)]) {
+        BOOL isFirstRevirse = NO; // 是否在第一个位置反向滑动
+        CGFloat ratio = 0;   // 滑动百分比
+        if (self.direction == GKCycleScrollViewScrollDirectionHorizontal) {
+            CGFloat offsetX = scrollView.contentOffset.x;
+            CGFloat maxW = self.realCount * scrollView.bounds.size.width;
+            
+            CGFloat changeOffsetX = self.isInfiniteLoop ? (offsetX - maxW) : offsetX;
+            if (changeOffsetX < 0) {
+                changeOffsetX = -changeOffsetX;
+                isFirstRevirse = YES;
+            }
+            ratio = (changeOffsetX / scrollView.bounds.size.width);
+        }else if (self.direction == GKCycleScrollViewScrollDirectionVertical) {
+            CGFloat offsetY = scrollView.contentOffset.y;
+            CGFloat maxW = self.realCount * scrollView.bounds.size.height;
+            
+            CGFloat changeOffsetY = self.isInfiniteLoop ? (offsetY - maxW) : offsetY;
+            if (changeOffsetY < 0) {
+                changeOffsetY = -changeOffsetY;
+                isFirstRevirse = YES;
+            }
+            ratio = (changeOffsetY / scrollView.bounds.size.height);
+        }
+        if (ratio > self.realCount || ratio < 0) return; // 越界，不作处理
+        ratio = MAX(0, MIN(self.realCount, ratio));
+        NSInteger baseIndex = floor(ratio);
+        if (baseIndex + 1 > self.realCount) {
+            // 右边越界了
+            baseIndex = 0;
+        }
+        CGFloat remainderRatio = ratio - baseIndex;
+        if (remainderRatio <= 0 || remainderRatio >= 1) return;
+        NSInteger toIndex = 0;
+        if (isFirstRevirse) {
+            baseIndex = self.realCount - 1;
+            toIndex = 0;
+            remainderRatio = 1 - remainderRatio;
+        }else if (baseIndex == self.realCount - 1) {
+            toIndex = 0;
+        }else {
+            toIndex = baseIndex + 1;
+        }
+        [self.delegate cycleScrollView:self scrollingFromIndex:baseIndex toIndex:toIndex ratio:remainderRatio];
     }
 }
 

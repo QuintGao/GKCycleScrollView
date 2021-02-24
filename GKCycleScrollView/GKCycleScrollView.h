@@ -34,7 +34,8 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 @protocol GKCycleScrollViewDelegate <NSObject>
 
 @optional
-// 返回自定义cell尺寸
+/// 返回自定义cell尺寸
+/// @param cycleScrollView cycleScrollView description
 - (CGSize)sizeForCellInCycleScrollView:(GKCycleScrollView *)cycleScrollView;
 
 // cell滑动时调用
@@ -43,6 +44,12 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 // cell点击时调用
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didSelectCellAtIndex:(NSInteger)index;
 
+/// scrollView滚动中的回调
+/// @param cycleScrollView cycleScrollView对象
+/// @param fromIndex 正在滚动中，相对位置处于左边或上边的index，根据direction区分
+/// @param toIndex 正在滚动中，相对位置处于右边或下边的index，根据direction区分
+/// @param ratio 从左到右或从上到下计算的百分比，根据direction区分
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView scrollingFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex ratio:(CGFloat)ratio;
 #pragma mark - UIScrollViewDelegate 相关
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView willBeginDragging:(UIScrollView *)scrollView;
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScroll:(UIScrollView *)scrollView;

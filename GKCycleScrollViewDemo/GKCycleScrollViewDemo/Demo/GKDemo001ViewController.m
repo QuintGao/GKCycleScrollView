@@ -44,6 +44,7 @@
     // 默认样式：无缩放，自动轮播，无限轮播
     GKCycleScrollView *cycleScrollView1 = [[GKCycleScrollView alloc] initWithFrame:CGRectMake(0, GK_STATUSBAR_NAVBAR_HEIGHT, kScreenW, 130)];
     cycleScrollView1.dataSource = self;
+    cycleScrollView1.delegate = self;
     [self.view addSubview:cycleScrollView1];
     self.cycleScrollView1 = cycleScrollView1;
     
@@ -188,6 +189,7 @@
 
 #pragma mark - GKCycleScrollViewDelegate
 - (CGSize)sizeForCellInCycleScrollView:(GKCycleScrollView *)cycleScrollView {
+    if (cycleScrollView == self.cycleScrollView1) return CGSizeMake(kScreenW, 130);
     if (cycleScrollView == self.cycleScrollView5) return CGSizeMake(kScreenW, 40);
     return CGSizeMake(kScreenW - 100, 130);
 }
@@ -203,6 +205,12 @@
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didSelectCellAtIndex:(NSInteger)index {
     NSLog(@"cell点击，index=%zd", index);
+}
+
+- (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView scrollingFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex ratio:(CGFloat)ratio {
+    if (cycleScrollView != self.cycleScrollView1) return;
+    
+    NSLog(@"fromIndex:%zd,toIndex:%zd,ratio:%f", fromIndex, toIndex, ratio);
 }
 
 @end
