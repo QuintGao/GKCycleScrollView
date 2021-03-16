@@ -4,7 +4,7 @@ target 'GKCycleScrollViewDemo' do
   use_frameworks!
 
   pod 'GKNavigationBarViewController'
-  pod 'JXCategoryView'
+  pod 'JXCategoryViewExt', :subspecs => ['Title', 'Indicator/Line']
   pod 'Masonry'
   pod 'SDAutoLayout'
   pod 'SDWebImage'

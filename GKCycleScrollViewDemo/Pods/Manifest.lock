@@ -1,6 +1,10 @@
 PODS:
   - GKNavigationBarViewController (2.6.4)
-  - JXCategoryView (1.5.8)
+  - JXCategoryViewExt/Core (1.0.5)
+  - JXCategoryViewExt/Indicator/Line (1.0.5):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Title (1.0.5):
+    - JXCategoryViewExt/Core
   - Masonry (1.1.0)
   - SDAutoLayout (2.2.1)
   - SDWebImage (5.10.0):
@@ -9,7 +13,8 @@ PODS:
 
 DEPENDENCIES:
   - GKNavigationBarViewController
-  - JXCategoryView
+  - JXCategoryViewExt/Indicator/Line
+  - JXCategoryViewExt/Title
   - Masonry
   - SDAutoLayout
   - SDWebImage
@@ -17,18 +22,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - GKNavigationBarViewController
-    - JXCategoryView
+    - JXCategoryViewExt
     - Masonry
     - SDAutoLayout
     - SDWebImage
 
 SPEC CHECKSUMS:
   GKNavigationBarViewController: 5f74830dde9ec4eabf4f7b6665989533b2b39631
-  JXCategoryView: 778a620f76070d6598fd8d7239991b8da8326170
+  JXCategoryViewExt: 66c8712c59e68231972c3405dc80ea1183f5acd3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
 
-PODFILE CHECKSUM: 71c5f187a60a1fe9f2b323085698c6e580f0fa3b
+PODFILE CHECKSUM: 37638f96be19f9ac48e337b528c30d0773fb67c2
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

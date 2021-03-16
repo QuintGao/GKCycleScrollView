@@ -7,7 +7,7 @@
 //
 
 #import "GKDemo003ViewController.h"
-#import <JXCategoryView/JXCategoryView.h>
+#import <JXCategoryViewExt/JXCategoryView.h>
 #import "GKCycleScrollView.h"
 #import "GKPageControl.h"
 #import <SDWebImage/SDWebImage.h>
@@ -98,27 +98,20 @@
 }
 
 - (void)cycleScrollView:(GKCycleScrollView *)cycleScrollView didScrollCellToIndex:(NSInteger)index {
+    if (cycleScrollView.scrollView.isTracking) return;
+    
     if (self.isClickCategory) return;
     
-//    self.isSelectCategory = YES;
-//    [self.categoryView selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll];
-//
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        self.isSelectCategory = NO;
-//    });
+    self.isSelectCategory = YES;
+    [self.categoryView selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.isSelectCategory = NO;
+    });
 }
 
 #pragma mark - JXCategoryViewDelegate
 - (void)categoryView:(JXCategoryBaseView *)categoryView didSelectedItemAtIndex:(NSInteger)index {
-    if (self.isSelectCategory) return;
-    
-    self.isClickCategory = YES;
-    [self.cycleScrollView scrollToCellAtIndex:index animated:YES];
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.isClickCategory = NO;
-        [self.cycleScrollView startTimer];
-    });
     
 }
 
@@ -131,6 +124,7 @@
         _categoryView.titleColor = [UIColor colorWithRed:157/255.0 green:157/255.0 blue:157/255.0 alpha:1.0];
         _categoryView.titleSelectedColor = [UIColor colorWithRed:40/255.0 green:40/255.0 blue:40/255.0 alpha:1.0];
         _categoryView.delegate = self;
+        _categoryView.selectItemOnScrollHalf = YES;
         
         JXCategoryIndicatorLineView *lineView = [JXCategoryIndicatorLineView new];
         lineView.lineStyle = JXCategoryIndicatorLineStyle_Normal;
