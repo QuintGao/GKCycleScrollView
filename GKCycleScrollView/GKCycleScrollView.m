@@ -151,14 +151,25 @@
         [self.visibleCells addObject:[NSNull null]];
     }
     
-    if (self.bounds.size.width <= 0 || self.bounds.size.height <= 0) {
-        [self.superview layoutIfNeeded];
+    __weak __typeof(self) weakSelf = self;
+    [self refreshSizeCompletion:^{
+        [weakSelf initialScrollViewAndCellSize];
+    }];
+}
+
+- (void)refreshSizeCompletion:(void(^)(void))completion {
+    if (self.bounds.size.width == 0 || self.bounds.size.height == 0) {
+        [self layoutIfNeeded];
         // 此处做延时处理是为了解决使用Masonry布局时导致的view的大小不能及时更新的bug
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self initialScrollViewAndCellSize];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (self.bounds.size.width == 0 || self.bounds.size.height == 0) {
+                [self refreshSizeCompletion:completion];
+            }else {
+                !completion ? : completion();
+            }
         });
     }else {
-        [self initialScrollViewAndCellSize];
+        !completion ? : completion();
     }
 }
 
