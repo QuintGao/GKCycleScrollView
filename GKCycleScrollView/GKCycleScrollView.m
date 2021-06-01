@@ -154,7 +154,7 @@
     if (self.bounds.size.width <= 0 || self.bounds.size.height <= 0) {
         [self.superview layoutIfNeeded];
         // 此处做延时处理是为了解决使用Masonry布局时导致的view的大小不能及时更新的bug
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self initialScrollViewAndCellSize];
         });
     }else {
@@ -283,7 +283,7 @@
                     self.timerIndex = self.defaultSelectIndex;
                 }
                 
-                self.scrollView.contentOffset = offset;
+                [self.scrollView setContentOffset:offset animated:NO];
                 
                 // 自动轮播
                 if (self.isAutoScroll) {
@@ -332,7 +332,10 @@
     if (self.showCount == 0) return;
     if (self.cellSize.width <= 0 || self.cellSize.height <= 0) return;
     //计算_visibleRange
-    CGPoint startPoint = CGPointMake(offset.x - self.scrollView.frame.origin.x, offset.y - self.scrollView.frame.origin.y);
+    CGFloat originX = self.scrollView.frame.origin.x == 0 ? 0.01 : self.scrollView.frame.origin.x;
+    CGFloat originY = self.scrollView.frame.origin.y == 0 ? 0.01 : self.scrollView.frame.origin.y;
+    
+    CGPoint startPoint = CGPointMake(offset.x - originX, offset.y - originY);
     CGPoint endPoint = CGPointMake(startPoint.x + self.bounds.size.width, startPoint.y + self.bounds.size.height);
     
     switch (self.direction) {
@@ -349,14 +352,14 @@
             for (NSInteger i = startIndex; i < self.visibleCells.count; i++) {
                 //如果都不超过则取最后一个
                 if ((self.cellSize.width * (i + 1) < endPoint.x && self.cellSize.width * (i + 2) >= endPoint.x) || i + 2 == self.visibleCells.count) {
-                    endIndex = i + 1;// i+2 是以个数，所以其index需要减去1
+                    endIndex = i + 1;
                     break;
                 }
             }
             
             // 可见页分别向前向后扩展一个，提高效率
-            startIndex = MAX(startIndex - 1, 0);
-            endIndex = MIN(endIndex + 1, self.visibleCells.count - 1);
+            startIndex = MAX(startIndex, 0);
+            endIndex = MIN(endIndex, self.visibleCells.count - 1);
             self.visibleRange = NSMakeRange(startIndex, endIndex - startIndex + 1);
             
             for (NSInteger i = startIndex; i <= endIndex; i++) {
