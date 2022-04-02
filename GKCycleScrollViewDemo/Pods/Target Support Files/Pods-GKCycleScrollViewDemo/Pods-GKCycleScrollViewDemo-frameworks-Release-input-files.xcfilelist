@@ -1,5 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-GKCycleScrollViewDemo/Pods-GKCycleScrollViewDemo-frameworks.sh
-${BUILT_PRODUCTS_DIR}/GKNavigationBarViewController/GKNavigationBarViewController.framework
+${BUILT_PRODUCTS_DIR}/GKNavigationBar/GKNavigationBar.framework
 ${BUILT_PRODUCTS_DIR}/JXCategoryViewExt/JXCategoryViewExt.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
 ${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework
