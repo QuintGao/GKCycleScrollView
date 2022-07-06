@@ -25,7 +25,7 @@
 @property (nonatomic, assign) NSInteger timerIndex;
 
 // 当前显示的cell大小
-@property (nonatomic,assign) CGSize cellSize;
+@property (nonatomic, assign) CGSize cellSize;
 
 @property (nonatomic, strong) NSMutableArray *visibleCells;
 @property (nonatomic, strong) NSMutableArray *reusableCells;
@@ -347,7 +347,7 @@
     CGFloat originY = self.scrollView.frame.origin.y == 0 ? 0.01 : self.scrollView.frame.origin.y;
     
     CGPoint startPoint = CGPointMake(offset.x - originX, offset.y - originY);
-    CGPoint endPoint = CGPointMake(startPoint.x + self.bounds.size.width, startPoint.y + self.bounds.size.height);
+    CGPoint endPoint = CGPointMake(offset.x + self.scrollView.frame.size.width + originX, offset.y + self.scrollView.frame.size.height + originY);
     
     switch (self.direction) {
         case GKCycleScrollViewScrollDirectionHorizontal: {
@@ -472,7 +472,7 @@
                 }else {
                     CGFloat scaleX = (self.cellSize.width - leftRightInset * 2) / self.cellSize.width;
                     CGFloat scaleY = (self.cellSize.height - topBottomInset * 2) / self.cellSize.height;
-                    UIEdgeInsets insets = UIEdgeInsetsMake(topBottomInset, leftRightInset, topBottomInset, leftRightInset);
+                    UIEdgeInsets insets = UIEdgeInsetsMake(topBottomInset, leftRightInset - 0.1, topBottomInset, leftRightInset);
                     
                     cell.layer.transform = CATransform3DMakeScale(scaleX, scaleY, 1.0);
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, insets);
@@ -530,7 +530,7 @@
                 }else {
                     CGFloat scaleX = (self.cellSize.width - leftRightInset * 2) / self.cellSize.width;
                     CGFloat scaleY = (self.cellSize.height - topBottomInset * 2) / self.cellSize.height;
-                    UIEdgeInsets insets = UIEdgeInsetsMake(topBottomInset, leftRightInset, topBottomInset, leftRightInset);
+                    UIEdgeInsets insets = UIEdgeInsetsMake(topBottomInset - 0.1, leftRightInset, topBottomInset, leftRightInset);
                     
                     cell.layer.transform = CATransform3DMakeScale(scaleX, scaleY, 1.0f);
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, insets);
@@ -747,22 +747,13 @@
     if (self.realCount > 1 && self.isAutoScroll) {
         switch (self.direction) {
             case GKCycleScrollViewScrollDirectionHorizontal: {
-                NSInteger index = floor(scrollView.contentOffset.x / self.cellSize.width);
-                
-                if (self.timerIndex == index) {
-                    self.timerIndex = index + 1;
-                }else {
-                    self.timerIndex = index;
-                }
+                NSInteger index = round(scrollView.contentOffset.x / self.cellSize.width);
+                self.timerIndex = index;
             }
                 break;
             case GKCycleScrollViewScrollDirectionVertical: {
-                NSInteger index = floor(scrollView.contentOffset.y / self.cellSize.height);
-                if (self.timerIndex == index) {
-                    self.timerIndex = index + 1;
-                }else {
-                    self.timerIndex = index;
-                }
+                NSInteger index = round(scrollView.contentOffset.y / self.cellSize.height);
+                self.timerIndex = index;
             }
                 break;
             default:

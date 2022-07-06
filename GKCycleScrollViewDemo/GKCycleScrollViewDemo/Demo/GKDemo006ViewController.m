@@ -31,11 +31,11 @@
     self.cycleScrollView.dataSource = self;
     self.cycleScrollView.delegate = self;
 //    self.cycleScrollView.topBottomMargin = 20;
-//    self.cycleScrollView.leftRightMargin = 20;
-//    self.cycleScrollView.isChangeAlpha = NO;
     self.cycleScrollView.leftRightMargin = 20;
+//    self.cycleScrollView.isChangeAlpha = NO;
+//    self.cycleScrollView.leftRightMargin = 20;
     self.cycleScrollView.isAutoScroll = NO;
-    self.cycleScrollView.minimumCellAlpha = 0.5;
+//    self.cycleScrollView.minimumCellAlpha = 1.0;
     self.cycleScrollView.scrollView.zoomScale = NO;
     self.cycleScrollView.scrollView.bounces = NO;
     self.cycleScrollView.scrollView.bouncesZoom = NO;
@@ -63,7 +63,8 @@
 
 - (CGSize)sizeForCellInCycleScrollView:(GKCycleScrollView *)cycleScrollView {
 //    return CGSizeMake(kScreenW - 80, 160);
-    return CGSizeMake(cycleScrollView.frame.size.width - 50, cycleScrollView.frame.size.height);
+//    return CGSizeMake(cycleScrollView.frame.size.width - 100, cycleScrollView.frame.size.height);
+    return CGSizeMake(kScreenW - 40, cycleScrollView.frame.size.height);
 }
 
 @end
