@@ -768,7 +768,6 @@
             case GKCycleScrollViewScrollDirectionHorizontal: {
                 NSInteger index = round(targetContentOffset->x / self.cellSize.width);
                 self.timerIndex = index;
-                NSLog(@"***timerIndex**%ld*****%f****%f***",self.timerIndex,scrollView.contentOffset.x,targetContentOffset->x);
             }
                 break;
             case GKCycleScrollViewScrollDirectionVertical: {
