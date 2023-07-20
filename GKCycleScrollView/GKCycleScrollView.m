@@ -155,6 +155,14 @@
         [self.visibleCells addObject:[NSNull null]];
     }
     
+    //add cell数量为1和更新时defaultSelectIndex超过了当前数量
+    if(self.defaultSelectIndex >= self.realCount) {
+        self.defaultSelectIndex = 0;
+    }
+    if(self.realCount == 1) {
+        self.timerIndex = 0;
+    }
+    
     __weak __typeof(self) weakSelf = self;
     //轮询到出现frame时初始化
     [self refreshSizeCompletion:^{
@@ -261,6 +269,7 @@
     [self addSubview:self.scrollView];
 }
 
+//reload才调用
 - (void)initialScrollViewAndCellSize {
     self.originSize = self.bounds.size;
     [self updateScrollViewAndCellSize];
@@ -271,7 +280,7 @@
     }
 }
 
-//初始化才调用
+//reload才调用
 - (void)updateScrollViewAndCellSize {
     if (self.bounds.size.width <= 0 || self.bounds.size.height <= 0) return;
     
