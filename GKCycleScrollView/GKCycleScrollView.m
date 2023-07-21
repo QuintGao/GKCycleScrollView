@@ -147,6 +147,14 @@
     [self.reusableCells removeAllObjects];
     self.visibleRange = NSMakeRange(0, 0);
     
+    //cell数量为1或defaultSelectIndex超过了当前数量
+    if(self.defaultSelectIndex >= self.realCount) {
+        self.defaultSelectIndex = 0;
+    }
+    if(self.realCount == 1) {
+        self.timerIndex = 0;
+    }
+    
     for (NSInteger i = 0; i < self.showCount; i++){
         [self.visibleCells addObject:[NSNull null]];
     }
@@ -682,7 +690,7 @@
                     
                     if (horIndex <= (self.realCount - 1)) {
                         scrollView.contentOffset = CGPointMake(self.cellSize.width * (2 * self.realCount - 1), 0);
-                        self.timerIndex = 2 * self.realCount;
+                        self.timerIndex = 2 * self.realCount - 1;
                     }
                 }
                     break;
@@ -747,12 +755,12 @@
     if (self.realCount > 1 && self.isAutoScroll) {
         switch (self.direction) {
             case GKCycleScrollViewScrollDirectionHorizontal: {
-                NSInteger index = round(scrollView.contentOffset.x / self.cellSize.width);
+                NSInteger index = round(targetContentOffset->x / self.cellSize.width);
                 self.timerIndex = index;
             }
                 break;
             case GKCycleScrollViewScrollDirectionVertical: {
-                NSInteger index = round(scrollView.contentOffset.y / self.cellSize.height);
+                NSInteger index = round(targetContentOffset->y / self.cellSize.height);
                 self.timerIndex = index;
             }
                 break;
