@@ -27,10 +27,6 @@
 // 当前显示的cell大小
 @property (nonatomic, assign) CGSize cellSize;
 
-////5个realCount 显示15个showCount 保证永远在5-9之间 只显示左右中3个 保证性能
-////15个只有3个放在visibleCells,其他都是null
-////reusableCells实现了缓存池效果，放了2个
-////reloadData 做了初始化
 @property (nonatomic, strong) NSMutableArray *visibleCells;
 @property (nonatomic, strong) NSMutableArray *reusableCells;
 @property (nonatomic, assign) NSRange        visibleRange;
@@ -151,11 +147,7 @@
     [self.reusableCells removeAllObjects];
     self.visibleRange = NSMakeRange(0, 0);
     
-    for (NSInteger i = 0; i < self.showCount; i++){
-        [self.visibleCells addObject:[NSNull null]];
-    }
-    
-    //add cell数量为1和更新时defaultSelectIndex超过了当前数量
+    //cell数量为1或defaultSelectIndex超过了当前数量
     if(self.defaultSelectIndex >= self.realCount) {
         self.defaultSelectIndex = 0;
     }
@@ -163,8 +155,11 @@
         self.timerIndex = 0;
     }
     
+    for (NSInteger i = 0; i < self.showCount; i++){
+        [self.visibleCells addObject:[NSNull null]];
+    }
+    
     __weak __typeof(self) weakSelf = self;
-    //轮询到出现frame时初始化
     [self refreshSizeCompletion:^{
         [weakSelf initialScrollViewAndCellSize];
     }];
@@ -269,7 +264,6 @@
     [self addSubview:self.scrollView];
 }
 
-//reload才调用
 - (void)initialScrollViewAndCellSize {
     self.originSize = self.bounds.size;
     [self updateScrollViewAndCellSize];
@@ -280,7 +274,6 @@
     }
 }
 
-//reload才调用
 - (void)updateScrollViewAndCellSize {
     if (self.bounds.size.width <= 0 || self.bounds.size.height <= 0) return;
     
@@ -294,14 +287,14 @@
     switch (self.direction) {
         case GKCycleScrollViewScrollDirectionHorizontal: {
             self.scrollView.frame = CGRectMake(0, 0, self.cellSize.width, self.cellSize.height);
-            self.scrollView.contentSize = CGSizeMake(self.cellSize.width * self.showCount,0); //15个
+            self.scrollView.contentSize = CGSizeMake(self.cellSize.width * self.showCount,0);
             self.scrollView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
             
             if (self.realCount > 1) {
                 CGPoint offset = CGPointZero;
                 
                 if (self.isInfiniteLoop) { // 开启无限轮播
-                    // 滚动到第5个 从5开始
+                    // 滚动到第二组
                     offset = CGPointMake(self.cellSize.width * (self.realCount + self.defaultSelectIndex), 0);
                     self.timerIndex = self.realCount + self.defaultSelectIndex;
                 }else {
@@ -347,7 +340,7 @@
             break;
     }
     
-    // 根据当前scrollView的offset设置显示的cell 中间和左右共三个
+    // 根据当前scrollView的offset设置显示的cell
     [self setupCellsWithContentOffset:self.scrollView.contentOffset];
     
     // 更新可见cell的显示
@@ -375,7 +368,6 @@
             }
             
             NSInteger endIndex = startIndex;
-            //3倍的意义，8-9-10
             for (NSInteger i = startIndex; i < self.visibleCells.count; i++) {
                 //如果都不超过则取最后一个
                 if ((self.cellSize.width * (i + 1) < endPoint.x && self.cellSize.width * (i + 2) >= endPoint.x) || i + 2 == self.visibleCells.count) {
@@ -384,18 +376,16 @@
                 }
             }
             
-            // 可见页分别向前向后扩展一个，提高效率  4-5-6
+            // 可见页分别向前向后扩展一个，提高效率
             startIndex = MAX(startIndex, 0);
             endIndex = MIN(endIndex, self.visibleCells.count - 1);
             self.visibleRange = NSMakeRange(startIndex, endIndex - startIndex + 1);
             
             for (NSInteger i = startIndex; i <= endIndex; i++) {
-                //15个只有3个放在visibleCells reusableCells实现了缓存池效果，放了2个
                 [self addCellAtIndex:i];
             }
             
             for (NSInteger i = 0; i < startIndex; i ++) {
-                //放入缓存中
                 [self removeCellAtIndex:i];
             }
             
@@ -445,7 +435,6 @@
     }
 }
 
-// 更新可见cell的显示
 - (void)updateVisibleCellAppearance {
     if (self.showCount == 0) return;
     if (self.cellSize.width <= 0 || self.cellSize.height <= 0) return;
@@ -464,9 +453,7 @@
                 CGFloat topBottomInset = 0;
                 CGFloat alpha = 0;
                 
-                //选中cell显示在最前 左右2个透明靠后  4-5-6
                 if (delta < self.cellSize.width) {
-                    //alpha指的黑色蒙版 越小越清晰 这里是当前cell
                     alpha = (delta / self.cellSize.width) * self.minimumCellAlpha;
                     
                     CGFloat adjustLeftRightMargin = self.leftRightMargin == 0 ? 0 : self.leftRightMargin + 1;
@@ -574,7 +561,6 @@
     
     GKCycleScrollViewCell *cell = self.visibleCells[index];
     if ((NSObject *)cell == [NSNull null]) {
-        //来自于delegate的cell
         cell = [self.dataSource cycleScrollView:self cellForViewAtIndex:index % self.realCount];
         if (cell) {
             [self.visibleCells replaceObjectAtIndex:index withObject:cell];
@@ -625,7 +611,6 @@
     }
 }
 
-//当前index并回调
 - (void)handleCellScrollWithIndex:(NSInteger)index {
     self.currentSelectIndex = index;
     
@@ -675,8 +660,6 @@
 }
 
 #pragma mark UIScrollView Delegate
-//这里是重点*****************
-//先执行timerUpdate中的setContentOffset 再执行scrollViewDidScroll
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (self.realCount == 0) return;
     if (self.cellSize.width <= 0 || self.cellSize.height <= 0) return;
@@ -700,7 +683,6 @@
             switch (self.direction) {
                 case GKCycleScrollViewScrollDirectionHorizontal: {
                     CGFloat horIndex = scrollView.contentOffset.x / self.cellSize.width;
-                    //到10的时候 这里timerIndex重置为5 无动画回到5 永远在5-10之间
                     if (horIndex >= 2 * self.realCount) {
                         scrollView.contentOffset = CGPointMake(self.cellSize.width * self.realCount, 0);
                         self.timerIndex = self.realCount;
@@ -708,7 +690,7 @@
                     
                     if (horIndex <= (self.realCount - 1)) {
                         scrollView.contentOffset = CGPointMake(self.cellSize.width * (2 * self.realCount - 1), 0);
-                        self.timerIndex = 2 * self.realCount-1;
+                        self.timerIndex = 2 * self.realCount - 1;
                     }
                 }
                     break;
@@ -734,7 +716,6 @@
         }
     }
     
-    //重新更新 4-5-6的cell
     [self setupCellsWithContentOffset:scrollView.contentOffset];
     [self updateVisibleCellAppearance];
     
@@ -742,7 +723,6 @@
         [self handleCellScrollWithIndex:index];
     }
     
-    //滚动过程中 滚动百分比
     [self handleScrollViewDidScroll:scrollView];
 }
 
@@ -780,7 +760,7 @@
             }
                 break;
             case GKCycleScrollViewScrollDirectionVertical: {
-                NSInteger index = round(scrollView.contentOffset.y / self.cellSize.height);
+                NSInteger index = round(targetContentOffset->y / self.cellSize.height);
                 self.timerIndex = index;
             }
                 break;
@@ -798,7 +778,6 @@
     }
 }
 
-//滚动百分比
 - (void)handleScrollViewDidScroll:(UIScrollView *)scrollView {
     if ([self.delegate respondsToSelector:@selector(cycleScrollView:didScroll:)]) {
         [self.delegate cycleScrollView:self didScroll:scrollView];
