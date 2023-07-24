@@ -703,8 +703,8 @@
                     }
                     
                     if (verIndex <= (self.realCount - 1)) {
-                        [scrollView setContentOffset:CGPointMake(0, (2 * self.realCount - 1) * self.cellSize.height) animated:NO];
-                        self.timerIndex = 2 * self.realCount;
+                        scrollView.contentOffset = CGPointMake(0, self.cellSize.height * (2 * self.realCount - 1));
+                        self.timerIndex = 2 * self.realCount - 1;
                     }
                 }
                     break;

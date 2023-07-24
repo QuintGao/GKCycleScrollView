@@ -7,7 +7,7 @@
 <a href=""><img src="https://img.shields.io/badge/support-ios%208%2B-orange.svg"></a>
 </p>
 
-该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.5.8，JXCategoryViewExt版本1.0.5
+该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.6.1，JXCategoryViewExt版本1.2.0
 
 ## 优化及bug修改
 
@@ -65,6 +65,9 @@ pod 'JXCategoryViewExt/DotZoom'
 // title+数字
 pod 'JXCategoryViewExt/Number'
 
+// title+(文字、数字、红点混合)
+pod 'JXCategoryViewExt/Badge'
+
 // title垂直滚动缩放
 pod 'JXCategoryViewExt/VerticalZoomTitle'
 ```
@@ -102,6 +105,15 @@ pod 'JXCategoryViewExt/RTL'
 ```
 
 ## 更新记录
+* 1.2.0 2023.02.14 JXCategoryView更新到1.6.1，代码优化
+* 1.1.7 2022.04.19 新增JXCategoryBadgeView，支持文字、数字、红点混合显示
+* 1.1.6 2021.12.03 删除多余属性
+* 1.1.4 2021.10.18 JXCategorySubTitleImageView优化，修复bug
+* 1.1.2 2021.08.20 新增JXCategorySubTitleImageView类型
+* 1.1.0 2021.08.19 JXCategoryTitleImageView支持忽略image宽度
+* 1.0.8 2021.07.21 JXCategoryTitleView支持动态设置标题
+* 1.0.7 2021.06.23 JXCategoryTitleView文字缩放优化
+* 1.0.6 2021.04.30 JXCategoryView更新到1.5.9版本
 * 1.0.5 2021.03.10 优化滑动到一半选中时的动画效果
 * 1.0.4 2021.03.08 修复某些情况下导致的Unbalanced calls to begin/end appearance transitions for xxx
 * 1.0.3 2021.01.25 增加subTitle分类样式和alignmentLine指示器样式

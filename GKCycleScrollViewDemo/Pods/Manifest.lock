@@ -1,19 +1,19 @@
 PODS:
-  - GKNavigationBar (1.7.2):
-    - GKNavigationBar/GestureHandle (= 1.7.2)
-    - GKNavigationBar/NavigationBar (= 1.7.2)
-  - GKNavigationBar/GestureHandle (1.7.2)
-  - GKNavigationBar/NavigationBar (1.7.2)
-  - JXCategoryViewExt/Core (1.0.5)
-  - JXCategoryViewExt/Indicator/Line (1.0.5):
+  - GKNavigationBar (1.8.6):
+    - GKNavigationBar/GestureHandle (= 1.8.6)
+    - GKNavigationBar/NavigationBar (= 1.8.6)
+  - GKNavigationBar/GestureHandle (1.8.6)
+  - GKNavigationBar/NavigationBar (1.8.6)
+  - JXCategoryViewExt/Core (1.2.0)
+  - JXCategoryViewExt/Indicator/Line (1.2.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Title (1.0.5):
+  - JXCategoryViewExt/Title (1.2.0):
     - JXCategoryViewExt/Core
   - Masonry (1.1.0)
   - SDAutoLayout (2.2.1)
-  - SDWebImage (5.10.0):
-    - SDWebImage/Core (= 5.10.0)
-  - SDWebImage/Core (5.10.0)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
 
 DEPENDENCIES:
   - GKNavigationBar
@@ -32,12 +32,12 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  GKNavigationBar: a2092a5baa0aaf436c17e113c5494652871ff89d
-  JXCategoryViewExt: 66c8712c59e68231972c3405dc80ea1183f5acd3
+  GKNavigationBar: 584621aee729a2eb8bd8e6b71909657b484a96f2
+  JXCategoryViewExt: cf395acdac10524d20a9158eb487be7642c33cd7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
-  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
 
 PODFILE CHECKSUM: 2e8c5f342e50a3fd7c26646809daef417ed21640
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

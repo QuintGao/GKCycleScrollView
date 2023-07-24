@@ -30,6 +30,10 @@ FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];
 #import <JXCategoryViewExt/JXCategorySubTitleView.h>
 #endif
 
+#if __has_include(<JXCategoryViewExt/JXCategorySubTitleImageView.h>)
+#import <JXCategoryViewExt/JXCategorySubTitleImageView.h>
+#endif
+
 #if __has_include(<JXCategoryViewExt/JXCategoryImageView.h>)
 #import <JXCategoryViewExt/JXCategoryImageView.h>
 #endif
@@ -52,6 +56,10 @@ FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];
 
 #if __has_include(<JXCategoryViewExt/JXCategoryNumberView.h>)
 #import <JXCategoryViewExt/JXCategoryNumberView.h>
+#endif
+
+#if __has_include(<JXCategoryViewExt/JXCategoryBadgeView.h>)
+#import <JXCategoryViewExt/JXCategoryBadgeView.h>
 #endif
 
 #if __has_include(<JXCategoryViewExt/JXCategoryTitleViewVerticalZoomView.h>)

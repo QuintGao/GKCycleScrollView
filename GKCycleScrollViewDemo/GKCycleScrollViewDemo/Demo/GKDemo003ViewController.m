@@ -32,14 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = @[@{@"title": @"美女", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2Fmn01%2F022219204249%2F1Z222204249-7.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616574225&t=6823cf729e389877cbdec6b6cf6f3318"},
-                     @{@"title": @"唯美", @"img_url": @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2662286432,3722176444&fm=15&gp=0.jpg"},
-                     @{@"title": @"可爱", @"img_url": @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1361252553,2794528335&fm=26&gp=0.jpg"},
-                     @{@"title": @"简约", @"img_url": @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2379750824,3935342609&fm=26&gp=0.jpg"},
-                     @{@"title": @"科幻", @"img_url": @"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1806438408,1904034154&fm=15&gp=0.jpg"},
-                     @{@"title": @"星座", @"img_url": @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1372360933,3806396369&fm=15&gp=0.jpg"},
-                     @{@"title": @"时尚", @"img_url": @"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1399835155,3191540966&fm=26&gp=0.jpg"},
-                     @{@"title": @"萌宠", @"img_url": @"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1401886252,3397293517&fm=15&gp=0.jpg"}];
+    self.dataArr = @[@{@"title": @"美女", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201702%2F05%2F20170205182700_dWNkf.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=08348ce43e5ccc443ad5505e04e7ca35"},
+                     @{@"title": @"唯美", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201702%2F05%2F20170205181958_ZSPC3.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=d2e59ceb71607c47795f8ce1eb93f40e"},
+                     @{@"title": @"可爱", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201702%2F05%2F20170205213628_dj3ic.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=f9577da4768bb8ac41fd787472c1dbaf"},
+                     @{@"title": @"简约", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201702%2F05%2F20170205183201_nYz8M.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=797df1a080a903765819922a5d47fba8"},
+                     @{@"title": @"科幻", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202003%2F06%2F20200306132544_iBBWt.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=c9b20cc5faae92c0bdc6e618878f8d4f"},
+                     @{@"title": @"星座", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201903%2F21%2F20190321091310_5XYY3.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=1f01654c98ad15c7761510dd89a331e4"},
+                     @{@"title": @"时尚", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201502%2F26%2F20150226234627_sPvPc.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=993a869cc36d66c41038145a6315790d"},
+                     @{@"title": @"萌宠", @"img_url": @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201505%2F06%2F20150506220237_j3veJ.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692753358&t=efef6c85adc6b6b3295e4543531be357"}];
     
     [self.view addSubview:self.categoryView];
     [self.view addSubview:self.cycleScrollView];

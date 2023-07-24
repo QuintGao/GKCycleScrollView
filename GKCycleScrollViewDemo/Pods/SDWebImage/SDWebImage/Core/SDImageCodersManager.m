@@ -41,16 +41,14 @@
     return self;
 }
 
-- (NSArray<id<SDImageCoder>> *)coders
-{
+- (NSArray<id<SDImageCoder>> *)coders {
     SD_LOCK(_codersLock);
     NSArray<id<SDImageCoder>> *coders = [_imageCoders copy];
     SD_UNLOCK(_codersLock);
     return coders;
 }
 
-- (void)setCoders:(NSArray<id<SDImageCoder>> *)coders
-{
+- (void)setCoders:(NSArray<id<SDImageCoder>> *)coders {
     SD_LOCK(_codersLock);
     [_imageCoders removeAllObjects];
     if (coders.count) {
@@ -124,6 +122,21 @@
     for (id<SDImageCoder> coder in coders.reverseObjectEnumerator) {
         if ([coder canEncodeToFormat:format]) {
             return [coder encodedDataWithImage:image format:format options:options];
+        }
+    }
+    return nil;
+}
+
+- (NSData *)encodedDataWithFrames:(NSArray<SDImageFrame *> *)frames loopCount:(NSUInteger)loopCount format:(SDImageFormat)format options:(SDImageCoderOptions *)options {
+    if (!frames || frames.count < 1) {
+        return nil;
+    }
+    NSArray<id<SDImageCoder>> *coders = self.coders;
+    for (id<SDImageCoder> coder in coders.reverseObjectEnumerator) {
+        if ([coder canEncodeToFormat:format]) {
+            if ([coder respondsToSelector:@selector(encodedDataWithFrames:loopCount:format:options:)]) {
+                return [coder encodedDataWithFrames:frames loopCount:loopCount format:format options:options];
+            }
         }
     }
     return nil;

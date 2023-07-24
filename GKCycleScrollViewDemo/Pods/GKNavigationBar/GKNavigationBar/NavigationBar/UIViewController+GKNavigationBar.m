@@ -45,13 +45,15 @@
 
 - (void)gk_viewDidLoad {
     // 设置默认状态
-    self.gk_disableFixNavItemSpace = YES;
-    self.gk_openFixNavItemSpace = NO;
+    if (self.navigationController && self.navigationController == self.parentViewController) {
+        self.gk_disableFixNavItemSpace = YES;
+        self.gk_openFixNavItemSpace = NO;
+    }
     
     if ([self shouldHandleNavBar]) {
         // 设置默认导航栏间距
-        self.gk_navItemLeftSpace    = GKNavigationBarItemSpace;
-        self.gk_navItemRightSpace   = GKNavigationBarItemSpace;
+        self.gk_navItemLeftSpace  = GKNavigationBarItemSpace;
+        self.gk_navItemRightSpace = GKNavigationBarItemSpace;
     }
     
     // 如果是根控制器，取消返回按钮
@@ -83,7 +85,7 @@
             [self.view bringSubviewToFront:self.gk_navigationBar];
         }
     }else {
-        if (self.navigationController && !self.navigationController.isNavigationBarHidden && ![self isNonFullScreen]) {
+        if (self.navigationController && self.navigationController == self.parentViewController && !self.navigationController.isNavigationBarHidden && ![self isNonFullScreen]) {
             self.gk_disableFixNavItemSpace = self.gk_disableFixNavItemSpace;
             self.gk_openFixNavItemSpace = self.gk_openFixNavItemSpace;
         }
@@ -92,7 +94,7 @@
     
     // bug fix #76，修改添加了子控制器后调整导航栏间距无效的bug
     // 当创建了gk_navigationBar或者父控制器是导航控制器的时候才去调整导航栏间距
-    if (self.gk_openFixNavItemSpace) {
+    if ([self shouldFixItemSpace]) {
         // 每次控制器出现的时候重置导航栏间距
         if (self.gk_navItemLeftSpace == GKNavigationBarItemSpace) {
             self.gk_navItemLeftSpace = GKConfigure.navItemLeftSpace;
@@ -120,7 +122,6 @@
     }else {
         [self restoreSystemNavBar];
     }
-    
     [self gk_viewDidAppear:animated];
 }
 
@@ -148,7 +149,7 @@
             
             // 非根控制器重新设置返回按钮
             BOOL isRootVC = self == self.navigationController.childViewControllers.firstObject;
-            if (!isRootVC && self.gk_backImage) {
+            if (!isRootVC && self.gk_backImage && !self.gk_navLeftBarButtonItem && !self.gk_navLeftBarButtonItems) {
                 [self setBackItemImage:self.gk_backImage];
             }
             
@@ -410,8 +411,7 @@ static char kAssociatedObjectKey_navLineHidden;
         }else if (self.gk_navShadowColor) {
             shadowImage = [UIImage gk_changeImage:[UIImage gk_imageNamed:@"nav_line"] color:self.gk_navShadowColor];
         }
-        
-        self.gk_navigationBar.shadowImage = shadowImage;
+        [self setNavShadowImage:shadowImage color:nil];
     }
     [self.gk_navigationBar layoutSubviews];
 }
@@ -714,8 +714,8 @@ static char kAssociatedObjectKey_navItemRightSpace;
 
 - (BOOL)isNonFullScreen {
     BOOL isNonFullScreen = NO;
-    CGFloat viewW = GK_SCREEN_WIDTH;
-    CGFloat viewH = GK_SCREEN_HEIGHT;
+    CGFloat viewW = self.view.frame.size.width;
+    CGFloat viewH = self.view.frame.size.height;
     if (self.isViewLoaded) {
         UIViewController *parentVC = self;
         // 找到最上层的父控制器
@@ -727,7 +727,7 @@ static char kAssociatedObjectKey_navItemRightSpace;
         if (viewW == 0 || viewH == 0) return NO;
         
         // 如果是通过present方式弹出且高度小于屏幕高度，则认为是非全屏
-        isNonFullScreen = self.presentingViewController && viewH < GK_SCREEN_HEIGHT;
+        isNonFullScreen = self.presentingViewController && viewH < self.view.bounds.size.height;
     }
     return isNonFullScreen;
 }
@@ -751,13 +751,16 @@ static char kAssociatedObjectKey_navItemRightSpace;
             self.gk_navigationBar.gk_nonFullScreen = YES;
         }else {
             if (GK_NOTCHED_SCREEN) { // 刘海屏手机
-                navBarH = GK_SAFEAREA_TOP + GK_NAVBAR_HEIGHT;
+                // iOS 14 pro 状态栏高度与安全区域高度不一致，这里改为使用状态栏高度
+                CGFloat topH = GK_STATUSBAR_HEIGHT;
+                if (topH == 20) topH = GK_SAFEAREA_TOP;
+                navBarH = topH + GK_NAVBAR_HEIGHT;
             }else {
                 navBarH = self.gk_statusBarHidden ? GK_NAVBAR_HEIGHT : GK_STATUSBAR_NAVBAR_HEIGHT;
             }
         }
     }
-    self.gk_navigationBar.frame = CGRectMake(0, 0, GK_SCREEN_WIDTH, navBarH);
+    self.gk_navigationBar.frame = CGRectMake(0, 0, self.view.frame.size.width, navBarH);
     [self.gk_navigationBar layoutSubviews];
 }
 
@@ -781,6 +784,17 @@ static char kAssociatedObjectKey_navItemRightSpace;
     if ([self isKindOfClass:UITabBarController.class]) return NO;
     if ([self.parentViewController isKindOfClass:UINavigationController.class]) return YES;
     return NO;
+}
+
+- (BOOL)shouldFixItemSpace {
+    if (self.gk_NavBarInit) {
+        if ([self isKindOfClass:UINavigationController.class]) return NO;
+        if ([self isKindOfClass:UITabBarController.class]) return NO;
+        if (!self.navigationController) return NO;
+        if (![self.parentViewController isKindOfClass:UINavigationController.class]) return NO;
+        return YES;
+    }
+    return self.gk_openFixNavItemSpace;
 }
 
 - (void)setBackItemImage:(UIImage *)image {
@@ -810,7 +824,7 @@ static char kAssociatedObjectKey_navItemRightSpace;
     // 没有image
     if (!image) return;
     
-    self.gk_navLeftBarButtonItem = [UIBarButtonItem gk_itemWithImage:image target:self action:@selector(backItemClick:)];
+    self.gk_navigationItem.leftBarButtonItem = [UIBarButtonItem gk_itemWithImage:image target:self action:@selector(backItemClick:)];
 }
 
 - (void)setNavBackgroundImage:(UIImage *)image {
@@ -821,16 +835,14 @@ static char kAssociatedObjectKey_navItemRightSpace;
         }
     }
     
-    if (!image) {
-        image = self.gk_navBackgroundImage;
-    }
+    if (!image) image = self.gk_navBackgroundImage;
     if (!image) return;
-    [self.gk_navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    [self setNavBackgroundImage:image color:nil];
 }
 
 - (void)setNavBackgroundColor:(UIColor *)color {
     if (!color) return;
-    [self.gk_navigationBar setBackgroundImage:[UIImage gk_imageWithColor:color] forBarMetrics:UIBarMetricsDefault];
+    [self setNavBackgroundImage:nil color:color];
 }
 
 - (void)setNavShadowImage:(UIImage *)image {
@@ -841,16 +853,14 @@ static char kAssociatedObjectKey_navItemRightSpace;
         }
     }
     
-    if (!image) {
-        image = self.gk_navShadowImage;
-    }
+    if (!image) image = self.gk_navShadowImage;
     if (!image) return;
-    self.gk_navigationBar.shadowImage = image;
+    [self setNavShadowImage:image color:nil];
 }
 
 - (void)setNavShadowColor:(UIColor *)color {
     if (!color) return;
-    self.gk_navigationBar.shadowImage = [UIImage gk_changeImage:[UIImage gk_imageNamed:@"nav_line"] color:color];
+    [self setNavShadowImage:nil color:color];
 }
 
 - (void)setNavTitleColor:(UIColor *)color {
@@ -861,8 +871,7 @@ static char kAssociatedObjectKey_navItemRightSpace;
     if (self.gk_navTitleFont) {
         attr[NSFontAttributeName] = self.gk_navTitleFont;
     }
-    
-    self.gk_navigationBar.titleTextAttributes = attr;
+    [self setNavTitleAttributes:attr];
 }
 
 - (void)setNavTitleFont:(UIFont *)font {
@@ -873,7 +882,58 @@ static char kAssociatedObjectKey_navItemRightSpace;
         attr[NSForegroundColorAttributeName] = self.gk_navTitleColor;
     }
     attr[NSFontAttributeName] = font;
-    self.gk_navigationBar.titleTextAttributes = attr;
+    [self setNavTitleAttributes:attr];
+}
+
+- (void)setNavBackgroundImage:(UIImage *)image color:(UIColor *)color {
+    if (@available(iOS 13.0, *)) {
+        UINavigationBarAppearance *appearance = self.gk_navigationBar.standardAppearance;
+        UIColor *shadowColor = appearance.shadowColor;
+        UIImage *shadowImage = appearance.shadowImage;
+        [appearance configureWithTransparentBackground];
+        appearance.backgroundImage = image;
+        appearance.backgroundColor = color;
+        appearance.shadowColor = shadowColor;
+        appearance.shadowImage = shadowImage;
+        self.gk_navigationBar.standardAppearance = appearance;
+        self.gk_navigationBar.scrollEdgeAppearance = appearance;
+    }else {
+        if (!image && color) {
+            image = [UIImage gk_imageWithColor:color];
+        }
+        [self.gk_navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    }
+}
+
+- (void)setNavShadowImage:(UIImage *)image color:(UIColor *)color {
+    if (@available(iOS 13.0, *)) {
+        UINavigationBarAppearance *appearance = self.gk_navigationBar.standardAppearance;
+        UIColor *backgroundColor = appearance.backgroundColor;
+        UIImage *backgroundImage = appearance.backgroundImage;
+        [appearance configureWithTransparentBackground];
+        appearance.shadowImage = image;
+        appearance.shadowColor = color;
+        appearance.backgroundColor = backgroundColor;
+        appearance.backgroundImage = backgroundImage;
+        self.gk_navigationBar.standardAppearance = appearance;
+        self.gk_navigationBar.scrollEdgeAppearance = appearance;
+    }else {
+        if (!image && color) {
+            image = [UIImage gk_changeImage:[UIImage gk_imageNamed:@"nav_line"] color:color];
+        }
+        self.gk_navigationBar.shadowImage = image;
+    }
+}
+
+- (void)setNavTitleAttributes:(NSDictionary<NSAttributedStringKey, id> *)attr {
+    if (@available(iOS 13.0, *)) {
+        UINavigationBarAppearance *appearance = self.gk_navigationBar.standardAppearance;
+        appearance.titleTextAttributes = attr;
+        self.gk_navigationBar.standardAppearance = appearance;
+        self.gk_navigationBar.scrollEdgeAppearance = appearance;
+    }else {
+        self.gk_navigationBar.titleTextAttributes = attr;
+    }
 }
 
 @end

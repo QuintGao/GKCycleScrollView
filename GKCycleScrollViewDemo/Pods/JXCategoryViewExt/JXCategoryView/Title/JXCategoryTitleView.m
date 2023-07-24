@@ -90,8 +90,9 @@
 }
 
 - (void)refreshDataSource {
-    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:self.titles.count];
-    for (int i = 0; i < self.titles.count; i++) {
+    NSInteger count = [self numberOfTitles];
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count; i++) {
         JXCategoryTitleCellModel *cellModel = [[JXCategoryTitleCellModel alloc] init];
         [tempArray addObject:cellModel];
     }
@@ -168,9 +169,9 @@
 - (CGFloat)preferredCellWidthAtIndex:(NSInteger)index {
     if (self.cellWidth == JXCategoryViewAutomaticDimension) {
         if (self.titleDataSource && [self.titleDataSource respondsToSelector:@selector(categoryTitleView:widthForTitle:)]) {
-            return [self.titleDataSource categoryTitleView:self widthForTitle:self.titles[index]];
+            return [self.titleDataSource categoryTitleView:self widthForTitle:[self titleWithIndex:index]];
         } else {
-            return ceilf([self.titles[index] boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : self.titleFont} context:nil].size.width);
+            return ceilf([[self titleWithIndex:index] boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : self.titleFont} context:nil].size.width);
         }
     } else {
         return self.cellWidth;
@@ -181,7 +182,7 @@
     [super refreshCellModel:cellModel index:index];
 
     JXCategoryTitleCellModel *model = (JXCategoryTitleCellModel *)cellModel;
-    model.title = self.titles[index];
+    model.title = [self titleWithIndex:index];
     model.titleNumberOfLines = self.titleNumberOfLines;
     model.titleFont = self.titleFont;
     model.titleSelectedFont = self.titleSelectedFont;
@@ -206,6 +207,20 @@
         model.titleLabelCurrentZoomScale = model.titleLabelNormalZoomScale;
         model.titleLabelCurrentStrokeWidth = model.titleLabelNormalStrokeWidth;
     }
+}
+
+- (NSInteger)numberOfTitles {
+    if ([self.titleDataSource respondsToSelector:@selector(numberOfTitleView:)] && [self.titleDataSource respondsToSelector:@selector(titleView:titleForIndex:)]) {
+        return [self.titleDataSource numberOfTitleView:self];
+    }
+    return self.titles.count;
+}
+
+- (NSString *)titleWithIndex:(NSInteger)index {
+    if ([self.titleDataSource respondsToSelector:@selector(numberOfTitleView:)] && [self.titleDataSource respondsToSelector:@selector(titleView:titleForIndex:)]) {
+        return [self.titleDataSource titleView:self titleForIndex:index];
+    }
+    return self.titles[index];
 }
 
 @end
