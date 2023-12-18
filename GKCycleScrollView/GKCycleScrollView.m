@@ -444,6 +444,7 @@
             CGFloat offsetX = self.scrollView.contentOffset.x;
             for (NSInteger i = self.visibleRange.location; i < NSMaxRange(self.visibleRange); i++) {
                 GKCycleScrollViewCell *cell = self.visibleCells[i];
+                if ((NSObject *)cell == [NSNull null]) continue;
                 CGFloat originX = cell.frame.origin.x;
                 CGFloat delta = fabs(originX - offsetX);
                 
@@ -502,6 +503,7 @@
             CGFloat offsetY = self.scrollView.contentOffset.y;
             for (NSInteger i = self.visibleRange.location; i < NSMaxRange(self.visibleRange); i++) {
                 GKCycleScrollViewCell *cell = self.visibleCells[i];
+                if ((NSObject *)cell == [NSNull null]) continue;
                 CGFloat originY = cell.frame.origin.y;
                 CGFloat delta = fabs(originY - offsetY);
                 
@@ -621,6 +623,7 @@
     // 获取当前cell
     for (NSInteger i = self.visibleRange.location; i < NSMaxRange(self.visibleRange); i++) {
         GKCycleScrollViewCell *cell = self.visibleCells[i];
+        if ((NSObject *)cell == [NSNull null]) continue;
         if (cell.tag == index) {
             self.currentCell = cell;
         }
