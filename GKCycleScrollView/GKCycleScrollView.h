@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 /// 返回继承自GKCycleScrollViewCell的类
 /// @param cycleScrollView cycleScrollView description
 /// @param index 索引
-- (GKCycleScrollViewCell *)cycleScrollView:(GKCycleScrollView *)cycleScrollView cellForViewAtIndex:(NSInteger)index;
+- (__kindof GKCycleScrollViewCell *)cycleScrollView:(GKCycleScrollView *)cycleScrollView cellForViewAtIndex:(NSInteger)index;
 
 @end
 
@@ -70,16 +70,16 @@ typedef NS_ENUM(NSUInteger, GKCycleScrollViewScrollDirection) {
 @property (nonatomic, assign) GKCycleScrollViewScrollDirection  direction;
 
 // 滚动视图
-@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
-// 外部传入，自行处理
+// 默认为nil，需外部创建并传入
 @property (nonatomic, weak) UIPageControl *pageControl;
 
 // 当前展示的cell
 @property (nonatomic, strong, readonly) GKCycleScrollViewCell *currentCell;
 
 // 当前显示的页码
-@property (nonatomic, assign, readonly) NSInteger   currentSelectIndex;
+@property (nonatomic, assign, readonly) NSInteger currentSelectIndex;
 
 // 默认选中的页码（默认：0）
 @property (nonatomic, assign) NSInteger defaultSelectIndex;

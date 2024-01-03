@@ -10,9 +10,11 @@
 
 @interface GKCycleScrollView ()<UIScrollViewDelegate>
 
-@property (nonatomic, strong, readwrite) GKCycleScrollViewCell *currentCell;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
-@property (nonatomic, assign, readwrite) NSInteger currentSelectIndex;
+@property (nonatomic, strong) GKCycleScrollViewCell *currentCell;
+
+@property (nonatomic, assign) NSInteger currentSelectIndex;
 
 // 实际的个数
 @property (nonatomic, assign) NSInteger realCount;
@@ -148,10 +150,10 @@
     self.visibleRange = NSMakeRange(0, 0);
     
     //cell数量为1或defaultSelectIndex超过了当前数量
-    if(self.defaultSelectIndex >= self.realCount) {
+    if (self.defaultSelectIndex >= self.realCount) {
         self.defaultSelectIndex = 0;
     }
-    if(self.realCount == 1) {
+    if (self.realCount == 1) {
         self.timerIndex = 0;
     }
     
@@ -278,7 +280,7 @@
     if (self.bounds.size.width <= 0 || self.bounds.size.height <= 0) return;
     
     // 设置cell尺寸
-    self.cellSize = CGSizeMake(self.bounds.size.width - 2 * self.leftRightMargin, self.bounds.size.height);
+    self.cellSize = CGSizeMake(self.bounds.size.width - 2 * self.leftRightMargin, self.bounds.size.height - 2 * self.topBottomMargin);
     if (self.delegate && [self.delegate respondsToSelector:@selector(sizeForCellInCycleScrollView:)]) {
         self.cellSize = [self.delegate sizeForCellInCycleScrollView:self];
     }
@@ -595,7 +597,7 @@
 }
 
 - (void)removeCellAtIndex:(NSInteger)index{
-    GKCycleScrollViewCell *cell = [self.visibleCells objectAtIndex:index];
+    GKCycleScrollViewCell *cell = self.visibleCells[index];
     if ((NSObject *)cell == [NSNull null]) return;
     
     [self.reusableCells addObject:cell];
