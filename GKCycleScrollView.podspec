@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = 'GKCycleScrollView'
-  s.version             = '1.2.2'
+  s.version             = '1.2.3'
   s.summary             = '一个轻量级的自定义轮播图组件'
   s.homepage            = 'https://github.com/QuintGao/GKCycleScrollView'
   s.license             = { :type => "MIT", :file => "LICENSE" }
